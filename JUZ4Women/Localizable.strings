@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  JUZ4Women
+
+  Created by Aakash sharma on 07/05/15.
+  Copyright (c) 2015 TTN Digital. All rights reserved.
+*/
+
+// Sign Up view
+
+"EMAIL_SECURITY_CODE_TEXT" = "Please enter the security code sent to your email";
+"MOBILE_SECURITY_CODE_TEXT" = "Please enter the security code sent to your mobile";
+
+"EMAIL_TEXT" = "Email";
+"MOBILE_NUMBER" = "Mobile Number";
