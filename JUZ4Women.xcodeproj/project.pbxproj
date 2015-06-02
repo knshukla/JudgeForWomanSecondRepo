@@ -99,6 +99,9 @@
 		38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38424F501AFA9C4000FCECA3 /* Localizable.strings */; };
 		3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873FF111AFF6A9800E5E680 /* ImageContstants.h */; };
 		3873FF141AFF6A9800E5E680 /* ImageContstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873FF121AFF6A9800E5E680 /* ImageContstants.m */; };
+		3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 387685071B1D420500CF73A4 /* SearchViewCell.h */; };
+		3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387685081B1D420500CF73A4 /* SearchViewCell.m */; };
+		3876850C1B1D420500CF73A4 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387685091B1D420500CF73A4 /* SearchViewCell.xib */; };
 		4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */; };
 		4A176D151B08585A006E4836 /* JFWLegalAdviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */; };
 		4A176D161B08585A006E4836 /* JFWLegalAdviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */; };
@@ -355,6 +358,9 @@
 		38424F501AFA9C4000FCECA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3873FF111AFF6A9800E5E680 /* ImageContstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContstants.h; sourceTree = "<group>"; };
 		3873FF121AFF6A9800E5E680 /* ImageContstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContstants.m; sourceTree = "<group>"; };
+		387685071B1D420500CF73A4 /* SearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewCell.h; sourceTree = "<group>"; };
+		387685081B1D420500CF73A4 /* SearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewCell.m; sourceTree = "<group>"; };
+		387685091B1D420500CF73A4 /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
 		4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLegalAdviceCell.h; sourceTree = "<group>"; };
 		4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLegalAdviceCell.m; sourceTree = "<group>"; };
 		4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWLegalAdviceCell.xib; sourceTree = "<group>"; };
@@ -754,6 +760,16 @@
 				381C748C1AF55393003290CF /* SignUpViewCell.xib */,
 			);
 			path = SignUpViewCell;
+			sourceTree = "<group>";
+		};
+		387685061B1D420500CF73A4 /* SearchViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				387685071B1D420500CF73A4 /* SearchViewCell.h */,
+				387685081B1D420500CF73A4 /* SearchViewCell.m */,
+				387685091B1D420500CF73A4 /* SearchViewCell.xib */,
+			);
+			path = SearchViewCell;
 			sourceTree = "<group>";
 		};
 		4A176D101B08584A006E4836 /* LegalAdviceCell */ = {
@@ -1294,6 +1310,7 @@
 		4AE3106E1AF6373C00D1E343 /* JFWSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				387685061B1D420500CF73A4 /* SearchViewCell */,
 				4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */,
 				4AE310701AF6376100D1E343 /* JFWSearchViewController.m */,
 			);
@@ -1353,6 +1370,7 @@
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
+				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
 				4AD19CD11B0850EC00BB2A37 /* JFWNotificationCell.h in Headers */,
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
@@ -1531,6 +1549,7 @@
 				381C74751AF53C82003290CF /* stop_medium_icon@2x.png in Resources */,
 				4A2EE4CD1B077C1D0078E322 /* contactusButton@2x.png in Resources */,
 				381C743A1AF53C82003290CF /* blue_poll_icon@2x.png in Resources */,
+				3876850C1B1D420500CF73A4 /* SearchViewCell.xib in Resources */,
 				381C74451AF53C82003290CF /* dislike_medium_icon@2x.png in Resources */,
 				38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */,
 				381C744A1AF53C82003290CF /* dot_icon@2x.png in Resources */,
@@ -1631,6 +1650,7 @@
 				4A6D15101AF27D2C003A1708 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4AD19CD21B0850EC00BB2A37 /* JFWNotificationCell.m in Sources */,
 				4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */,
+				3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */,
 				4A2EE4DE1B0799310078E322 /* JFWLegalAdviseViewController.m in Sources */,
 				4ACFBA721AF3F94400C82325 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */,

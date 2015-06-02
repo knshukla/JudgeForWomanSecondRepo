@@ -7,9 +7,13 @@
 //
 
 #import "JFWSearchViewController.h"
+#import "SearchViewCell.h"
 
-@interface JFWSearchViewController ()
-
+@interface JFWSearchViewController ()<UITableViewDataSource, UITableViewDelegate>
+{
+    IBOutlet SearchViewCell *searchViewCellObj;
+    
+}
 @end
 
 @implementation JFWSearchViewController
@@ -55,5 +59,25 @@
 -(void)onNavBarBackButtonTapped
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITable view delegate methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"SearchViewCellIdentifier";
+    
+    searchViewCellObj = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!searchViewCellObj) {
+        [[NSBundle mainBundle] loadNibNamed:@"SearchViewCell" owner:self options:nil];
+    }
+    
+    return searchViewCellObj;
 }
 @end
