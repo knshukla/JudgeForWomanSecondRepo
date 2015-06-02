@@ -1,3 +1,4 @@
+
 //
 //  SearchViewCell.m
 //  JUZ4Women
@@ -20,6 +21,8 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)shareButtonTapped:(id)sender {
+- (IBAction)shareButtonTapped:(id)sender
+{
 }
+
 @end

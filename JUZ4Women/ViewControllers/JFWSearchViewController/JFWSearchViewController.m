@@ -12,7 +12,9 @@
 @interface JFWSearchViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet SearchViewCell *searchViewCellObj;
+    __weak IBOutlet UITableView *tableViewObj;
     
+    __weak IBOutlet UISegmentedControl *segmentControlObj;
 }
 @end
 

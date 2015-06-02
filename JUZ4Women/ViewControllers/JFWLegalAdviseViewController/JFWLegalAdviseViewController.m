@@ -169,9 +169,8 @@
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
+    
     cell.backgroundColor = [UIColor clearColor];
-    
-    
     
     return cell;
     

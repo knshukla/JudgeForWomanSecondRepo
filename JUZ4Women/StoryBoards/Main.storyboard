@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1754,13 +1754,55 @@
                         <viewControllerLayoutGuide type="top" id="GuZ-CH-pXK"/>
                         <viewControllerLayoutGuide type="bottom" id="J8p-uk-ArH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JDd-nh-FYD">
+                    <view key="view" contentMode="scaleToFill" id="o9E-7t-sbO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-tX-yDG">
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="CCn-KB-U9t"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsL-Lc-Zaw">
+                                <rect key="frame" x="0.0" y="10" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GDz-dJ-yxF">
+                                <rect key="frame" x="12" y="62" width="296" height="29"/>
+                                <segments>
+                                    <segment title="Post"/>
+                                    <segment title="Article"/>
+                                    <segment title="Video"/>
+                                    <segment title="Poll"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1iw-17-mwB">
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QFj-hB-Zyw" id="zgq-rs-i0U"/>
+                                    <outlet property="delegate" destination="QFj-hB-Zyw" id="0rY-F3-EHu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.25882352939999997" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mp3-tX-yDG" firstAttribute="leading" secondItem="o9E-7t-sbO" secondAttribute="leading" id="QNY-qi-5cd"/>
+                            <constraint firstAttribute="trailing" secondItem="Mp3-tX-yDG" secondAttribute="trailing" id="Thh-ds-mbp"/>
+                            <constraint firstItem="Mp3-tX-yDG" firstAttribute="top" secondItem="o9E-7t-sbO" secondAttribute="top" constant="104" id="ZAd-cq-gsM"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="segmentControlObj" destination="GDz-dJ-yxF" id="jzo-g5-dm8"/>
+                        <outlet property="tableViewObj" destination="1iw-17-mwB" id="x95-qF-u78"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3D-8I-0nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
