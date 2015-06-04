@@ -101,6 +101,9 @@ typedef NS_ENUM(NSInteger, WebViewScreenType) {
 static NSString * const kMediaListApi = @"api/listVideo?items_per_page=11&page=0";
 static NSString * const kMediaMoreListApi = @"api/listVideo?items_per_page=10&page=%d";
 
+static NSString * const kBaseUrl = @"http://104.236.86.49/webservice.php";
+
+
 //No Network
 static NSString *const kNoNetworkMessage = @"Network connectivity is required for this application to work";
 static NSString *const kAlertMessage = @"Alert";
@@ -108,4 +111,9 @@ static NSString *const kOKMessage = @"OK";
 
 //User Sign Up
 static NSString *const kUserLoggedInKey = @"isUserLoggedIn";
+
+
+//Webservice blocks
+
+
 

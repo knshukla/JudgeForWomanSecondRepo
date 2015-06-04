@@ -247,6 +247,20 @@
 		4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */; };
 		4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */; };
 		4AE310891AF67C4B00D1E343 /* JFWFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */; };
+		4AEAC6231B1AE7F80050DBD7 /* MFCachingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */; };
+		4AEAC6241B1AE7F80050DBD7 /* MFCachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */; };
+		4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */; };
+		4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC61C1B1AE7F80050DBD7 /* MFReachability.h */; };
+		4AEAC6271B1AE7F80050DBD7 /* MFParserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */; };
+		4AEAC6281B1AE7F80050DBD7 /* MFParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */; };
+		4AEAC6291B1AE7F80050DBD7 /* MFWebserviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */; };
+		4AEAC62A1B1AE7F80050DBD7 /* MFWebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */; };
+		4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC62B1B1AEC7D0050DBD7 /* MFAppConstants.h */; };
+		4AEAC62E1B1AEC7D0050DBD7 /* MFLibraryConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC62C1B1AEC7D0050DBD7 /* MFLibraryConstants.h */; };
+		4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6311B1B06C60050DBD7 /* JFWLoginModel.h */; };
+		4AEAC6341B1B06C60050DBD7 /* JFWLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6321B1B06C60050DBD7 /* JFWLoginModel.m */; };
+		4AEAC6371B1B06D80050DBD7 /* JFWSignUpModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6351B1B06D80050DBD7 /* JFWSignUpModel.h */; };
+		4AEAC6381B1B06D80050DBD7 /* JFWSignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6361B1B06D80050DBD7 /* JFWSignUpModel.m */; };
 		4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF66E621AF864B900115840 /* JFWFilterView.h */; };
 		4AF66E651AF864B900115840 /* JFWFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF66E631AF864B900115840 /* JFWFilterView.m */; };
 /* End PBXBuildFile section */
@@ -563,6 +577,20 @@
 		4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFilterTableViewCell.h; sourceTree = "<group>"; };
 		4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFilterTableViewCell.m; sourceTree = "<group>"; };
 		4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWFilterTableViewCell.xib; sourceTree = "<group>"; };
+		4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCachingManager.h; sourceTree = "<group>"; };
+		4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCachingManager.m; sourceTree = "<group>"; };
+		4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
+		4AEAC61C1B1AE7F80050DBD7 /* MFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFReachability.h; sourceTree = "<group>"; };
+		4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFParserManager.h; sourceTree = "<group>"; };
+		4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFParserManager.m; sourceTree = "<group>"; };
+		4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFWebserviceManager.h; sourceTree = "<group>"; };
+		4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFWebserviceManager.m; sourceTree = "<group>"; };
+		4AEAC62B1B1AEC7D0050DBD7 /* MFAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFAppConstants.h; sourceTree = "<group>"; };
+		4AEAC62C1B1AEC7D0050DBD7 /* MFLibraryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLibraryConstants.h; sourceTree = "<group>"; };
+		4AEAC6311B1B06C60050DBD7 /* JFWLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLoginModel.h; sourceTree = "<group>"; };
+		4AEAC6321B1B06C60050DBD7 /* JFWLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLoginModel.m; sourceTree = "<group>"; };
+		4AEAC6351B1B06D80050DBD7 /* JFWSignUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWSignUpModel.h; sourceTree = "<group>"; };
+		4AEAC6361B1B06D80050DBD7 /* JFWSignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSignUpModel.m; sourceTree = "<group>"; };
 		4AF66E621AF864B900115840 /* JFWFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFilterView.h; sourceTree = "<group>"; };
 		4AF66E631AF864B900115840 /* JFWFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFilterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -901,6 +929,8 @@
 		4A6D14CD1AF2796F003A1708 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				4AEAC62B1B1AEC7D0050DBD7 /* MFAppConstants.h */,
+				4AEAC62C1B1AEC7D0050DBD7 /* MFLibraryConstants.h */,
 				3873FF111AFF6A9800E5E680 /* ImageContstants.h */,
 				3873FF121AFF6A9800E5E680 /* ImageContstants.m */,
 				4A6D15171AF27D5F003A1708 /* JFWAppConstants.h */,
@@ -911,6 +941,10 @@
 		4A6D14CE1AF2796F003A1708 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4AEAC6171B1AE7F80050DBD7 /* CachingManager */,
+				4AEAC61A1B1AE7F80050DBD7 /* NetworkStatusManager */,
+				4AEAC61D1B1AE7F80050DBD7 /* ParserManager */,
+				4AEAC6201B1AE7F80050DBD7 /* WebserviceManager */,
 				381C73CC1AF5272C003290CF /* UserPreference */,
 				4ACFBA391AF3F94300C82325 /* DrawerManager */,
 			);
@@ -979,6 +1013,8 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AEAC62F1B1B06AA0050DBD7 /* LoginModel */,
+				4AEAC6301B1B06AA0050DBD7 /* SignUpModel */,
 				4AD2B2361AF54F790089DB7F /* MenuItemModel */,
 			);
 			path = Models;
@@ -1319,6 +1355,60 @@
 			path = FilterTableViewCell;
 			sourceTree = "<group>";
 		};
+		4AEAC6171B1AE7F80050DBD7 /* CachingManager */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */,
+				4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */,
+			);
+			path = CachingManager;
+			sourceTree = "<group>";
+		};
+		4AEAC61A1B1AE7F80050DBD7 /* NetworkStatusManager */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */,
+				4AEAC61C1B1AE7F80050DBD7 /* MFReachability.h */,
+			);
+			path = NetworkStatusManager;
+			sourceTree = "<group>";
+		};
+		4AEAC61D1B1AE7F80050DBD7 /* ParserManager */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */,
+				4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */,
+			);
+			path = ParserManager;
+			sourceTree = "<group>";
+		};
+		4AEAC6201B1AE7F80050DBD7 /* WebserviceManager */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */,
+				4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */,
+			);
+			path = WebserviceManager;
+			sourceTree = "<group>";
+		};
+		4AEAC62F1B1B06AA0050DBD7 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC6311B1B06C60050DBD7 /* JFWLoginModel.h */,
+				4AEAC6321B1B06C60050DBD7 /* JFWLoginModel.m */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		4AEAC6301B1B06AA0050DBD7 /* SignUpModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC6351B1B06D80050DBD7 /* JFWSignUpModel.h */,
+				4AEAC6361B1B06D80050DBD7 /* JFWSignUpModel.m */,
+			);
+			path = SignUpModel;
+			sourceTree = "<group>";
+		};
 		4AF66E611AF864A600115840 /* JFWFilterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,12 +1425,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEAC6371B1B06D80050DBD7 /* JFWSignUpModel.h in Headers */,
 				381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */,
 				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
 				4A2EE4DD1B0799310078E322 /* JFWLegalAdviseViewController.h in Headers */,
 				4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */,
+				4AEAC6291B1AE7F80050DBD7 /* MFWebserviceManager.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */,
+				4AEAC6271B1AE7F80050DBD7 /* MFParserManager.h in Headers */,
 				4A2EE4C81B0770270078E322 /* JFWContactUsViewController.h in Headers */,
 				4A2EE4D31B0782580078E322 /* JFWNotificationViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
@@ -1348,15 +1441,20 @@
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
+				4AEAC62E1B1AEC7D0050DBD7 /* MFLibraryConstants.h in Headers */,
 				4AD19CDF1B08517800BB2A37 /* SuccessStoriesCell.h in Headers */,
+				4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */,
 				4A176D1F1B08D2EC006E4836 /* JFWAddVideoViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
+				4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
 				4AD19CD11B0850EC00BB2A37 /* JFWNotificationCell.h in Headers */,
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
+				4AEAC6231B1AE7F80050DBD7 /* MFCachingManager.h in Headers */,
 				4AD19CD81B08513100BB2A37 /* JFWVideoCell.h in Headers */,
+				4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
 				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
 				4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */,
@@ -1601,9 +1699,11 @@
 				4A6D15061AF27D2C003A1708 /* AFHTTPRequestOperation.m in Sources */,
 				4ACFBA671AF3F94400C82325 /* MMDrawerBarButtonItem.m in Sources */,
 				4A6D15131AF27D2C003A1708 /* UIImageView+AFNetworking.m in Sources */,
+				4AEAC6281B1AE7F80050DBD7 /* MFParserManager.m in Sources */,
 				4ACFBA941AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				4ACFBA791AF3F94400C82325 /* UIViewController+MMDrawerController.m in Sources */,
 				4AD19CE01B08517800BB2A37 /* SuccessStoriesCell.m in Sources */,
+				4AEAC6341B1B06C60050DBD7 /* JFWLoginModel.m in Sources */,
 				4A6D14D91AF27A21003A1708 /* JFWViewController.m in Sources */,
 				4AD2B2441AF558E10089DB7F /* JFWAboutUsViewController.m in Sources */,
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
@@ -1613,6 +1713,7 @@
 				4A76DA0E1AFF0FB200BCFFEE /* JFWLoginViewController.m in Sources */,
 				4A2EE4D41B0782580078E322 /* JFWNotificationViewController.m in Sources */,
 				4AE310771AF642BD00D1E343 /* JFWAddPostViewController.m in Sources */,
+				4AEAC6381B1B06D80050DBD7 /* JFWSignUpModel.m in Sources */,
 				4ACFBA701AF3F94400C82325 /* MMLogoView.m in Sources */,
 				4AF66E651AF864B900115840 /* JFWFilterView.m in Sources */,
 				4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */,
@@ -1668,13 +1769,16 @@
 				4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */,
 				4ACFBA741AF3F94400C82325 /* MMTableViewCell.m in Sources */,
 				4A6D150C1AF27D2C003A1708 /* AFURLRequestSerialization.m in Sources */,
+				4AEAC62A1B1AE7F80050DBD7 /* MFWebserviceManager.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				4A6D150E1AF27D2C003A1708 /* AFURLSessionManager.m in Sources */,
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
+				4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */,
 				4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */,
+				4AEAC6241B1AE7F80050DBD7 /* MFCachingManager.m in Sources */,
 				4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

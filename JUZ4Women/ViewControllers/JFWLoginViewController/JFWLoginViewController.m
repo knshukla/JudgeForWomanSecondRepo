@@ -18,7 +18,7 @@
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
 #import "JFWUtilities.h"
-
+#import "MFWebserviceManager.h"
 
 @interface JFWLoginViewController ()
 @property (nonatomic,strong) MMDrawerController * drawerController;
@@ -64,49 +64,56 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
-    IGHomeViewController *beaconSearchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    MFWebserviceManager *webServiceManager = [[MFWebserviceManager alloc]init];
     
-    IGLeftMenuViewController *leftSideDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
-    
-    UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
-    
-    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:beaconSearchViewControllerObj];
-    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
-    if([JFWUtilities isOSVersionIsAtLeastiOS7]){
-        UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
-        [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
-        //        UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
-        //        [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
-        self.drawerController = [[MMDrawerController alloc]
-                                 initWithCenterViewController:navigationController
-                                 leftDrawerViewController:leftSideDrawerViewController
-                                 rightDrawerViewController:nil];
-        [self.drawerController setShowsShadow:NO];
-    }
-    else{
-        self.drawerController = [[MMDrawerController alloc]
-                                 initWithCenterViewController:navigationController
-                                 leftDrawerViewController:leftSideDrawerViewController
-                                 rightDrawerViewController:rightSideDrawerViewController];
-    }
-    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
-    [self.drawerController setMaximumRightDrawerWidth:200.0];
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    
-    [self.drawerController
-     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
-         MMDrawerControllerDrawerVisualStateBlock block;
-         block = [[MMExampleDrawerVisualStateManager sharedManager]
-                  drawerVisualStateBlockForDrawerSide:drawerSide];
-         if(block){
-             block(drawerController, drawerSide, percentVisible);
-         }
-     }];
-    
-    JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
-    
-    [delegate.window setRootViewController:self.drawerController];
+   [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal) {
+       
+   } withFailureBlock:^(NSError *error) {
+       
+   }];
+    //    IGHomeViewController *beaconSearchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+//    
+//    IGLeftMenuViewController *leftSideDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+//    
+//    UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
+//    
+//    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:beaconSearchViewControllerObj];
+//    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+//    if([JFWUtilities isOSVersionIsAtLeastiOS7]){
+//        UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
+//        [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+//        //        UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+//        //        [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+//        self.drawerController = [[MMDrawerController alloc]
+//                                 initWithCenterViewController:navigationController
+//                                 leftDrawerViewController:leftSideDrawerViewController
+//                                 rightDrawerViewController:nil];
+//        [self.drawerController setShowsShadow:NO];
+//    }
+//    else{
+//        self.drawerController = [[MMDrawerController alloc]
+//                                 initWithCenterViewController:navigationController
+//                                 leftDrawerViewController:leftSideDrawerViewController
+//                                 rightDrawerViewController:rightSideDrawerViewController];
+//    }
+//    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+//    [self.drawerController setMaximumRightDrawerWidth:200.0];
+//    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+//    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+//    
+//    [self.drawerController
+//     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+//         MMDrawerControllerDrawerVisualStateBlock block;
+//         block = [[MMExampleDrawerVisualStateManager sharedManager]
+//                  drawerVisualStateBlockForDrawerSide:drawerSide];
+//         if(block){
+//             block(drawerController, drawerSide, percentVisible);
+//         }
+//     }];
+//    
+//    JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+//    
+//    [delegate.window setRootViewController:self.drawerController];
 }
 
 - (IBAction)onFacebookButtonTapped:(id)sender
