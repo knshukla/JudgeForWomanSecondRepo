@@ -20,45 +20,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-            timestampString = "455303302.703313"
+            timestampString = "455307774.41869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-getApiData:parameters:success:failure:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MFWebserviceManager getApiData:parameters:success:failure:]"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Abhi/Documents/Work/Projects/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-                  timestampString = "455303302.907453"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "157">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[MFWebserviceManager getApiData:parameters:success:failure:]_block_invoke"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Abhi/Documents/Work/Projects/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-                  timestampString = "455303302.907697"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -68,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-            timestampString = "455303305.403293"
+            timestampString = "455307774.41869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-postApiData:parameters:success:failure:"
             landmarkType = "5">
             <Locations>
@@ -84,11 +52,11 @@
                   moduleName = "JUZ4Women"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Abhi/Documents/Work/Projects/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-                  timestampString = "455303305.407153"
+                  timestampString = "455308602.043584"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
                   offsetFromSymbolStart = "157">
                </Location>
                <Location
@@ -99,11 +67,11 @@
                   moduleName = "JUZ4Women"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Abhi/Documents/Work/Projects/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-                  timestampString = "455303305.407384"
+                  timestampString = "455308602.043754"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
                   offsetFromSymbolStart = "67">
                </Location>
             </Locations>
@@ -116,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-            timestampString = "455303311.857197"
+            timestampString = "455308607.427543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -132,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-            timestampString = "455303347.047581"
+            timestampString = "455308461.874959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -148,12 +116,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/MFWebserviceManager.m"
-            timestampString = "455303353.947276"
+            timestampString = "455308604.45227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m"
+            timestampString = "455308800.697342"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-POST:parameters:success:failure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
