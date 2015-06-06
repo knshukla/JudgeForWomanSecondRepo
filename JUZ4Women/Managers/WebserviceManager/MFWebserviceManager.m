@@ -174,7 +174,6 @@
     [dataDict setObject:@"vivekbansal" forKey:@"username"];
     [dataDict setObject:@"vivek123" forKey:@"password"];
 
-    NSError *error;
     
 
     [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
