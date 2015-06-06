@@ -322,7 +322,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
         return nil;
     }
 
-    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html",@"application/x-www-form-urlencoded", nil];
+    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html",@"application/x-www-form-urlencoded",@"application/json", nil];
 
     return self;
 }
@@ -367,7 +367,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
         return nil;
     }
 
-    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html",@"application/x-www-form-urlencoded", nil];
+    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html",@"application/x-www-form-urlencoded",@"application/json", nil];
 
     return self;
 }
@@ -450,7 +450,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
         return nil;
     }
 
-    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/x-plist", nil];
+    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/x-plist",@"application/json", nil];
 
     return self;
 }
@@ -622,7 +622,7 @@ static UIImage * AFInflatedImageFromResponseWithDataAtScale(NSHTTPURLResponse *r
         return nil;
     }
 
-    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", nil];
+    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap",@"application/json", nil];
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
     self.imageScale = [[UIScreen mainScreen] scale];
