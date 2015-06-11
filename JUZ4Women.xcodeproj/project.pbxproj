@@ -243,6 +243,9 @@
 		4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */; };
 		4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */; };
 		4AD926EB1AF5E5E800F8CF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */; };
+		4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE103331B25D23D0035C0A6 /* PopUpView.h */; };
+		4AE103371B25D23D0035C0A6 /* PopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE103341B25D23D0035C0A6 /* PopUpView.m */; };
+		4AE103381B25D23D0035C0A6 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE103351B25D23D0035C0A6 /* PopUpView.xib */; };
 		4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */; };
 		4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310701AF6376100D1E343 /* JFWSearchViewController.m */; };
 		4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE310741AF642BD00D1E343 /* JFWAddPostViewController.h */; };
@@ -576,6 +579,9 @@
 		4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWVideoViewController.h; sourceTree = "<group>"; };
 		4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWVideoViewController.m; sourceTree = "<group>"; };
 		4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4AE103331B25D23D0035C0A6 /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
+		4AE103341B25D23D0035C0A6 /* PopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpView.m; sourceTree = "<group>"; };
+		4AE103351B25D23D0035C0A6 /* PopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWSearchViewController.h; sourceTree = "<group>"; };
 		4AE310701AF6376100D1E343 /* JFWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSearchViewController.m; sourceTree = "<group>"; };
 		4AE310741AF642BD00D1E343 /* JFWAddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWAddPostViewController.h; sourceTree = "<group>"; };
@@ -884,6 +890,7 @@
 		4A6D14A51AF1390A003A1708 /* JUZ4Women */ = {
 			isa = PBXGroup;
 			children = (
+				4AE103321B25D22B0035C0A6 /* ReusableViews */,
 				4AD926E81AF5E5C600F8CF2A /* Frameworks */,
 				4A6D14CC1AF2796F003A1708 /* ApplicationDelegate */,
 				4ACFBAAA1AF49CDE00C82325 /* Images */,
@@ -1343,6 +1350,16 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		4AE103321B25D22B0035C0A6 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				4AE103331B25D23D0035C0A6 /* PopUpView.h */,
+				4AE103341B25D23D0035C0A6 /* PopUpView.m */,
+				4AE103351B25D23D0035C0A6 /* PopUpView.xib */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		4AE3106E1AF6373C00D1E343 /* JFWSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1454,6 +1471,7 @@
 				4A2EE4C81B0770270078E322 /* JFWContactUsViewController.h in Headers */,
 				4A2EE4D31B0782580078E322 /* JFWNotificationViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
+				4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
@@ -1604,6 +1622,7 @@
 				4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */,
 				381C74641AF53C82003290CF /* products_icon@2x.png in Resources */,
 				4A76DA361AFF49EF00BCFFEE /* mailBackground@2x.png in Resources */,
+				4AE103381B25D23D0035C0A6 /* PopUpView.xib in Resources */,
 				381C746F1AF53C82003290CF /* sign_up_mail_and_mob_option@2x.png in Resources */,
 				381C74721AF53C82003290CF /* splash_app_icon@2x.png in Resources */,
 				381C74321AF53C82003290CF /* app_back@2x.png in Resources */,
@@ -1744,6 +1763,7 @@
 				4A6D150D1AF27D2C003A1708 /* AFURLResponseSerialization.m in Sources */,
 				4AD19CD91B08513100BB2A37 /* JFWVideoCell.m in Sources */,
 				4ACFBA961AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				4AE103371B25D23D0035C0A6 /* PopUpView.m in Sources */,
 				381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */,
 				381C73CF1AF52757003290CF /* UserPreference.m in Sources */,
 				4A6D150B1AF27D2C003A1708 /* AFURLConnectionOperation.m in Sources */,

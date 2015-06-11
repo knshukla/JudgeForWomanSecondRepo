@@ -29,6 +29,7 @@
 {
     if((self = [super init])) {
         self.networkManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrl]];
+        self.networkManager.requestSerializer = [AFJSONRequestSerializer serializer];
         return self;
     }
     return nil;

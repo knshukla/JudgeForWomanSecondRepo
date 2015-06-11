@@ -68,10 +68,13 @@
     
    [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal) {
        
+       
+       
    } withFailureBlock:^(NSError *error) {
        
    }];
-    //    IGHomeViewController *beaconSearchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    
+//    IGHomeViewController *beaconSearchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
 //    
 //    IGLeftMenuViewController *leftSideDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
 //    
@@ -114,6 +117,7 @@
 //    JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
 //    
 //    [delegate.window setRootViewController:self.drawerController];
+
 }
 
 - (IBAction)onFacebookButtonTapped:(id)sender
