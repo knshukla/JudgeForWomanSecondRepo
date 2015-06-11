@@ -10,6 +10,7 @@
 #import "MFLibraryConstants.h"
 #import "AFNetworking.h"
 #import "UIKit+AFNetworking.h"
+
 //#import "MFErrorHandler.h"
 //#import "MFMedia.h"
 //#import "MFLiveEventModal.h"
@@ -174,16 +175,31 @@
     [dataDict setObject:@"loginAuthentication" forKey:@"requestType"];
     [dataDict setObject:@"vivekbansal" forKey:@"username"];
     [dataDict setObject:@"vivek123" forKey:@"password"];
+    
+    NSError *error =nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataDict
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+    if (! jsonData)
+    {
+        NSLog(@"Got an error: %@", error);
+    }
+    else
+    {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        [self postApiData:kBaseUrl parameters:jsonString success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            //API successful
+            [self handleReceviedResponse:responseObject];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            //API failed
+            self.failureBlock(error);
+        }];
+    }
 
     
-
-    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //API successful
-        [self handleReceviedResponse:responseObject];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //API failed
-        self.failureBlock(error);
-    }];
 }
 
 @end
