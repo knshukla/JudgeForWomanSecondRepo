@@ -17,7 +17,10 @@
 #import "MMDrawerVisualState.h"
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
+
 #import "JFWAppDelegate.h"
+
+#import "SignUpView.h"
 
 #import "JFWUtilities.h"
 
@@ -25,7 +28,7 @@
 
 #import "JFWAppConstants.h"
 
-@interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SignUpViewCellDelegate>
+@interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SignUpViewCellDelegate, SignUpViewDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
     __weak IBOutlet UIPageControl *pageControl;
@@ -198,7 +201,8 @@
     
     if (indexPath.row ==  3)
     {
-        [self loadHomeViewController];
+        [self loadSignUpView];
+       
         return;
     }
     
@@ -353,5 +357,28 @@
     JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
     
     [delegate.window setRootViewController:self.drawerController];
+}
+
+-(void)loadSignUpView
+{
+    SignUpView *signUpViewObj = [[SignUpView alloc]initWithFrame:self.view.bounds];
+    
+    CGRect frame = self.view.bounds;
+    frame.origin.x = frame.size.width;
+    
+    [signUpViewObj setDelegate:self];
+    
+    [signUpViewObj setFrame:frame];
+    
+    [scrollView addSubview:signUpViewObj];
+    
+    [scrollView setContentSize:CGSizeMake(2*self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [scrollView setContentOffset:CGPointMake(self.view.bounds.size.width, self.view.bounds.origin.y) animated:YES];
+}
+
+-(void)signUpButtonTapped:(NSString *)realName andDisplayName:(NSString *)displayName
+{
+    [self loadHomeViewController];
 }
 @end

@@ -14,36 +14,31 @@
 
 @implementation SignUpViewCell
 
-+(UIColor *)placeHolderTextColor
-{
-    return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:.6];
-}
-
 - (void)awakeFromNib
 {
     // Initialization code
     [dateTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:dateTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:dateTextField color:[JFWUtilities placeHolderTextColor]];
     
     [monthTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:monthTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:monthTextField color:[JFWUtilities placeHolderTextColor]];
     
     [yearTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:yearTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:yearTextField color:[JFWUtilities placeHolderTextColor]];
     
     [countryTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:countryTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:countryTextField color:[JFWUtilities placeHolderTextColor]];
     
     [securityCodeTextField setDelegate:self];
     
     [cityTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:cityTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:cityTextField color:[JFWUtilities placeHolderTextColor]];
     
     [emailTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[JFWUtilities placeHolderTextColor]];
     
     [passwordTextField setDelegate:self];
-    [JFWUtilities setPlaceHolderTextColor:passwordTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:passwordTextField color:[JFWUtilities placeHolderTextColor]];
     
 }
 
@@ -220,7 +215,7 @@
     }
     
     [emailTextField setPlaceholder:message];
-    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[SignUpViewCell placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[JFWUtilities placeHolderTextColor]];
 }
 
 -(BOOL)checkAllMandatoryFieldsFilled
