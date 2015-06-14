@@ -10,12 +10,14 @@
 
 @interface JFWFeedsModel : NSObject
 
-@property (nonatomic) NSNumber *postId;
-@property (nonatomic) NSNumber *likeCount;
-@property (nonatomic) NSNumber *dislikeCount;
-@property (nonatomic) NSNumber *commentsCount;
+@property (assign) int postId;
+@property (assign) long likeCount;
+@property (assign) long dislikeCount;
+@property (assign) long commentsCount;
 @property (nonatomic) NSString *postTitle;
+@property (nonatomic) NSString *userAvatorUrl;
+
 @property (nonatomic) NSString *tags;
 
--(id)initWithPostId:(NSNumber *)postId withLikeCount:(NSNumber *)likeCount withDislikeCount:(NSNumber *)dislikeCount withcommentsCount:(NSNumber *)commentsCount withPostTitle:(NSString *)postTitle withTags:(NSString *)postTitle;
+-(id)initWithPostId:(int )postId withLikeCount:(long)likeCount withDislikeCount:(long)dislikeCount withcommentsCount:(long)commentsCount withPostTitle:(NSString *)postTitle withTags:(NSString *)tags withUserAvatorUrl:(NSString *)avatorUrl;
 @end

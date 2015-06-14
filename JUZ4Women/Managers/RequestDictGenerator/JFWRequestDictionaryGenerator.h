@@ -10,10 +10,15 @@
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
 @class UserModel;
+@class JFWFeedsModel;
+
 @interface JFWRequestDictionaryGenerator : NSObject
 
 -(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel;
 
 -(NSMutableDictionary *)createLeftMenuRequestDictionary:(UserModel *)userModel;
+
+-(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel;
+
 
 @end

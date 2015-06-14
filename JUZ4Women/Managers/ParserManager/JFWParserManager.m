@@ -11,6 +11,7 @@
 #import "JFWAppConstants.h"
 #import "JFWLeftMenuModel.h"
 #import "UserModel.h"
+#import "JFWFeedsModel.h"
 
 @implementation JFWParserManager
 
@@ -28,6 +29,21 @@
 
     
     return userModel;
+}
+
+-(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict
+{
+    NSMutableArray *feedsArray = [[NSMutableArray alloc]init];
+    
+    NSArray *dataArray = [responseDict objectForKey:@"responseArray"];
+    
+    for(NSDictionary *dict in dataArray)
+    {
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:[dict objectForKey:@"tags"] withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"]];
+        
+        [feedsArray addObject:feedModel];
+    }
+    return feedsArray;
 }
 
 @end

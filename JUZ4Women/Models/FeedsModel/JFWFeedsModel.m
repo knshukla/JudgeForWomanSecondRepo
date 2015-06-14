@@ -10,7 +10,7 @@
 
 @implementation JFWFeedsModel
 
--(id)initWithPostId:(NSNumber *)postId withLikeCount:(NSNumber *)likeCount withDislikeCount:(NSNumber *)dislikeCount withcommentsCount:(NSNumber *)commentsCount withPostTitle:(NSString *)postTitle withTags:(NSString *)tags
+-(id)initWithPostId:(int )postId withLikeCount:(long)likeCount withDislikeCount:(long)dislikeCount withcommentsCount:(long)commentsCount withPostTitle:(NSString *)postTitle withTags:(NSString *)tags withUserAvatorUrl:(NSString *)avatorUrl
 {
     self = [super init];
     if(self)
@@ -21,6 +21,7 @@
         self.commentsCount = commentsCount;
         self.postTitle = postTitle;
         self.tags = tags;
+        self.userAvatorUrl = avatorUrl;
     }
     return self;
 }
