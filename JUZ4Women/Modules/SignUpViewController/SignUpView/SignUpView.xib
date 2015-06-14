@@ -33,18 +33,33 @@
                         <action selector="cameraButtonTapped:" destination="-1" eventType="touchUpInside" id="Pnq-tx-W6y"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="emailBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-SD-ioB">
-                    <rect key="frame" x="56" y="336" width="210" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-j9-QsY">
+                    <rect key="frame" x="55" y="336" width="211" height="36"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Real Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-SD-ioB">
+                    <rect key="frame" x="59" y="336" width="204" height="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gfD-TB-hoi"/>
+                    </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="emailBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="RKr-9M-0eJ">
-                    <rect key="frame" x="55" y="390" width="210" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-P5-tIR">
+                    <rect key="frame" x="54" y="390" width="211" height="36"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKr-9M-0eJ">
+                    <rect key="frame" x="59" y="390" width="204" height="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="WoR-fg-euN"/>
+                    </connections>
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sC-A1-zj4">
                     <rect key="frame" x="0.0" y="514" width="320" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By signing up you agree to terms and conditions*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-MQ-glN">
                     <rect key="frame" x="49" y="491" width="223" height="20"/>

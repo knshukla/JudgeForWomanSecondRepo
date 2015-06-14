@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SignUpViewDelegate <NSObject>
+
+-(void)signUpButtonTapped:(NSString *)realName andDisplayName:(NSString *)displayName;
+
+@end
+
 @interface SignUpView : UIView
+{
+    
+}
+
+@property(nonatomic, weak)id<SignUpViewDelegate> delegate;
 
 @end
