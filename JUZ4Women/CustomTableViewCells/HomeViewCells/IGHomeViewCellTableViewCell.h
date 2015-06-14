@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class JFWFeedsModel;
 @interface IGHomeViewCellTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *postTitleLabel;
@@ -16,4 +16,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+
+-(void)configureCell:(JFWFeedsModel *)feedModel;
 @end

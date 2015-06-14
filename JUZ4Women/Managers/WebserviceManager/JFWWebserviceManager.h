@@ -11,6 +11,8 @@
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
 @class UserModel;
+@class JFWFeedsModel;
+
 typedef void (^SuccessBlock)(id);
 typedef void (^FailureBlock)(NSError *);
 
@@ -24,6 +26,7 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestLeftMenuApiWithLeftMenuModel:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;

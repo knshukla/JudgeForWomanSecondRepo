@@ -15,6 +15,8 @@
 #import "JFWRequestDictionaryGenerator.h"
 #import "JFWParserManager.h"
 #import "UserModel.h"
+#import "JFWFeedsModel.h"
+
 @interface JFWWebserviceManager()
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager *networkManager;
@@ -40,7 +42,6 @@
                                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     AFHTTPRequestOperation *operation = [self.networkManager GET:URLString parameters:parameters success: success failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //NSError *customizeError = [MFErrorHandler errorWithCode:error.code];
         failure(operation,error);
     }];
     return operation;
@@ -123,4 +124,34 @@
     NSLog(@"Response dict is %@",responseDictionary);
 }
 
+-(void)requestFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createFeedRequestDictionary:feedModel];
+
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+}
+
+- (void)handleFeedsResponse:(NSDictionary *)responseDictionary
+{
+    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+
+    NSMutableArray *dataArray = [parserManager parseFeedsResponseWith:responseDictionary];
+    self.successBlock(dataArray);
+    
+    
+}
 @end

@@ -17,6 +17,8 @@
 #import "JFWAddPostViewController.h"
 #import "JFWFilterView.h"
 #import "PopUpView.h"
+#import "JFWFeedsModel.h"
+#import "JFWWebserviceManager.h"
 
 @interface IGHomeViewController()
 {
@@ -27,6 +29,7 @@
     JFWFilterView *filterViewObj;
     BOOL isTableOpened;
     PopUpView *demoView;
+    NSArray *responseArray;
 
 }
 @end
@@ -47,6 +50,22 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     self.postTopViewObj.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:67.0/255.0 blue:96.0/255.0 alpha:1];
+    
+    [self fetchFeedDetail];
+}
+
+-(void)fetchFeedDetail
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestFeedApiWithFeedModel:nil withSuccessBlock:^(id dataArray)
+    {
+        responseArray = (NSArray *)dataArray;
+        [self.homeTableView reloadData];
+    } withFailureBlock:^(NSError *error)
+    {
+        
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -144,7 +163,7 @@
 {
     //Returing number of rows in section of tableview
 
-    return 10;
+    return responseArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -169,6 +188,7 @@
     
     cell.userImageView.layer.cornerRadius = 25;
     cell.userImageView.layer.masksToBounds = YES;
+    [cell configureCell:[responseArray objectAtIndex:indexPath.row]];
     
     return cell;
     

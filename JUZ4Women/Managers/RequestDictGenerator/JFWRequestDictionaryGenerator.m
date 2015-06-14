@@ -36,4 +36,20 @@
 
     return dataDict;
 }
+
+-(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel
+{
+    NSNumber *postId = [NSNumber numberWithInt:12];
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+     NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    [dataDict setObject:@"getPostScreenDetails" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+    [dataDict setObject:postId forKey:@"last_post_id"];
+
+    return dataDict;
+}
+
 @end

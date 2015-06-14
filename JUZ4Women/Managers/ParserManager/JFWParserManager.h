@@ -15,5 +15,7 @@
 
 -(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
 -(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
+-(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict;
+
 
 @end
