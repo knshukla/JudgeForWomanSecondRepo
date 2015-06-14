@@ -20,6 +20,8 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestLoginApiWithLoginModal:(JFWLoginModel *)loginModal withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestSignUpApiWithLoginModal:(JFWLoginModel *)loginModal withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+
 -(void)requestLeftMenuApiWithLeftMenuModel:(JFWLeftMenuModel *)leftMenuModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 
