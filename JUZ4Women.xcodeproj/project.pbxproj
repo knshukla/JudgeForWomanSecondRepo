@@ -102,6 +102,13 @@
 		3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 387685071B1D420500CF73A4 /* SearchViewCell.h */; };
 		3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387685081B1D420500CF73A4 /* SearchViewCell.m */; };
 		3876850C1B1D420500CF73A4 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387685091B1D420500CF73A4 /* SearchViewCell.xib */; };
+		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
+		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
+		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
+		38CCE6261B2D8FAB00D51D68 /* UserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE6241B2D8FAB00D51D68 /* UserModel.h */; };
+		38CCE6271B2D8FAB00D51D68 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE6251B2D8FAB00D51D68 /* UserModel.m */; };
+		38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE6291B2D913C00D51D68 /* DateModel.h */; };
+		38CCE62C1B2D913C00D51D68 /* DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE62A1B2D913C00D51D68 /* DateModel.m */; };
 		4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */; };
 		4A176D151B08585A006E4836 /* JFWLegalAdviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */; };
 		4A176D161B08585A006E4836 /* JFWLegalAdviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */; };
@@ -384,6 +391,13 @@
 		387685071B1D420500CF73A4 /* SearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewCell.h; sourceTree = "<group>"; };
 		387685081B1D420500CF73A4 /* SearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewCell.m; sourceTree = "<group>"; };
 		387685091B1D420500CF73A4 /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
+		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
+		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
+		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		38CCE6241B2D8FAB00D51D68 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		38CCE6251B2D8FAB00D51D68 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		38CCE6291B2D913C00D51D68 /* DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateModel.h; sourceTree = "<group>"; };
+		38CCE62A1B2D913C00D51D68 /* DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateModel.m; sourceTree = "<group>"; };
 		4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLegalAdviceCell.h; sourceTree = "<group>"; };
 		4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLegalAdviceCell.m; sourceTree = "<group>"; };
 		4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWLegalAdviceCell.xib; sourceTree = "<group>"; };
@@ -791,6 +805,7 @@
 		381C74801AF55331003290CF /* SignUpViewController */ = {
 			isa = PBXGroup;
 			children = (
+				38CCE61C1B2D85F800D51D68 /* SignUpView */,
 				381C74891AF55363003290CF /* SignUpViewCell */,
 				381C74811AF55331003290CF /* SignUpViewController.h */,
 				381C74821AF55331003290CF /* SignUpViewController.m */,
@@ -816,6 +831,34 @@
 				387685091B1D420500CF73A4 /* SearchViewCell.xib */,
 			);
 			path = SearchViewCell;
+			sourceTree = "<group>";
+		};
+		38CCE61C1B2D85F800D51D68 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				38CCE61D1B2D862400D51D68 /* SignUpView.h */,
+				38CCE61E1B2D862400D51D68 /* SignUpView.m */,
+				38CCE6211B2D863600D51D68 /* SignUpView.xib */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		38CCE6231B2D8F9400D51D68 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				38CCE6241B2D8FAB00D51D68 /* UserModel.h */,
+				38CCE6251B2D8FAB00D51D68 /* UserModel.m */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		38CCE6281B2D912A00D51D68 /* DateModel */ = {
+			isa = PBXGroup;
+			children = (
+				38CCE6291B2D913C00D51D68 /* DateModel.h */,
+				38CCE62A1B2D913C00D51D68 /* DateModel.m */,
+			);
+			path = DateModel;
 			sourceTree = "<group>";
 		};
 		4A176D101B08584A006E4836 /* LegalAdviceCell */ = {
@@ -1049,6 +1092,8 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38CCE6281B2D912A00D51D68 /* DateModel */,
+				38CCE6231B2D8F9400D51D68 /* UserModel */,
 				4AB64C5F1B2D175200251E52 /* LeftMenuModel */,
 				4AB64C5A1B2BDD8300251E52 /* FeedsModel */,
 				4AEAC62F1B1B06AA0050DBD7 /* LoginModel */,
@@ -1527,6 +1572,7 @@
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
+				38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */,
 				4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */,
 				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
@@ -1535,7 +1581,9 @@
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
 				4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */,
 				4AD19CD81B08513100BB2A37 /* JFWVideoCell.h in Headers */,
+				38CCE6261B2D8FAB00D51D68 /* UserModel.h in Headers */,
 				4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */,
+				38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
 				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
 				4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */,
@@ -1631,6 +1679,7 @@
 				381C74631AF53C82003290CF /* post_icon@2x.png in Resources */,
 				4A76DA471AFF4D3400BCFFEE /* countryBox@2x.png in Resources */,
 				381C74761AF53C82003290CF /* stop_small_icon@2x.png in Resources */,
+				38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */,
 				381C74361AF53C82003290CF /* arrow_right_icon@2x.png in Resources */,
 				381C746B1AF53C82003290CF /* share_icon_dark_red@2x.png in Resources */,
 				381C74741AF53C82003290CF /* stop_icon@2x.png in Resources */,
@@ -1836,6 +1885,7 @@
 				4AD2B23A1AF54FB00089DB7F /* JFWMenuItemModel.m in Sources */,
 				4ACFBA971AF3FBC600C82325 /* SlideNavigationController.m in Sources */,
 				4A6D15151AF27D2C003A1708 /* UIRefreshControl+AFNetworking.m in Sources */,
+				38CCE62C1B2D913C00D51D68 /* DateModel.m in Sources */,
 				4ACFBA731AF3F94400C82325 /* MMSideDrawerTableViewCell.m in Sources */,
 				4ACFBA681AF3F94400C82325 /* MMDrawerController.m in Sources */,
 				4A6D15161AF27D2C003A1708 /* UIWebView+AFNetworking.m in Sources */,
@@ -1849,6 +1899,7 @@
 				4ACFBA9D1AF3FD3600C82325 /* LeftMenuCellTableViewCell.m in Sources */,
 				4A6D15111AF27D2C003A1708 /* UIAlertView+AFNetworking.m in Sources */,
 				4ACFBA6F1AF3F94400C82325 /* MMExampleViewController.m in Sources */,
+				38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */,
 				4ACFBA711AF3F94400C82325 /* MMNavigationController.m in Sources */,
 				4AD2B2501AF559170089DB7F /* JFWPostViewController.m in Sources */,
 				4A176D201B08D2EC006E4836 /* JFWAddVideoViewController.m in Sources */,
@@ -1864,6 +1915,7 @@
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
+				38CCE6271B2D8FAB00D51D68 /* UserModel.m in Sources */,
 				4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */,
 				4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */,
 				4AEAC6241B1AE7F80050DBD7 /* JFWCachingManager.m in Sources */,
