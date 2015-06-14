@@ -31,9 +31,14 @@ static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
 static NSString * const kHelveticaNeue = @"HelveticaNeue";
 
 //Webservice constants
+//
+static NSString * const kRequestType = @"requestType";
 static NSString * const kUserName = @"username";
 static NSString * const kUserTypeId = @"user_type_id";
 static NSString * const kUid = @"uid";
+static NSString * const kPassword = @"password";
+
+//
 
 
 

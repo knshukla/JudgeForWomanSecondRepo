@@ -29,7 +29,7 @@
 #import "JFWLegalAdviseViewController.h"
 #import "JFWSuccessStoriesViewController.h"
 #import "JFWNotificationViewController.h"
-#import "MFWebserviceManager.h"
+#import "JFWWebserviceManager.h"
 
 @interface IGLeftMenuViewController()
 {
@@ -52,6 +52,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    NSLog(@"Controll came here");
     
       menuItemArray = [self createMenuItemArray];
     
@@ -67,15 +68,15 @@
 
 -(void)fetchLeftMenuDetails
 {
-    MFWebserviceManager *webServiceManager = [[MFWebserviceManager alloc]init];
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
-    [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal) {
-        
-        
+    [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal) {
         
     } withFailureBlock:^(NSError *error) {
         
     }];
+    
+    
 
 }
 #pragma mark - UITableView Delegate & Datasrouce -

@@ -180,6 +180,10 @@
 		4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */; };
 		4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */; };
 		4AB64C5E1B2BDDA200251E52 /* JFWFeedsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */; };
+		4AB64C621B2D176700251E52 /* JFWLeftMenuModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C601B2D176700251E52 /* JFWLeftMenuModel.h */; };
+		4AB64C631B2D176700251E52 /* JFWLeftMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB64C611B2D176700251E52 /* JFWLeftMenuModel.m */; };
+		4AB64C671B2D512000251E52 /* JFWRequestDictionaryGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C651B2D512000251E52 /* JFWRequestDictionaryGenerator.h */; };
+		4AB64C681B2D512000251E52 /* JFWRequestDictionaryGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB64C661B2D512000251E52 /* JFWRequestDictionaryGenerator.m */; };
 		4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3B1AF3F94300C82325 /* MainViewController.m */; };
 		4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */; };
 		4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3E1AF3F94300C82325 /* MMCenterTableViewCell.m */; };
@@ -255,14 +259,14 @@
 		4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */; };
 		4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */; };
 		4AE310891AF67C4B00D1E343 /* JFWFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */; };
-		4AEAC6231B1AE7F80050DBD7 /* MFCachingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */; };
-		4AEAC6241B1AE7F80050DBD7 /* MFCachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */; };
+		4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6181B1AE7F80050DBD7 /* JFWCachingManager.h */; };
+		4AEAC6241B1AE7F80050DBD7 /* JFWCachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6191B1AE7F80050DBD7 /* JFWCachingManager.m */; };
 		4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */; };
 		4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC61C1B1AE7F80050DBD7 /* MFReachability.h */; };
-		4AEAC6271B1AE7F80050DBD7 /* MFParserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */; };
-		4AEAC6281B1AE7F80050DBD7 /* MFParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */; };
-		4AEAC6291B1AE7F80050DBD7 /* MFWebserviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */; };
-		4AEAC62A1B1AE7F80050DBD7 /* MFWebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */; };
+		4AEAC6271B1AE7F80050DBD7 /* JFWParserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC61E1B1AE7F80050DBD7 /* JFWParserManager.h */; };
+		4AEAC6281B1AE7F80050DBD7 /* JFWParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61F1B1AE7F80050DBD7 /* JFWParserManager.m */; };
+		4AEAC6291B1AE7F80050DBD7 /* JFWWebserviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6211B1AE7F80050DBD7 /* JFWWebserviceManager.h */; };
+		4AEAC62A1B1AE7F80050DBD7 /* JFWWebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6221B1AE7F80050DBD7 /* JFWWebserviceManager.m */; };
 		4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC62B1B1AEC7D0050DBD7 /* MFAppConstants.h */; };
 		4AEAC62E1B1AEC7D0050DBD7 /* MFLibraryConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC62C1B1AEC7D0050DBD7 /* MFLibraryConstants.h */; };
 		4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6311B1B06C60050DBD7 /* JFWLoginModel.h */; };
@@ -485,6 +489,10 @@
 		4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeyourmind@2x.png"; sourceTree = "<group>"; };
 		4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFeedsModel.h; sourceTree = "<group>"; };
 		4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFeedsModel.m; sourceTree = "<group>"; };
+		4AB64C601B2D176700251E52 /* JFWLeftMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLeftMenuModel.h; sourceTree = "<group>"; };
+		4AB64C611B2D176700251E52 /* JFWLeftMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLeftMenuModel.m; sourceTree = "<group>"; };
+		4AB64C651B2D512000251E52 /* JFWRequestDictionaryGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWRequestDictionaryGenerator.h; sourceTree = "<group>"; };
+		4AB64C661B2D512000251E52 /* JFWRequestDictionaryGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWRequestDictionaryGenerator.m; sourceTree = "<group>"; };
 		4ACFBA3A1AF3F94300C82325 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4ACFBA3B1AF3F94300C82325 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -593,14 +601,14 @@
 		4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFilterTableViewCell.h; sourceTree = "<group>"; };
 		4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFilterTableViewCell.m; sourceTree = "<group>"; };
 		4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWFilterTableViewCell.xib; sourceTree = "<group>"; };
-		4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCachingManager.h; sourceTree = "<group>"; };
-		4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCachingManager.m; sourceTree = "<group>"; };
+		4AEAC6181B1AE7F80050DBD7 /* JFWCachingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWCachingManager.h; sourceTree = "<group>"; };
+		4AEAC6191B1AE7F80050DBD7 /* JFWCachingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWCachingManager.m; sourceTree = "<group>"; };
 		4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
 		4AEAC61C1B1AE7F80050DBD7 /* MFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFReachability.h; sourceTree = "<group>"; };
-		4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFParserManager.h; sourceTree = "<group>"; };
-		4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFParserManager.m; sourceTree = "<group>"; };
-		4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFWebserviceManager.h; sourceTree = "<group>"; };
-		4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFWebserviceManager.m; sourceTree = "<group>"; };
+		4AEAC61E1B1AE7F80050DBD7 /* JFWParserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWParserManager.h; sourceTree = "<group>"; };
+		4AEAC61F1B1AE7F80050DBD7 /* JFWParserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWParserManager.m; sourceTree = "<group>"; };
+		4AEAC6211B1AE7F80050DBD7 /* JFWWebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWWebserviceManager.h; sourceTree = "<group>"; };
+		4AEAC6221B1AE7F80050DBD7 /* JFWWebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWWebserviceManager.m; sourceTree = "<group>"; };
 		4AEAC62B1B1AEC7D0050DBD7 /* MFAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFAppConstants.h; sourceTree = "<group>"; };
 		4AEAC62C1B1AEC7D0050DBD7 /* MFLibraryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLibraryConstants.h; sourceTree = "<group>"; };
 		4AEAC6311B1B06C60050DBD7 /* JFWLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLoginModel.h; sourceTree = "<group>"; };
@@ -968,6 +976,7 @@
 		4A6D14CE1AF2796F003A1708 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4AB64C641B2D50E400251E52 /* RequestDictGenerator */,
 				4AEAC6171B1AE7F80050DBD7 /* CachingManager */,
 				4AEAC61A1B1AE7F80050DBD7 /* NetworkStatusManager */,
 				4AEAC61D1B1AE7F80050DBD7 /* ParserManager */,
@@ -1040,6 +1049,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AB64C5F1B2D175200251E52 /* LeftMenuModel */,
 				4AB64C5A1B2BDD8300251E52 /* FeedsModel */,
 				4AEAC62F1B1B06AA0050DBD7 /* LoginModel */,
 				4AEAC6301B1B06AA0050DBD7 /* SignUpModel */,
@@ -1132,6 +1142,24 @@
 				4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */,
 			);
 			path = FeedsModel;
+			sourceTree = "<group>";
+		};
+		4AB64C5F1B2D175200251E52 /* LeftMenuModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AB64C601B2D176700251E52 /* JFWLeftMenuModel.h */,
+				4AB64C611B2D176700251E52 /* JFWLeftMenuModel.m */,
+			);
+			path = LeftMenuModel;
+			sourceTree = "<group>";
+		};
+		4AB64C641B2D50E400251E52 /* RequestDictGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				4AB64C651B2D512000251E52 /* JFWRequestDictionaryGenerator.h */,
+				4AB64C661B2D512000251E52 /* JFWRequestDictionaryGenerator.m */,
+			);
+			path = RequestDictGenerator;
 			sourceTree = "<group>";
 		};
 		4ACFBA391AF3F94300C82325 /* DrawerManager */ = {
@@ -1406,8 +1434,8 @@
 		4AEAC6171B1AE7F80050DBD7 /* CachingManager */ = {
 			isa = PBXGroup;
 			children = (
-				4AEAC6181B1AE7F80050DBD7 /* MFCachingManager.h */,
-				4AEAC6191B1AE7F80050DBD7 /* MFCachingManager.m */,
+				4AEAC6181B1AE7F80050DBD7 /* JFWCachingManager.h */,
+				4AEAC6191B1AE7F80050DBD7 /* JFWCachingManager.m */,
 			);
 			path = CachingManager;
 			sourceTree = "<group>";
@@ -1424,8 +1452,8 @@
 		4AEAC61D1B1AE7F80050DBD7 /* ParserManager */ = {
 			isa = PBXGroup;
 			children = (
-				4AEAC61E1B1AE7F80050DBD7 /* MFParserManager.h */,
-				4AEAC61F1B1AE7F80050DBD7 /* MFParserManager.m */,
+				4AEAC61E1B1AE7F80050DBD7 /* JFWParserManager.h */,
+				4AEAC61F1B1AE7F80050DBD7 /* JFWParserManager.m */,
 			);
 			path = ParserManager;
 			sourceTree = "<group>";
@@ -1433,8 +1461,8 @@
 		4AEAC6201B1AE7F80050DBD7 /* WebserviceManager */ = {
 			isa = PBXGroup;
 			children = (
-				4AEAC6211B1AE7F80050DBD7 /* MFWebserviceManager.h */,
-				4AEAC6221B1AE7F80050DBD7 /* MFWebserviceManager.m */,
+				4AEAC6211B1AE7F80050DBD7 /* JFWWebserviceManager.h */,
+				4AEAC6221B1AE7F80050DBD7 /* JFWWebserviceManager.m */,
 			);
 			path = WebserviceManager;
 			sourceTree = "<group>";
@@ -1478,10 +1506,10 @@
 				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
 				4A2EE4DD1B0799310078E322 /* JFWLegalAdviseViewController.h in Headers */,
 				4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */,
-				4AEAC6291B1AE7F80050DBD7 /* MFWebserviceManager.h in Headers */,
+				4AEAC6291B1AE7F80050DBD7 /* JFWWebserviceManager.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */,
-				4AEAC6271B1AE7F80050DBD7 /* MFParserManager.h in Headers */,
+				4AEAC6271B1AE7F80050DBD7 /* JFWParserManager.h in Headers */,
 				4A2EE4C81B0770270078E322 /* JFWContactUsViewController.h in Headers */,
 				4A2EE4D31B0782580078E322 /* JFWNotificationViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
@@ -1491,6 +1519,7 @@
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
+				4AB64C621B2D176700251E52 /* JFWLeftMenuModel.h in Headers */,
 				4AEAC62E1B1AEC7D0050DBD7 /* MFLibraryConstants.h in Headers */,
 				4AD19CDF1B08517800BB2A37 /* SuccessStoriesCell.h in Headers */,
 				4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */,
@@ -1501,9 +1530,10 @@
 				4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */,
 				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
+				4AB64C671B2D512000251E52 /* JFWRequestDictionaryGenerator.h in Headers */,
 				4AD19CD11B0850EC00BB2A37 /* JFWNotificationCell.h in Headers */,
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
-				4AEAC6231B1AE7F80050DBD7 /* MFCachingManager.h in Headers */,
+				4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */,
 				4AD19CD81B08513100BB2A37 /* JFWVideoCell.h in Headers */,
 				4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
@@ -1750,9 +1780,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6D15061AF27D2C003A1708 /* AFHTTPRequestOperation.m in Sources */,
+				4AB64C681B2D512000251E52 /* JFWRequestDictionaryGenerator.m in Sources */,
 				4ACFBA671AF3F94400C82325 /* MMDrawerBarButtonItem.m in Sources */,
 				4A6D15131AF27D2C003A1708 /* UIImageView+AFNetworking.m in Sources */,
-				4AEAC6281B1AE7F80050DBD7 /* MFParserManager.m in Sources */,
+				4AB64C631B2D176700251E52 /* JFWLeftMenuModel.m in Sources */,
+				4AEAC6281B1AE7F80050DBD7 /* JFWParserManager.m in Sources */,
 				4ACFBA941AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				4ACFBA791AF3F94400C82325 /* UIViewController+MMDrawerController.m in Sources */,
 				4AD19CE01B08517800BB2A37 /* SuccessStoriesCell.m in Sources */,
@@ -1825,7 +1857,7 @@
 				4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */,
 				4ACFBA741AF3F94400C82325 /* MMTableViewCell.m in Sources */,
 				4A6D150C1AF27D2C003A1708 /* AFURLRequestSerialization.m in Sources */,
-				4AEAC62A1B1AE7F80050DBD7 /* MFWebserviceManager.m in Sources */,
+				4AEAC62A1B1AE7F80050DBD7 /* JFWWebserviceManager.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				4A6D150E1AF27D2C003A1708 /* AFURLSessionManager.m in Sources */,
@@ -1834,7 +1866,7 @@
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
 				4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */,
 				4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */,
-				4AEAC6241B1AE7F80050DBD7 /* MFCachingManager.m in Sources */,
+				4AEAC6241B1AE7F80050DBD7 /* JFWCachingManager.m in Sources */,
 				4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

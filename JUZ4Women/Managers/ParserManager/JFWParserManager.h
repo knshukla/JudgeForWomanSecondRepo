@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class JFWLoginModel;
+@class JFWLeftMenuModel;
 
-@interface MFParserManager : NSObject
+@interface JFWParserManager : NSObject
 
+-(JFWLoginModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
 @end

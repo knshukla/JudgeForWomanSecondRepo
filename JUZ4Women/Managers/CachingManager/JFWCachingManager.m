@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "MFCachingManager.h"
-static MFCachingManager *sharedInstance = nil;
+#import "JFWCachingManager.h"
+static JFWCachingManager *sharedInstance = nil;
 
-@implementation MFCachingManager
+@implementation JFWCachingManager
 
 #pragma mark singleton class method
-+ (MFCachingManager *) getInstance
++ (JFWCachingManager *) getInstance
 {
     @synchronized(self)
     {

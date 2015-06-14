@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 @class MFMediaModal;
 
-@interface MFCachingManager : NSObject
+@interface JFWCachingManager : NSObject
 
 @property (nonatomic ,strong) NSMutableArray *mediaListingArray;
 @property (nonatomic ,strong) MFMediaModal *mediaModalObj;
 
 
-+ (MFCachingManager *) getInstance;
++ (JFWCachingManager *) getInstance;
 + (void) removeInstance;
 @end

@@ -18,7 +18,8 @@
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
 #import "JFWUtilities.h"
-#import "MFWebserviceManager.h"
+#import "JFWWebserviceManager.h"
+#import "JFWLoginModel.h"
 
 @interface JFWLoginViewController ()
 @property (nonatomic,strong) MMDrawerController * drawerController;
@@ -64,14 +65,16 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
-    MFWebserviceManager *webServiceManager = [[MFWebserviceManager alloc]init];
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
    [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal)
     {
-       
+        JFWLoginModel *loginModel = (JFWLoginModel *)modal;
         [self handleLoginResponse:modal];
+        NSLog(@"User name is %@",loginModel.userName);
        
-   } withFailureBlock:^(NSError *error) {
+   } withFailureBlock:^(NSError *error)
+    {
        
    }];
     
