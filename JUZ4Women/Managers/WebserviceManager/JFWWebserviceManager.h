@@ -22,7 +22,7 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestLoginApiWithLoginModal:(UserModel *)loginModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
--(void)requestSignUpApiWithLoginModal:(JFWLoginModel *)loginModal withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+-(void)requestSignUpApiWithUserModal:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 -(void)requestLeftMenuApiWithLeftMenuModel:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 

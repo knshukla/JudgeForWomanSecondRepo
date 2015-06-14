@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "JFWAppConstants.h"
+#import <UIKit/UIKit.h>
 
 @class DateModel;
 
 @interface UserModel : NSObject
 
-@property(nonatomic, strong) NSString *userId;
 @property(nonatomic, strong) NSString *realName;
 
 @property(nonatomic, strong) NSString *displayName;
@@ -30,6 +30,8 @@
 
 @property(nonatomic, strong) NSString *country;
 @property (nonatomic ,strong) NSString *imageUrl;
+
+@property(nonatomic, strong) UIImage *image;
 
 @property (nonatomic,strong) NSString *userName;
 @property (nonatomic,strong) NSString *uId;

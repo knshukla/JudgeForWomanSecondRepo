@@ -16,7 +16,6 @@
     self = [super init];
     if(self)
     {
-        self.userId = userId;
         self.realName = realName;
         self.displayName = displayName;
         self.emailAddress = emailId;
@@ -33,6 +32,7 @@
         self.userTotalComments = commentsCount;
         self.userTotalProfileViews = profileViewsCount;
         self.userTotalPostShares = postShareCount;
+        self.uId = userId;
     }
     return self;
 }

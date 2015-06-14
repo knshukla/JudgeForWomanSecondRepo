@@ -116,6 +116,31 @@
     }];
 
 }
+
+
+-(void)requestSignUpApiWithUserModal:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager getSignUpRequestParameter:userModel];;
+    
+    NSLog(@"Request dict is %@",dataDict);
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleLeftMenuResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+}
+
 - (void)handleLeftMenuResponse:(NSDictionary *)responseDictionary
 {
     JFWParserManager *parserManager = [[JFWParserManager alloc]init];

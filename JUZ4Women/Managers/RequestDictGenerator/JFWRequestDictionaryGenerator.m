@@ -10,6 +10,8 @@
 #import "JFWAppConstants.h"
 #import "JFWLoginModel.h"
 #import "UserModel.h"
+#import "DateModel.h"
+
 @implementation JFWRequestDictionaryGenerator
 
 -(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel
@@ -37,6 +39,62 @@
     return dataDict;
 }
 
+-(NSMutableDictionary *)getSignUpRequestParameter:(UserModel *)userModel
+{
+    if (!userModel) {
+        return nil;
+    }
+    
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    [dataDict setObject:@"registerNewUser" forKey:kRequestType];
+    
+    if (userModel.realName)
+        [dataDict setObject:userModel.realName forKey:kUserName];
+    
+    if (userModel.password)
+        [dataDict setObject:userModel.password forKey:kPassword];
+    
+    if (userModel.displayName)
+        [dataDict setObject:userModel.displayName forKey:kUserAlisName];
+    
+    if (userModel.emailAddress)
+        [dataDict setObject:userModel.emailAddress forKey:kEmail];
+    
+    if (userModel.dateOfBirth)
+    {
+        [dataDict setObject:[NSString stringWithFormat:@"%d-%d-%d",userModel.dateOfBirth.yyyy,userModel.dateOfBirth.mm, userModel.dateOfBirth.dd] forKey:kDateOfBirth];
+    }
+    
+    if (userModel.country)
+        [dataDict setObject:userModel.country forKey:kCountry];
+    
+    if (userModel.city)
+        [dataDict setObject:userModel.city forKey:kCity];
+    
+    if (userModel.signUpOption) {
+        NSString *string = nil;
+        
+        if (userModel.signUpOption == MOBILE)
+            string = @"mobile";
+        else
+            string = @"email";
+        
+        [dataDict setObject:string forKey:kSignUpType];
+    }
+    
+    if (userModel.image)
+    {
+        
+        [dataDict setObject:userModel.image forKey:kProfileImage];
+    }
+    
+    if (userModel.mobileNumber) {
+        [dataDict setObject:userModel.mobileNumber forKey:kPhoneNUmber];
+    }
+    
+    return dataDict;
+}
 -(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel
 {
     NSNumber *postId = [NSNumber numberWithInt:12];
