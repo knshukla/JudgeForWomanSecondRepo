@@ -24,5 +24,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tag3TextFieldObj;
 
+- (IBAction)onSubmitButtonTapped:(id)sender;
 
 @end

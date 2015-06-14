@@ -20,5 +20,6 @@
 
 -(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel;
 
+-(NSMutableDictionary *)createAddFeedRequestDictionary:(JFWFeedsModel *)feedModel;
 
 @end

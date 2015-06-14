@@ -28,6 +28,9 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestAddFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+
+
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;
 

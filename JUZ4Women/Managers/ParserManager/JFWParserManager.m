@@ -39,7 +39,7 @@
     
     for(NSDictionary *dict in dataArray)
     {
-        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:[dict objectForKey:@"tags"] withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"]];
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:[dict objectForKey:@"tags"] withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
         
         [feedsArray addObject:feedModel];
     }

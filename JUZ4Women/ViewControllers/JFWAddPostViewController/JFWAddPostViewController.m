@@ -8,6 +8,8 @@
 
 #import "JFWAddPostViewController.h"
 #import "JFWUtilities.h"
+#import "JFWWebserviceManager.h"
+#import "JFWFeedsModel.h"
 
 @interface JFWAddPostViewController ()
 
@@ -92,4 +94,18 @@
     }
 }
 
+- (IBAction)onSubmitButtonTapped:(id)sender
+{
+    JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:1 withLikeCount:0.0 withDislikeCount:0.0 withcommentsCount:0.0 withPostTitle:self.titleTextFieldObj.text withTags:nil withUserAvatorUrl:nil withTag1:self.tag1TextFieldObj.text withTag2:self.tag2TextFieldObj.text withTag3:self.tag3TextFieldObj.text withPostDescription:self.textViewObj.text];
+    
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestAddFeedApiWithFeedModel:feedModel withSuccessBlock:^(id dataArray)
+     {
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
 @end
