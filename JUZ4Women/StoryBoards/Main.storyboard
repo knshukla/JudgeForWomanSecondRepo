@@ -1833,10 +1833,42 @@
                     <view key="view" contentMode="scaleToFill" id="zbI-91-bFw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="12T-3W-gLa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="668-lY-x6Y"/>
+                                    <constraint firstAttribute="width" constant="320" id="pro-cf-29a"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBU-fL-ouz">
+                                <rect key="frame" x="51" y="123" width="219" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg2-ad-e4c">
+                                <rect key="frame" x="84" y="269" width="133" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmitButtonTapped:" destination="eLb-Mn-DG1" eventType="touchUpInside" id="I8T-Ma-Sbg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="12T-3W-gLa" firstAttribute="leading" secondItem="zbI-91-bFw" secondAttribute="leadingMargin" constant="-16" id="4X3-DA-wLC"/>
+                            <constraint firstItem="12T-3W-gLa" firstAttribute="top" secondItem="zbI-91-bFw" secondAttribute="topMargin" id="HWQ-EN-pfq"/>
+                            <constraint firstItem="ohi-c8-jro" firstAttribute="top" secondItem="12T-3W-gLa" secondAttribute="bottom" id="Nhj-0j-4ii"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="12T-3W-gLa" secondAttribute="trailing" constant="-16" id="biv-kz-mRH"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="sBU-fL-ouz" id="WYU-48-91f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isj-Wr-qVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

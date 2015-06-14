@@ -47,6 +47,8 @@ static NSString * const kUserTotalPost = @"user_total_posts";
 static NSString * const kUserTotalComments = @"user_total_comments";
 static NSString * const kUserTotalProfileViews = @"user_profile_views";
 static NSString * const kUserTotalPostShares = @"user_total_post_shares";
+static NSString * const kMenuUserName = @"user_name";
+
 
 
 #define kFontSize18           18.0
