@@ -30,6 +30,7 @@
 #import "JFWSuccessStoriesViewController.h"
 #import "JFWNotificationViewController.h"
 #import "JFWWebserviceManager.h"
+#import "JFWLeftMenuModel.h"
 
 @interface IGLeftMenuViewController()
 {
@@ -70,15 +71,30 @@
 {
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
-    [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal) {
-        
+    [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal)
+    {
+        JFWLeftMenuModel *leftMenuModel = (JFWLeftMenuModel *)modal;
+        [self updateView:leftMenuModel];
     } withFailureBlock:^(NSError *error) {
         
     }];
-    
-    
+}
+
+-(void)updateView:(JFWLeftMenuModel *)leftMenuModel
+{
+    self.nameLableObj.text = leftMenuModel.userName;
+    self.emailLabelObj.text = leftMenuModel.userAlisName;
+    NSString *postText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalPostCount];
+    NSString *commentsViewText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalComments];
+    NSString *profileViewText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalProfileViews];
+    NSString *postSharedText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalPostShares];
+    self.postLabel.text = postText;
+    self.profileViewLabel.text = profileViewText;
+    self.commentsLabel.text = commentsViewText;
+    self.postSharedLabel.text = postSharedText;
 
 }
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -94,17 +94,12 @@
 
 -(void)requestLeftMenuApiWithLeftMenuModel:(JFWLeftMenuModel *)leftMenuModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
 {
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     
-    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
-    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
-    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
-
-    
-    [dataDict setObject:@"getUserDetailsForMenu" forKey:kRequestType];
-    [dataDict setObject:userName forKey:kUserName];
-    [dataDict setObject:uid forKey:kUid];
+    NSMutableDictionary *dataDict = [requestGeneratorManager createLeftMenuRequestDictionary:leftMenuModel];;
     
     NSLog(@"Request dict is %@",dataDict);
 
@@ -122,6 +117,9 @@
 }
 - (void)handleLeftMenuResponse:(NSDictionary *)responseDictionary
 {
+    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+   JFWLeftMenuModel *leftMenuModel = [parserManager parseLeftMenuResponseWith:responseDictionary];
+    self.successBlock(leftMenuModel);
     NSLog(@"Response dict is %@",responseDictionary);
 }
 

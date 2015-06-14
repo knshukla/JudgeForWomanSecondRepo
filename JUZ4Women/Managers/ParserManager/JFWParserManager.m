@@ -9,7 +9,7 @@
 #import "JFWParserManager.h"
 #import "JFWLoginModel.h"
 #import "JFWAppConstants.h"
-
+#import "JFWLeftMenuModel.h"
 @implementation JFWParserManager
 
 -(JFWLoginModel *)parseLoginResponseWith:(NSDictionary *)responseDict
@@ -18,6 +18,13 @@
     
     return loginModel;
 
+}
+
+-(JFWLeftMenuModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
+{
+    JFWLeftMenuModel *leftMenuModel = [[JFWLeftMenuModel alloc]initWithUserAlisName:[responseDict objectForKey:kUserAlisName] withUserName:[responseDict objectForKey:kUserName] withSuccess:[responseDict objectForKey:kSuccess] withUserPostCount:(int)[responseDict objectForKey:kUserTotalPost] withUserCommentsCount:(int)[responseDict objectForKey:kUserTotalComments] withProfileView:(int)[responseDict objectForKey:kUserTotalProfileViews] withPostCount:(int)[responseDict objectForKey:kUserTotalPostShares]];
+    
+    return leftMenuModel;
 }
 
 @end

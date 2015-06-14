@@ -23,6 +23,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *emailLabelObj;
 
+@property (weak, nonatomic) IBOutlet UILabel *postLabel;
+@property (weak, nonatomic) IBOutlet UILabel *profileViewLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *postSharedLabel;
+
 
 
 @end

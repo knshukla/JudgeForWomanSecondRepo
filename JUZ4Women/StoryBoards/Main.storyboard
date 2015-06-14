@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -177,9 +177,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-RB-1bs">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-RB-1bs">
+                                <rect key="frame" x="0.0" y="198" width="280" height="370"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8jo-fH-CZo"/>
+                                    <constraint firstAttribute="height" constant="370" id="Ebj-RU-hXC"/>
+                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftMenuCell" textLabel="Dcf-Lf-kn4" rowHeight="40" style="IBUITableViewCellStyleDefault" id="Pcg-wb-oR8">
@@ -346,6 +350,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Je-RB-1bs" secondAttribute="trailing" constant="40" id="GYN-Ks-Hnt"/>
+                            <constraint firstItem="4Je-RB-1bs" firstAttribute="leading" secondItem="sJs-50-Sb7" secondAttribute="leading" id="GyG-EK-nnn"/>
+                            <constraint firstItem="YTR-cf-zm7" firstAttribute="top" secondItem="4Je-RB-1bs" secondAttribute="bottom" id="eUw-2T-G2x"/>
+                            <constraint firstItem="4Je-RB-1bs" firstAttribute="top" secondItem="nKR-cL-QAB" secondAttribute="bottom" constant="178" id="v5e-RS-vnd"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Qp6-PA-ANz"/>
@@ -360,15 +370,19 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="commentsLabel" destination="Kmk-4K-mfW" id="r9d-gK-Cxw"/>
                         <outlet property="emailLabelObj" destination="4c8-Dp-BYY" id="EZo-or-ay7"/>
                         <outlet property="nameLableObj" destination="2ud-wd-d7r" id="hhj-Pq-Vgt"/>
+                        <outlet property="postLabel" destination="66r-o8-qjL" id="HUJ-fv-vzb"/>
+                        <outlet property="postSharedLabel" destination="d6n-5s-qrz" id="Iid-B2-h4r"/>
                         <outlet property="profileImageView" destination="F4c-Xd-HJQ" id="EbE-3x-J0o"/>
+                        <outlet property="profileViewLabel" destination="wFp-GQ-SFg" id="gMX-95-EfL"/>
                         <outlet property="tableView" destination="4Je-RB-1bs" id="W8u-Yg-52Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo1-Js-mQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-490.5" y="-287.25"/>
+            <point key="canvasLocation" x="-491" y="-288"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="x3u-xG-XD8">
@@ -574,10 +588,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-ZK-Fef">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTP-bq-Asc">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTP-bq-Asc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="Wuh-5q-Q4w"/>

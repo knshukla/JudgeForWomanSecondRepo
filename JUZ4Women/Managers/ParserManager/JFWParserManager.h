@@ -13,4 +13,6 @@
 @interface JFWParserManager : NSObject
 
 -(JFWLoginModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
+-(JFWLeftMenuModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
+
 @end

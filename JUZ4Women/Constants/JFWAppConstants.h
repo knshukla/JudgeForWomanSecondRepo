@@ -31,16 +31,22 @@ static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
 static NSString * const kHelveticaNeue = @"HelveticaNeue";
 
 //Webservice constants
-//
+
+//Login
 static NSString * const kRequestType = @"requestType";
 static NSString * const kUserName = @"username";
 static NSString * const kUserTypeId = @"user_type_id";
 static NSString * const kUid = @"uid";
 static NSString * const kPassword = @"password";
 
-//
 
-
+//LeftMenu
+static NSString * const kSuccess = @"success";
+static NSString * const kUserAlisName = @"user_alias_name";
+static NSString * const kUserTotalPost = @"user_total_posts";
+static NSString * const kUserTotalComments = @"user_total_comments";
+static NSString * const kUserTotalProfileViews = @"user_profile_views";
+static NSString * const kUserTotalPostShares = @"user_total_post_shares";
 
 
 #define kFontSize18           18.0

@@ -13,11 +13,11 @@
 @property (assign) BOOL success;
 @property (nonatomic) NSString *userAlisName;
 @property (nonatomic) NSString *userName;
-@property (nonatomic) int userTotalPostCount;
-@property (nonatomic) int userTotalComments;
-@property (nonatomic) int userTotalProfileViews;
-@property (nonatomic) int userTotalPostShares;
+@property (assign) int userTotalPostCount;
+@property (assign) int userTotalComments;
+@property (assign) int userTotalProfileViews;
+@property (assign) int userTotalPostShares;
 
--(id)initWithUserAlisName:(NSString *)userAlisName withUserName:(NSString *)userName withSuccess:(BOOL)success withUserPostCount:(int)postCount withUserCommentsCount:(int) commentCount withProfileView:(int) profileViews withPostCount:(int)postCount;
+-(id)initWithUserAlisName:(NSString *)userAlisName withUserName:(NSString *)userName withSuccess:(BOOL)success withUserPostCount:(int)postCount withUserCommentsCount:(int) commentCount withProfileView:(int) profileViews withPostCount:(int)postShareCount;
 
 @end

@@ -22,4 +22,17 @@
     return dataDict;
 }
 
+-(NSMutableDictionary *)createLeftMenuRequestDictionary:(JFWLeftMenuModel *)leftMenuModel
+{
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    
+    [dataDict setObject:@"getUserDetailsForMenu" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+
+    return dataDict;
+}
 @end
