@@ -10,21 +10,24 @@
 #import "JFWLoginModel.h"
 #import "JFWAppConstants.h"
 #import "JFWLeftMenuModel.h"
+#import "UserModel.h"
+
 @implementation JFWParserManager
 
--(JFWLoginModel *)parseLoginResponseWith:(NSDictionary *)responseDict
+-(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict
 {
-    JFWLoginModel *loginModel = [[JFWLoginModel alloc]initWithUserName:[responseDict objectForKey:kUserName] withPassword:nil withUid:[responseDict objectForKey:kUid] withUserTypeId:(int)[responseDict objectForKey:kUserTypeId]];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:[responseDict objectForKey:kUid] withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kUserName] withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0];
     
-    return loginModel;
+    return userModel;
 
 }
 
--(JFWLeftMenuModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
+-(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
 {
-    JFWLeftMenuModel *leftMenuModel = [[JFWLeftMenuModel alloc]initWithUserAlisName:[responseDict objectForKey:kUserAlisName] withUserName:[responseDict objectForKey:kMenuUserName] withSuccess:[responseDict objectForKey:kSuccess] withUserPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withUserCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileView:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
+
     
-    return leftMenuModel;
+    return userModel;
 }
 
 @end

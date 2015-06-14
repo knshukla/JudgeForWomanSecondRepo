@@ -20,6 +20,7 @@
 #import "JFWUtilities.h"
 #import "JFWWebserviceManager.h"
 #import "JFWLoginModel.h"
+#import "UserModel.h"
 
 @interface JFWLoginViewController ()
 @property (nonatomic,strong) MMDrawerController * drawerController;
@@ -65,13 +66,15 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:nil withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0];
+    
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
-   [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal)
+   [webServiceManager requestLoginApiWithLoginModal:userModel withSuccessBlock:^(id modal)
     {
-        JFWLoginModel *loginModel = (JFWLoginModel *)modal;
+        UserModel *userModel = (UserModel *)modal;
         [self handleLoginResponse:modal];
-        NSLog(@"User name is %@",loginModel.userName);
+        NSLog(@"User name is %@",userModel.userName);
        
    } withFailureBlock:^(NSError *error)
     {
@@ -81,9 +84,8 @@
 
 }
 
--(void)handleLoginResponse:(id)model
+-(void)handleLoginResponse:(UserModel *)model
 {
-    JFWLoginModel *loginModel = (JFWLoginModel *)model;
     [self pushHomeView];
 }
 

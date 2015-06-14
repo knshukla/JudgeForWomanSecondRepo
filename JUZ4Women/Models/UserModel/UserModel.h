@@ -32,6 +32,8 @@
 @property (nonatomic ,strong) NSString *imageUrl;
 
 @property (nonatomic,strong) NSString *userName;
+@property (nonatomic,strong) NSString *uId;
+
 
 @property (assign) long userTotalPostCount;
 @property (assign) long userTotalComments;

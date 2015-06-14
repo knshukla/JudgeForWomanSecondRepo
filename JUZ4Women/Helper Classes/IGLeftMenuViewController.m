@@ -31,7 +31,7 @@
 #import "JFWNotificationViewController.h"
 #import "JFWWebserviceManager.h"
 #import "JFWLeftMenuModel.h"
-
+#import "UserModel.h"
 @interface IGLeftMenuViewController()
 {
     NSMutableArray *menuItemArray;
@@ -73,21 +73,21 @@
     
     [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal)
     {
-        JFWLeftMenuModel *leftMenuModel = (JFWLeftMenuModel *)modal;
-        [self updateView:leftMenuModel];
+        UserModel *userModel = (UserModel *)modal;
+        [self updateView:userModel];
     } withFailureBlock:^(NSError *error) {
         
     }];
 }
 
--(void)updateView:(JFWLeftMenuModel *)leftMenuModel
+-(void)updateView:(UserModel *)userModel
 {
-    self.nameLableObj.text = leftMenuModel.userName;
-    self.emailLabelObj.text = leftMenuModel.userAlisName;
-    NSString *postText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalPostCount];
-    NSString *commentsViewText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalComments];
-    NSString *profileViewText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalProfileViews];
-    NSString *postSharedText = [NSString stringWithFormat:@"%d",leftMenuModel.userTotalPostShares];
+    self.nameLableObj.text = userModel.userName;
+    self.emailLabelObj.text = userModel.displayName;
+    NSString *postText = [NSString stringWithFormat:@"%ld",userModel.userTotalPostCount];
+    NSString *commentsViewText = [NSString stringWithFormat:@"%ld",userModel.userTotalComments];
+    NSString *profileViewText = [NSString stringWithFormat:@"%ld",userModel.userTotalProfileViews];
+    NSString *postSharedText = [NSString stringWithFormat:@"%ld",userModel.userTotalPostShares];
     self.postLabel.text = postText;
     self.profileViewLabel.text = profileViewText;
     self.commentsLabel.text = commentsViewText;

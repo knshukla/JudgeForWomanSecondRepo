@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
-
+@class UserModel;
 @interface JFWRequestDictionaryGenerator : NSObject
 
--(NSMutableDictionary *)createLoginRequestDictionary:(JFWLoginModel *)loginModel;
+-(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel;
 
--(NSMutableDictionary *)createLeftMenuRequestDictionary:(JFWLeftMenuModel *)leftMenuModel;
+-(NSMutableDictionary *)createLeftMenuRequestDictionary:(UserModel *)userModel;
 
 @end

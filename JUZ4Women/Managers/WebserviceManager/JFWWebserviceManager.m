@@ -14,7 +14,7 @@
 #import "JFWAppConstants.h"
 #import "JFWRequestDictionaryGenerator.h"
 #import "JFWParserManager.h"
-
+#import "UserModel.h"
 @interface JFWWebserviceManager()
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager *networkManager;
@@ -66,19 +66,19 @@
     
     [[NSUserDefaults standardUserDefaults]setObject:[responseDictionary objectForKey:kUserName] forKey:kUserName];
 
-    JFWLoginModel *loginModel = [parserManager parseLoginResponseWith:responseDictionary];
+    UserModel *userModel = [parserManager parseLoginResponseWith:responseDictionary];
     
-    self.successBlock(loginModel);
+    self.successBlock(userModel);
 }
 
--(void)requestLoginApiWithLoginModal:(JFWLoginModel *)loginModal withSuccessBlock:(void (^)(id modal))successBlock withFailureBlock:(void (^) (NSError *error))failureBlock
+-(void)requestLoginApiWithLoginModal:(UserModel *)userModel withSuccessBlock:(void (^)(id modal))successBlock withFailureBlock:(void (^) (NSError *error))failureBlock
 {
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     
     JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
     
-    NSMutableDictionary *dataDict = [requestGeneratorManager createLoginRequestDictionary:loginModal];
+    NSMutableDictionary *dataDict = [requestGeneratorManager createLoginRequestDictionary:userModel];
     
         
         [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -92,14 +92,14 @@
     
 }
 
--(void)requestLeftMenuApiWithLeftMenuModel:(JFWLeftMenuModel *)leftMenuModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+-(void)requestLeftMenuApiWithLeftMenuModel:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
 {
     JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
 
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     
-    NSMutableDictionary *dataDict = [requestGeneratorManager createLeftMenuRequestDictionary:leftMenuModel];;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createLeftMenuRequestDictionary:userModel];;
     
     NSLog(@"Request dict is %@",dataDict);
 
@@ -118,8 +118,8 @@
 - (void)handleLeftMenuResponse:(NSDictionary *)responseDictionary
 {
     JFWParserManager *parserManager = [[JFWParserManager alloc]init];
-   JFWLeftMenuModel *leftMenuModel = [parserManager parseLeftMenuResponseWith:responseDictionary];
-    self.successBlock(leftMenuModel);
+   UserModel *userModel = [parserManager parseLeftMenuResponseWith:responseDictionary];
+    self.successBlock(userModel);
     NSLog(@"Response dict is %@",responseDictionary);
 }
 
