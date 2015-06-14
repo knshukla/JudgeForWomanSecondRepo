@@ -178,6 +178,8 @@
 		4A76DA4F1AFF9E1F00BCFFEE /* suggestAdminPost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */; };
 		4A76DA501AFF9E1F00BCFFEE /* titleBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */; };
 		4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */; };
+		4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */; };
+		4AB64C5E1B2BDDA200251E52 /* JFWFeedsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */; };
 		4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3B1AF3F94300C82325 /* MainViewController.m */; };
 		4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */; };
 		4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3E1AF3F94300C82325 /* MMCenterTableViewCell.m */; };
@@ -481,6 +483,8 @@
 		4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestAdminPost@2x.png"; sourceTree = "<group>"; };
 		4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleBox@2x.png"; sourceTree = "<group>"; };
 		4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeyourmind@2x.png"; sourceTree = "<group>"; };
+		4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFeedsModel.h; sourceTree = "<group>"; };
+		4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFeedsModel.m; sourceTree = "<group>"; };
 		4ACFBA3A1AF3F94300C82325 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4ACFBA3B1AF3F94300C82325 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -1036,6 +1040,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AB64C5A1B2BDD8300251E52 /* FeedsModel */,
 				4AEAC62F1B1B06AA0050DBD7 /* LoginModel */,
 				4AEAC6301B1B06AA0050DBD7 /* SignUpModel */,
 				4AD2B2361AF54F790089DB7F /* MenuItemModel */,
@@ -1118,6 +1123,15 @@
 				4A76DA111AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m */,
 			);
 			path = JFWForgotPasswordViewController;
+			sourceTree = "<group>";
+		};
+		4AB64C5A1B2BDD8300251E52 /* FeedsModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */,
+				4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */,
+			);
+			path = FeedsModel;
 			sourceTree = "<group>";
 		};
 		4ACFBA391AF3F94300C82325 /* DrawerManager */ = {
@@ -1473,6 +1487,7 @@
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
 				4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
+				4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
@@ -1761,6 +1776,7 @@
 				4A76DA131AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m in Sources */,
 				4A6D15091AF27D2C003A1708 /* AFNetworkReachabilityManager.m in Sources */,
 				4A6D150D1AF27D2C003A1708 /* AFURLResponseSerialization.m in Sources */,
+				4AB64C5E1B2BDDA200251E52 /* JFWFeedsModel.m in Sources */,
 				4AD19CD91B08513100BB2A37 /* JFWVideoCell.m in Sources */,
 				4ACFBA961AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				4AE103371B25D23D0035C0A6 /* PopUpView.m in Sources */,
