@@ -10,4 +10,16 @@
 
 @implementation DateModel
 
+-(id)initWithDay:(int )dd month:(int )mm andYear:(int )yy
+{
+    self = [super init];
+    if(self)
+    {
+        self.dd = dd;
+        self.mm = mm;
+        self.yyyy = yy;
+    }
+    return self;
+}
+
 @end

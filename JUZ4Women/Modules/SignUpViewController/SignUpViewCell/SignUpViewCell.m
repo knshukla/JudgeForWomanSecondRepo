@@ -10,7 +10,8 @@
 
 #import "JFWUtilities.h"
 #import "ImageContstants.h"
-
+#import "UserModel.h"
+#import "DateModel.h"
 
 @implementation SignUpViewCell
 
@@ -286,10 +287,7 @@
 {
     BOOL mode = [self checkAllMandatoryFieldsFilled];
     
-//    if (textField.text.length + string.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
-//    {
-//        mode = NO;
-//    }
+    [self fillUserModel];
 
     if ([self.delegate respondsToSelector:@selector(disableNextButton:)])
     {
@@ -308,11 +306,15 @@
 
 - (IBAction)emailButtonTapped:(id)sender
 {
+    self.user.signUpOption = EMAIL;
+    
     [self signUpOptionDidSelect:EMAIL];
 }
 
 - (IBAction)mobileButtonTapped:(id)sender
 {
+    self.user.signUpOption = MOBILE;
+    
     [self signUpOptionDidSelect:MOBILE];
 }
 
@@ -324,7 +326,46 @@
     }
 }
 
-
+-(void)fillUserModel
+{
+    switch (self.signUpScreenType)
+    {
+        case DATE_OF_BIRTH_SCREEN:
+            
+            if (!self.user.dateOfBirth) {
+                self.user.dateOfBirth = [[DateModel alloc]initWithDay:[dateTextField.text intValue] month:[monthTextField.text intValue] andYear:[yearTextField.text intValue]];
+            }
+            
+            self.user.dateOfBirth.dd = [dateTextField.text intValue];
+            self.user.dateOfBirth.mm = [monthTextField.text intValue];
+            self.user.dateOfBirth.yyyy = [yearTextField.text intValue];
+            
+            break;
+            
+        case USERNAME_PASSWORD_SCREEN:
+            
+            self.user.emailAddress = emailTextField.text;
+            self.user.password = passwordTextField.text;
+            
+            break;
+            
+        case SECURITY_CODE_SCREEN:
+            
+            self.user.verificationCode = [NSNumber numberWithInt:[securityCodeTextField.text intValue]];
+            
+            break;
+            
+        case LOCATION_SCREEN:
+            
+            self.user.city = cityTextField.text;
+            self.user.country = countryTextField.text;
+            
+            break;
+            
+        default:
+            break;
+    }
+}
 @end
 
 @implementation UITextField (CUSTOM_BOUNDS)

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JFWPollsViewController : UIViewController
+#import "JFWPollsView.h"
+@interface JFWPollsViewController : UIViewController<JFWPollsViewDelegate>
+{
+    JFWPollsView *jFWPollsViewObj;
+}
 
 @end

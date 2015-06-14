@@ -14,4 +14,6 @@
 @property(nonatomic, assign) int mm;
 @property(nonatomic, assign) int yyyy;
 
+-(id)initWithDay:(int )dd month:(int )mm andYear:(int )yy;
+
 @end

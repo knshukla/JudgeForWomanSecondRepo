@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "JFWAppConstants.h"
+@class UserModel;
 
 @protocol  SignUpViewCellDelegate <NSObject>
 
@@ -62,6 +63,7 @@
 @property(nonatomic, assign)SignUpScreenType signUpScreenType;
 @property(nonatomic, assign)SignUpOption signUpOption;
 
+@property(nonatomic, retain) UserModel *user;
 
 -(void)setDataOnCell;
 -(BOOL)checkAllMandatoryFieldsFilled;

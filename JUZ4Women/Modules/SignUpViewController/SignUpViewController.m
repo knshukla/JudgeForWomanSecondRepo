@@ -28,6 +28,8 @@
 
 #import "JFWAppConstants.h"
 
+#import "UserModel.h"
+
 @interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SignUpViewCellDelegate, SignUpViewDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
@@ -39,6 +41,8 @@
     SignUpViewCell *signUpViewCellObj;
     
     SignUpOption signUpOption;
+    
+    UserModel *user;
 }
 
 @property (nonatomic,strong) MMDrawerController * drawerController;
@@ -205,7 +209,7 @@
        
         return;
     }
-    
+        
     indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
     
     [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
@@ -379,6 +383,8 @@
 
 -(void)signUpButtonTapped:(NSString *)realName andDisplayName:(NSString *)displayName
 {
-    [self loadHomeViewController];
+    user.realName = realName;
+    user.displayName = displayName;
 }
+
 @end

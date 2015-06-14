@@ -109,6 +109,12 @@
 		38CCE6271B2D8FAB00D51D68 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE6251B2D8FAB00D51D68 /* UserModel.m */; };
 		38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE6291B2D913C00D51D68 /* DateModel.h */; };
 		38CCE62C1B2D913C00D51D68 /* DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE62A1B2D913C00D51D68 /* DateModel.m */; };
+		38CCE6331B2DD9BF00D51D68 /* JFWPollCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE62D1B2DD9BF00D51D68 /* JFWPollCell.h */; };
+		38CCE6341B2DD9BF00D51D68 /* JFWPollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE62E1B2DD9BF00D51D68 /* JFWPollCell.m */; };
+		38CCE6351B2DD9BF00D51D68 /* JFWPollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE62F1B2DD9BF00D51D68 /* JFWPollCell.xib */; };
+		38CCE6361B2DD9BF00D51D68 /* JFWPollsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE6301B2DD9BF00D51D68 /* JFWPollsView.h */; };
+		38CCE6371B2DD9BF00D51D68 /* JFWPollsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE6311B2DD9BF00D51D68 /* JFWPollsView.m */; };
+		38CCE6381B2DD9BF00D51D68 /* JFWPollsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6321B2DD9BF00D51D68 /* JFWPollsView.xib */; };
 		4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */; };
 		4A176D151B08585A006E4836 /* JFWLegalAdviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */; };
 		4A176D161B08585A006E4836 /* JFWLegalAdviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */; };
@@ -398,6 +404,12 @@
 		38CCE6251B2D8FAB00D51D68 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		38CCE6291B2D913C00D51D68 /* DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateModel.h; sourceTree = "<group>"; };
 		38CCE62A1B2D913C00D51D68 /* DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateModel.m; sourceTree = "<group>"; };
+		38CCE62D1B2DD9BF00D51D68 /* JFWPollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPollCell.h; sourceTree = "<group>"; };
+		38CCE62E1B2DD9BF00D51D68 /* JFWPollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWPollCell.m; sourceTree = "<group>"; };
+		38CCE62F1B2DD9BF00D51D68 /* JFWPollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWPollCell.xib; sourceTree = "<group>"; };
+		38CCE6301B2DD9BF00D51D68 /* JFWPollsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPollsView.h; sourceTree = "<group>"; };
+		38CCE6311B2DD9BF00D51D68 /* JFWPollsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWPollsView.m; sourceTree = "<group>"; };
+		38CCE6321B2DD9BF00D51D68 /* JFWPollsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWPollsView.xib; sourceTree = "<group>"; };
 		4A176D111B08585A006E4836 /* JFWLegalAdviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLegalAdviceCell.h; sourceTree = "<group>"; };
 		4A176D121B08585A006E4836 /* JFWLegalAdviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLegalAdviceCell.m; sourceTree = "<group>"; };
 		4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWLegalAdviceCell.xib; sourceTree = "<group>"; };
@@ -1396,6 +1408,12 @@
 		4AD2B23D1AF558C70089DB7F /* JFWPollsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				38CCE62D1B2DD9BF00D51D68 /* JFWPollCell.h */,
+				38CCE62E1B2DD9BF00D51D68 /* JFWPollCell.m */,
+				38CCE62F1B2DD9BF00D51D68 /* JFWPollCell.xib */,
+				38CCE6301B2DD9BF00D51D68 /* JFWPollsView.h */,
+				38CCE6311B2DD9BF00D51D68 /* JFWPollsView.m */,
+				38CCE6321B2DD9BF00D51D68 /* JFWPollsView.xib */,
 				4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */,
 				4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */,
 			);
@@ -1570,9 +1588,11 @@
 				4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */,
 				4A176D1F1B08D2EC006E4836 /* JFWAddVideoViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
+				38CCE6331B2DD9BF00D51D68 /* JFWPollCell.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
 				38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */,
+				38CCE6361B2DD9BF00D51D68 /* JFWPollsView.h in Headers */,
 				4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */,
 				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
@@ -1714,6 +1734,7 @@
 				4A76DA211AFF441600BCFFEE /* usernameBackground@2x.png in Resources */,
 				381C744F1AF53C82003290CF /* facebook_icon@2x.png in Resources */,
 				4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */,
+				38CCE6351B2DD9BF00D51D68 /* JFWPollCell.xib in Resources */,
 				381C74641AF53C82003290CF /* products_icon@2x.png in Resources */,
 				4A76DA361AFF49EF00BCFFEE /* mailBackground@2x.png in Resources */,
 				4AE103381B25D23D0035C0A6 /* PopUpView.xib in Resources */,
@@ -1808,6 +1829,7 @@
 				4A76DA1B1AFF441600BCFFEE /* facebookIcon@2x.png in Resources */,
 				381C74791AF53C82003290CF /* upload_medium_icon_selected@2x.png in Resources */,
 				4ACFBAA71AF3FDE700C82325 /* IGHomeViewCellTableViewCell.xib in Resources */,
+				38CCE6381B2DD9BF00D51D68 /* JFWPollsView.xib in Resources */,
 				381C74541AF53C82003290CF /* inspried_medium_icon_selected@2x.png in Resources */,
 				381C74461AF53C82003290CF /* dislike_medium_icon_selected@2x.png in Resources */,
 				4AE310891AF67C4B00D1E343 /* JFWFilterTableViewCell.xib in Resources */,
@@ -1898,10 +1920,12 @@
 				3873FF141AFF6A9800E5E680 /* ImageContstants.m in Sources */,
 				4ACFBA9D1AF3FD3600C82325 /* LeftMenuCellTableViewCell.m in Sources */,
 				4A6D15111AF27D2C003A1708 /* UIAlertView+AFNetworking.m in Sources */,
+				38CCE6341B2DD9BF00D51D68 /* JFWPollCell.m in Sources */,
 				4ACFBA6F1AF3F94400C82325 /* MMExampleViewController.m in Sources */,
 				38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */,
 				4ACFBA711AF3F94400C82325 /* MMNavigationController.m in Sources */,
 				4AD2B2501AF559170089DB7F /* JFWPostViewController.m in Sources */,
+				38CCE6371B2DD9BF00D51D68 /* JFWPollsView.m in Sources */,
 				4A176D201B08D2EC006E4836 /* JFWAddVideoViewController.m in Sources */,
 				4ACFBA951AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				4A2EE4DA1B0799100078E322 /* JFWSuccessStoriesViewController.m in Sources */,
