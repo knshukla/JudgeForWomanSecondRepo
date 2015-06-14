@@ -29,6 +29,7 @@
 #import "JFWLegalAdviseViewController.h"
 #import "JFWSuccessStoriesViewController.h"
 #import "JFWNotificationViewController.h"
+#import "MFWebserviceManager.h"
 
 @interface IGLeftMenuViewController()
 {
@@ -59,8 +60,24 @@
     
     self.profileImageView.layer.cornerRadius = 25;
     self.profileImageView.layer.masksToBounds = YES;
+    
+    [self fetchLeftMenuDetails];
+    
 }
 
+-(void)fetchLeftMenuDetails
+{
+    MFWebserviceManager *webServiceManager = [[MFWebserviceManager alloc]init];
+    
+    [webServiceManager requestLoginApiWithLoginModal:nil withSuccessBlock:^(id modal) {
+        
+        
+        
+    } withFailureBlock:^(NSError *error) {
+        
+    }];
+
+}
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

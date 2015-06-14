@@ -10,6 +10,8 @@
 #import "MFLibraryConstants.h"
 #import "AFNetworking.h"
 #import "UIKit+AFNetworking.h"
+#import "JFWLoginModel.h"
+#import "JFWAppConstants.h"
 
 //#import "MFErrorHandler.h"
 //#import "MFMedia.h"
@@ -63,27 +65,12 @@
 
 
 
-- (void)requestMediaListData:(NSString *)mediaApiString WithSuccessBlock:(void (^)(MFMediaModal *mediaArray))successBlock WithFailureBlock:(void (^)(NSError *error))failureBlock
-{
-    //NSString *apiString = @"api/listVideo?items_per_page=4&page=0";
-     NSString *urlString = [NSString stringWithFormat:@"%@%@",kBaseUrl,mediaApiString];
-    
-    self.successBlock = successBlock;
-    self.failureBlock = failureBlock;
-    
-    [self getApiData:mediaApiString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //API successful
-        [self handleReceviedResponse:responseObject];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //API failed
-        self.failureBlock(error);
-    }];
-
-}
 
 - (void)handleReceviedResponse:(NSDictionary *)responseDictionary
 {
-    //[self parseVideoList:responseDictionary];
+    JFWLoginModel *loginModel = [[JFWLoginModel alloc]initWithUserName:[responseDictionary objectForKey:kUserName] withPassword:nil withUid:[responseDictionary objectForKey:kUid] withUserTypeId:(int)[responseDictionary objectForKey:kUserTypeId]];
+    
+    self.successBlock(loginModel);
 }
 
 //- (void)parseVideoList:(NSDictionary *)responseDictionary
@@ -190,7 +177,7 @@
     {
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         
-        [self postApiData:kBaseUrl parameters:jsonString success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
             //API successful
             [self handleReceviedResponse:responseObject];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

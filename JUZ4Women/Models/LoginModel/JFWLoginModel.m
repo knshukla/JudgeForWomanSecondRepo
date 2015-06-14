@@ -10,13 +10,15 @@
 
 @implementation JFWLoginModel
 
--(id)initWithUserName:(NSString *)userName withPassword:(NSString *)password
+-(id)initWithUserName:(NSString *)userName withPassword:(NSString *)password withUid:(NSString *)uid withUserTypeId:(int)userTypeId
 {
     self = [super init];
     if(self)
     {
         self.userName = userName;
         self.password = password;
+        self.uid = uid;
+        self.userTypeId = userTypeId;
     }
     return self;
 }

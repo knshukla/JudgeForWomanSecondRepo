@@ -32,7 +32,7 @@ typedef void(^CompletionHandlerBlock)(NSMutableArray*, NSError*);
 //static NSString * const kBaseUrl = @"http://riaus.pp.mediafoundry.com.au/";
 
 //Production server environment
-static NSString * const kBaseUrl = @"http://104.236.86.49/webservice.php";
+//static NSString * const kBaseUrl = @"http://104.236.86.49/webservice.php";
 
 //API names
 #define kPageSize   10

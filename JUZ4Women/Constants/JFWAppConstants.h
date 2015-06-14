@@ -30,6 +30,12 @@ static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
 //Font related constants
 static NSString * const kHelveticaNeue = @"HelveticaNeue";
 
+//Webservice constants
+static NSString * const kUserName = @"username";
+static NSString * const kUserTypeId = @"user_type_id";
+static NSString * const kUid = @"uid";
+
+
 
 
 #define kFontSize18           18.0
