@@ -10,7 +10,7 @@
 
 @implementation JFWLeftMenuModel
 
--(id)initWithUserAlisName:(NSString *)userAlisName withUserName:(NSString *)userName withSuccess:(BOOL)success withUserPostCount:(int)postCount withUserCommentsCount:(int) commentCount withProfileView:(int) profileViews withPostShare:(int)postShare
+-(id)initWithUserAlisName:(NSString *)userAlisName withUserName:(NSString *)userName withSuccess:(BOOL)success withUserPostCount:(long)postCount withUserCommentsCount:(long) commentCount withProfileView:(long) profileViews withPostCount:(long)postShareCount
 {
     self = [super init];
     if(self)
@@ -21,7 +21,7 @@
         self.userTotalPostCount = postCount;
         self.userTotalComments = commentCount;
         self.userTotalProfileViews = profileViews;
-        self.userTotalPostShares = postCount;
+        self.userTotalPostShares = postShareCount;
 
     }
     return self;

@@ -86,7 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
@@ -99,14 +99,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__88-[JFWWebserviceManager requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:]_block_invoke"
                   moduleName = "JUZ4Women"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kailash/Desktop/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-                  timestampString = "455955710.771311"
+                  timestampString = "455968186.049088"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "87"
@@ -114,14 +114,14 @@
                   offsetFromSymbolStart = "123">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__88-[JFWWebserviceManager requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:]_block_invoke216"
+                  symbolName = "__88-[JFWWebserviceManager requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:]_block_invoke228"
                   moduleName = "JUZ4Women"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kailash/Desktop/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-                  timestampString = "455955710.771471"
+                  timestampString = "455968186.049259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "87"
@@ -134,7 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
@@ -150,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
@@ -166,7 +166,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
@@ -262,7 +262,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
@@ -278,7 +278,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
@@ -294,7 +294,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
@@ -310,7 +310,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
@@ -342,7 +342,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455955710.274976"
+            timestampString = "455960339.657205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "@implementation JFWWebserviceManager"
             landmarkType = "3">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455955710.274976"
+            timestampString = "455960339.657205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138">
+            startingLineNumber = "136"
+            endingLineNumber = "136">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -520,73 +520,41 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455955710.274976"
+            timestampString = "455960339.657205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130">
+            startingLineNumber = "128"
+            endingLineNumber = "128">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Helper Classes/IGLeftMenuViewController.m"
-            timestampString = "455954136.643806"
+            timestampString = "455959355.232809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-fetchLeftMenuDetails"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[IGLeftMenuViewController fetchLeftMenuDetails]"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kailash/Desktop/videos/JudgeForWomanSecondRepo/JUZ4Women/Helper%20Classes/IGLeftMenuViewController.m"
-                  timestampString = "455955710.803281"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "83">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__48-[IGLeftMenuViewController fetchLeftMenuDetails]_block_invoke"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kailash/Desktop/videos/JudgeForWomanSecondRepo/JUZ4Women/Helper%20Classes/IGLeftMenuViewController.m"
-                  timestampString = "455955710.803528"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Helper Classes/IGLeftMenuViewController.m"
-            timestampString = "455954136.643806"
+            timestampString = "455959355.232809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-fetchLeftMenuDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -598,11 +566,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455955710.274976"
+            timestampString = "455956404.480603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-requestLeftMenuApiWithLeftMenuModel:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -610,7 +578,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
@@ -620,6 +588,54 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/Helper Classes/IGLeftMenuViewController.m"
+            timestampString = "455960185.25773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-updateView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
+            timestampString = "455968200.994972"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/Managers/ParserManager/JFWParserManager.m"
+            timestampString = "455976572.391443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-parseLeftMenuResponseWith:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

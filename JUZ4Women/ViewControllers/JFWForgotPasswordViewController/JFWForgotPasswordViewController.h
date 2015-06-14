@@ -10,4 +10,8 @@
 
 @interface JFWForgotPasswordViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+- (IBAction)onSubmitButtonTapped:(id)sender;
+
 @end

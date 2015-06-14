@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
+@class UserModel;
 
 @interface JFWParserManager : NSObject
 
--(JFWLoginModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
+-(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
+-(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
+
 @end

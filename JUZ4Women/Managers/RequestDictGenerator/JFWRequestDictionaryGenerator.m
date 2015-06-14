@@ -9,9 +9,10 @@
 #import "JFWRequestDictionaryGenerator.h"
 #import "JFWAppConstants.h"
 #import "JFWLoginModel.h"
+#import "UserModel.h"
 @implementation JFWRequestDictionaryGenerator
 
--(NSMutableDictionary *)createLoginRequestDictionary:(JFWLoginModel *)loginModel
+-(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel
 {
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
@@ -22,4 +23,17 @@
     return dataDict;
 }
 
+-(NSMutableDictionary *)createLeftMenuRequestDictionary:(UserModel *)userModel
+{
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    
+    [dataDict setObject:@"getUserDetailsForMenu" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+
+    return dataDict;
+}
 @end

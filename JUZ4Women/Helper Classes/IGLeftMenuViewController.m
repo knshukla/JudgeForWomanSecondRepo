@@ -30,7 +30,8 @@
 #import "JFWSuccessStoriesViewController.h"
 #import "JFWNotificationViewController.h"
 #import "JFWWebserviceManager.h"
-
+#import "JFWLeftMenuModel.h"
+#import "UserModel.h"
 @interface IGLeftMenuViewController()
 {
     NSMutableArray *menuItemArray;
@@ -70,15 +71,30 @@
 {
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
-    [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal) {
-        
+    [webServiceManager requestLeftMenuApiWithLeftMenuModel:nil withSuccessBlock:^(id modal)
+    {
+        UserModel *userModel = (UserModel *)modal;
+        [self updateView:userModel];
     } withFailureBlock:^(NSError *error) {
         
     }];
-    
-    
+}
+
+-(void)updateView:(UserModel *)userModel
+{
+    self.nameLableObj.text = userModel.userName;
+    self.emailLabelObj.text = userModel.displayName;
+    NSString *postText = [NSString stringWithFormat:@"%ld",userModel.userTotalPostCount];
+    NSString *commentsViewText = [NSString stringWithFormat:@"%ld",userModel.userTotalComments];
+    NSString *profileViewText = [NSString stringWithFormat:@"%ld",userModel.userTotalProfileViews];
+    NSString *postSharedText = [NSString stringWithFormat:@"%ld",userModel.userTotalPostShares];
+    self.postLabel.text = postText;
+    self.profileViewLabel.text = profileViewText;
+    self.commentsLabel.text = commentsViewText;
+    self.postSharedLabel.text = postSharedText;
 
 }
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
