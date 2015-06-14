@@ -19,7 +19,7 @@
 #import "MMNavigationController.h"
 
 #import "JFWAppDelegate.h"
-
+#import "JFWWebserviceManager.h"
 #import "SignUpView.h"
 
 #import "JFWUtilities.h"
@@ -385,6 +385,28 @@
 {
     user.realName = realName;
     user.displayName = displayName;
+    
+    [self callSignUpWebService];
 }
 
+#pragma mark - Web serice method
+
+-(void)callSignUpWebService
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestSignUpApiWithUserModal:user withSuccessBlock:^(id modal)
+     {
+         [self handleSignUpResposne:modal];
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
+
+-(void)handleSignUpResposne:(id)model
+{
+    
+}
 @end

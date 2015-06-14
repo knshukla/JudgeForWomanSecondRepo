@@ -38,7 +38,14 @@ static NSString * const kUserName = @"username";
 static NSString * const kUserTypeId = @"user_type_id";
 static NSString * const kUid = @"uid";
 static NSString * const kPassword = @"password";
+static NSString * const kEmail = @"user_email_id";
+static NSString * const kPhoneNUmber = @"user_phone_no";
+static NSString * const kDateOfBirth = @"user_dob";
 
+static NSString * const kCountry = @"user_country_name";
+static NSString * const kCity = @"user_city_name";
+static NSString * const kSignUpType = @"registered_as";
+static NSString * const kProfileImage = @"user_profile_image";
 
 //LeftMenu
 static NSString * const kSuccess = @"success";
@@ -48,6 +55,7 @@ static NSString * const kUserTotalComments = @"user_total_comments";
 static NSString * const kUserTotalProfileViews = @"user_profile_views";
 static NSString * const kUserTotalPostShares = @"user_total_post_shares";
 static NSString * const kMenuUserName = @"user_name";
+
 
 
 
