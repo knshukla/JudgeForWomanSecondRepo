@@ -32,6 +32,8 @@
 #import "JFWWebserviceManager.h"
 #import "JFWLeftMenuModel.h"
 #import "UserModel.h"
+#import "UIImageView+AFNetworking.h"
+#import "JFWAppConstants.h"
 @interface IGLeftMenuViewController()
 {
     NSMutableArray *menuItemArray;
@@ -92,6 +94,8 @@
     self.profileViewLabel.text = profileViewText;
     self.commentsLabel.text = commentsViewText;
     self.postSharedLabel.text = postSharedText;
+    
+    [self downloadProfileImage:self.profileImageView withUrl:userModel.imageUrl];
 
 }
 
@@ -216,5 +220,20 @@
 NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6,menuItemModelObj7,menuItemModelObj8,menuItemModelObj9,menuItemModelObj10, nil];
     
     return menuItemsArray;
+}
+
+-(void)downloadProfileImage:(UIImageView *)imageView withUrl:(NSString *)url
+{
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,url];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [imageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         [imageView setImage:image];
+         
+     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         
+     }];
+
 }
 @end

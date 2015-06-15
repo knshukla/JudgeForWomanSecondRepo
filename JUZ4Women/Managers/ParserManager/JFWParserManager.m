@@ -25,7 +25,8 @@
 
 -(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
 {
-    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
+    NSString *imageUrl = [responseDict objectForKey:@"user_profile_picture"];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
 
     
     return userModel;
@@ -39,7 +40,12 @@
     
     for(NSDictionary *dict in dataArray)
     {
-        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:[dict objectForKey:@"tags"] withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
+        NSString *tagString = [dict objectForKey:@"tags"];
+        if([tagString isEqual:[NSNull null]])
+        {
+            tagString = @"";
+        }
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
         
         [feedsArray addObject:feedModel];
     }
