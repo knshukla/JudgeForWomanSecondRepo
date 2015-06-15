@@ -12,6 +12,7 @@
 #import "JFWLeftMenuModel.h"
 #import "UserModel.h"
 #import "JFWFeedsModel.h"
+#import "VideoModel.h"
 
 @implementation JFWParserManager
 
@@ -48,6 +49,22 @@
         JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
         
         [feedsArray addObject:feedModel];
+    }
+    return feedsArray;
+}
+
+
+-(NSMutableArray *)parseVideoFeedsResponseWith:(NSDictionary *)responseDict
+{
+    NSMutableArray *feedsArray = [[NSMutableArray alloc]init];
+    
+    NSArray *dataArray = [responseDict objectForKey:@"responseArray"];
+    
+    for(NSDictionary *dict in dataArray)
+    {
+        VideoModel *videoModel = [[VideoModel alloc]initWithVideoName:[dict objectForKey:@"name"] withVideoUrl:[dict objectForKey:@"url"] withVideoTags:[dict objectForKey:@"tags"] withVideoLikes:[[dict objectForKey:@"likes"] longValue] withVideoInspires:[[dict objectForKey:@"inspire"] longValue] withVideoId:[[dict objectForKey:@"id"] intValue] withDescription:[dict objectForKey:@"description"] withThumbnailUrl:[dict objectForKey:@"thumbnail_url"]];
+        
+        [feedsArray addObject:videoModel];
     }
     return feedsArray;
 }

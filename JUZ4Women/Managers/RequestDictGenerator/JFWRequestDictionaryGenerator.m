@@ -11,7 +11,7 @@
 #import "JFWLoginModel.h"
 #import "UserModel.h"
 #import "DateModel.h"
-
+#import "VideoModel.h"
 #import "JFWFeedsModel.h"
 @implementation JFWRequestDictionaryGenerator
 
@@ -133,4 +133,20 @@
     return dataDict;
 }
 
+-(NSMutableDictionary *)createVideoFeedRequestDictionary:(VideoModel *)videoModel
+{
+    NSNumber *postId = [NSNumber numberWithInt:1];
+
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    [dataDict setObject:@"getVideoScreenDetails" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+    [dataDict setObject:postId forKey:@"last_video_id"];
+    return dataDict;
+
+}
 @end

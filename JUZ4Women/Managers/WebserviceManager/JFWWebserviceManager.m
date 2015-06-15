@@ -211,4 +211,34 @@
     
     
 }
+
+-(void)requestVideoFeedApiWithVideoModel:(VideoModel *)videoModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createVideoFeedRequestDictionary:videoModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleVideoFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+
+}
+
+- (void)handleVideoFeedsResponse:(NSDictionary *)responseDictionary
+{
+    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+    
+    NSMutableArray *dataArray = [parserManager parseVideoFeedsResponseWith:responseDictionary];
+    self.successBlock(dataArray);
+}
 @end

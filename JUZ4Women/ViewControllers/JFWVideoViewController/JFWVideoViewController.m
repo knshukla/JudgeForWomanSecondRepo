@@ -10,14 +10,19 @@
 #import "UIViewController+MMDrawerController.h"
 #import "JFWVideoCell.h"
 #import "JFWAddVideoViewController.h"
-@interface JFWVideoViewController ()
+#import "JFWWebserviceManager.h"
 
+@interface JFWVideoViewController ()
+{
+    NSArray *responseArray;
+}
 @end
 
 @implementation JFWVideoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchVideoFeedDetail];
     // Do any additional setup after loading the view.
     [self configureLeftNavBar];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
@@ -65,7 +70,7 @@
 {
     //Returing number of rows in section of tableview
     
-    return 10;
+    return responseArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,7 +92,7 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     cell.backgroundColor = [UIColor clearColor];
-    
+    [cell configureCellWithModel:[responseArray objectAtIndex:indexPath.row]];
     return cell;
     
 }
@@ -110,4 +115,20 @@
 {
     
 }
+
+-(void)fetchVideoFeedDetail
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestVideoFeedApiWithVideoModel:nil withSuccessBlock:^(id dataArray)
+     {
+         responseArray = (NSArray *)dataArray;
+         [self.videoTableView reloadData];
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
+
+
 @end

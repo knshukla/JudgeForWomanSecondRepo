@@ -12,13 +12,12 @@
 @class JFWLeftMenuModel;
 @class UserModel;
 @class JFWFeedsModel;
+@class VideoModel;
 
 typedef void (^SuccessBlock)(id);
 typedef void (^FailureBlock)(NSError *);
 
 @interface JFWWebserviceManager : NSObject
-
-//- (void)requestMediaListData:(NSString *)mediaApiString WithSuccessBlock:(void (^)(MFMediaModal *mediaArray))successBlock WithFailureBlock:(void (^)(NSError *error))failureBlock;
 
 -(void)requestLoginApiWithLoginModal:(UserModel *)loginModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
@@ -29,6 +28,9 @@ typedef void (^FailureBlock)(NSError *);
 -(void)requestFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 -(void)requestAddFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+
+-(void)requestVideoFeedApiWithVideoModel:(VideoModel *)videoModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+
 
 
 @property (copy, nonatomic) SuccessBlock successBlock;

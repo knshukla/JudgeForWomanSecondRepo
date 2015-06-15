@@ -10,6 +10,8 @@
 
 @interface JFWVideoViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *videoTableView;
+
 - (IBAction)onAddVideoButtonTapped:(id)sender;
 
 - (IBAction)onFilterButtonTapped:(id)sender;
