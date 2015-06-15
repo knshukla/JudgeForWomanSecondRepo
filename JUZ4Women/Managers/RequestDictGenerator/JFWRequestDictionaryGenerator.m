@@ -10,6 +10,8 @@
 #import "JFWAppConstants.h"
 #import "JFWLoginModel.h"
 #import "UserModel.h"
+#import "DateModel.h"
+
 #import "JFWFeedsModel.h"
 @implementation JFWRequestDictionaryGenerator
 

@@ -20,6 +20,7 @@
 
 -(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel;
 
+-(NSMutableDictionary *)getSignUpRequestParameter:(UserModel *)userModel;
 -(NSMutableDictionary *)createAddFeedRequestDictionary:(JFWFeedsModel *)feedModel;
 
 @end

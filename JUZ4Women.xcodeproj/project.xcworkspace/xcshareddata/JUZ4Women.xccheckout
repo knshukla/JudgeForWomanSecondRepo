@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>9B1511FC-D591-48D7-B597-028ABE7E314B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>JUZ4Women</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6BD24694BBC4AC25844076E12D83C26A4F4E9EF5</key>
 		<string>github.com:knshukla/JudgeForWomanSecondRepo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JUZ4Women.xcodeproj/project.xcworkspace</string>
+	<string>JUZ4Women.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6BD24694BBC4AC25844076E12D83C26A4F4E9EF5</key>
