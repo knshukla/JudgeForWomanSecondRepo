@@ -344,7 +344,11 @@
             
         case USERNAME_PASSWORD_SCREEN:
             
-            self.user.emailAddress = emailTextField.text;
+            if (self.signUpOption == MOBILE) {
+                self.user.mobileNumber = [NSNumber numberWithInteger:[emailTextField.text integerValue]];
+            }
+            else
+                self.user.emailAddress = emailTextField.text;
             self.user.password = passwordTextField.text;
             
             break;

@@ -100,12 +100,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Modules/SignUpViewController/SignUpViewController.m"
-            timestampString = "455995739.415446"
+            timestampString = "456174579.092297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
-            landmarkName = "-handleSignUpResposne:"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
+            landmarkName = "-callSignUpWebService"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -116,27 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455996267.656748"
+            timestampString = "456174637.052809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-requestSignUpApiWithUserModal:withSuccessBlock:withFailureBlock:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-            timestampString = "455996268.972494"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-requestSignUpApiWithUserModal:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>

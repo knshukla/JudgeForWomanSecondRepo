@@ -15,7 +15,7 @@
 
 @implementation JFWParserManager
 
--(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict
++(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict
 {
     UserModel *userModel = [[UserModel alloc]initWithUserId:[responseDict objectForKey:kUid] withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kUserName] withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0];
     
@@ -23,7 +23,7 @@
 
 }
 
--(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
++(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
 {
     UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
 
@@ -31,7 +31,8 @@
     return userModel;
 }
 
--(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict
+
++(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict
 {
     NSMutableArray *feedsArray = [[NSMutableArray alloc]init];
     

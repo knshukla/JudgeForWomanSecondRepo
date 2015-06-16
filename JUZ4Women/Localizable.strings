@@ -13,3 +13,8 @@
 
 "EMAIL_TEXT" = "Email";
 "MOBILE_NUMBER" = "Mobile Number";
+
+"SIGNUP_ERROR" = "Unable to sign up this time. Please try again later";
+"SIGNUP_ERROR_EMAIL" = "Email address not found";
+"SIGNUP_ERROR_MOBILE" = "Mobile number not found";
+"SIGNUP_ERROR_USERNAME" = "Username not found";

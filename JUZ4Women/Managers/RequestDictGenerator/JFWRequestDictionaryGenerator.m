@@ -11,6 +11,7 @@
 #import "JFWLoginModel.h"
 #import "UserModel.h"
 #import "DateModel.h"
+#import "JFWUtilities.h"
 
 @implementation JFWRequestDictionaryGenerator
 
@@ -91,6 +92,11 @@
     
     if (userModel.mobileNumber) {
         [dataDict setObject:userModel.mobileNumber forKey:kPhoneNUmber];
+    }
+    
+    if (userModel.image)
+    {
+        [dataDict setObject:[JFWUtilities encodeToBase64String:userModel.image] forKey:kUserProfileImage];
     }
     
     return dataDict;

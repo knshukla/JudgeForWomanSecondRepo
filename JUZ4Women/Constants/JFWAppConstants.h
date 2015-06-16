@@ -41,6 +41,7 @@ static NSString * const kPassword = @"password";
 static NSString * const kEmail = @"user_email_id";
 static NSString * const kPhoneNUmber = @"user_phone_no";
 static NSString * const kDateOfBirth = @"user_dob";
+static NSString * const kUserProfileImage = @"user_profile_image";
 
 static NSString * const kCountry = @"user_country_name";
 static NSString * const kCity = @"user_city_name";
@@ -57,7 +58,9 @@ static NSString * const kUserTotalPostShares = @"user_total_post_shares";
 static NSString * const kMenuUserName = @"user_name";
 
 
-
+static NSString * const kIsEmailID = @"isEmailID";
+static NSString * const kIsPhoneNumber = @"isPhoneNumber";
+static NSString * const kIsUserName = @"IsUserName";
 
 #define kFontSize18           18.0
 

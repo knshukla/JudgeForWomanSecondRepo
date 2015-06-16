@@ -12,6 +12,8 @@
 
 -(void)signUpButtonTapped:(NSString *)realName andDisplayName:(NSString *)displayName;
 
+-(void)showImagePicker;
+
 @end
 
 @interface SignUpView : UIView
