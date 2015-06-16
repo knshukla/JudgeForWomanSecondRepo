@@ -165,6 +165,14 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="inspireLabel" destination="Vl7-gV-TKK" id="fe6-M3-O2d"/>
+                <outlet property="likesLabel" destination="qqi-hZ-g5N" id="Fzi-wk-THn"/>
+                <outlet property="videoImageView" destination="kai-NZ-gaT" id="JBh-GV-cTx"/>
+                <outlet property="videoName" destination="TAy-xF-xkd" id="81q-AU-8JG"/>
+                <outlet property="videoTags" destination="bKL-66-fCq" id="g9P-hG-oFm"/>
+                <outlet property="videoTime" destination="g76-xk-iO2" id="IAv-OO-Kmv"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

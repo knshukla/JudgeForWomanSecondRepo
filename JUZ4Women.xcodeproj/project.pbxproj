@@ -202,6 +202,8 @@
 		4A76DA4F1AFF9E1F00BCFFEE /* suggestAdminPost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */; };
 		4A76DA501AFF9E1F00BCFFEE /* titleBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */; };
 		4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */; };
+		4A7757B61B2F38E10006A5B1 /* VideoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A7757B41B2F38E10006A5B1 /* VideoModel.h */; };
+		4A7757B71B2F38E10006A5B1 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7757B51B2F38E10006A5B1 /* VideoModel.m */; };
 		4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */; };
 		4AB64C5E1B2BDDA200251E52 /* JFWFeedsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */; };
 		4AB64C621B2D176700251E52 /* JFWLeftMenuModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB64C601B2D176700251E52 /* JFWLeftMenuModel.h */; };
@@ -535,6 +537,8 @@
 		4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestAdminPost@2x.png"; sourceTree = "<group>"; };
 		4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleBox@2x.png"; sourceTree = "<group>"; };
 		4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeyourmind@2x.png"; sourceTree = "<group>"; };
+		4A7757B41B2F38E10006A5B1 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		4A7757B51B2F38E10006A5B1 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
 		4AB64C5B1B2BDDA200251E52 /* JFWFeedsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFeedsModel.h; sourceTree = "<group>"; };
 		4AB64C5C1B2BDDA200251E52 /* JFWFeedsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFeedsModel.m; sourceTree = "<group>"; };
 		4AB64C601B2D176700251E52 /* JFWLeftMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLeftMenuModel.h; sourceTree = "<group>"; };
@@ -1152,6 +1156,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A7757B31B2F38D30006A5B1 /* VideoModel */,
 				38CCE64C1B2DDB3700D51D68 /* OptionModel */,
 				38CCE6281B2D912A00D51D68 /* DateModel */,
 				38CCE6231B2D8F9400D51D68 /* UserModel */,
@@ -1239,6 +1244,15 @@
 				4A76DA111AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m */,
 			);
 			path = JFWForgotPasswordViewController;
+			sourceTree = "<group>";
+		};
+		4A7757B31B2F38D30006A5B1 /* VideoModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A7757B41B2F38E10006A5B1 /* VideoModel.h */,
+				4A7757B51B2F38E10006A5B1 /* VideoModel.m */,
+			);
+			path = VideoModel;
 			sourceTree = "<group>";
 		};
 		4AB64C5A1B2BDD8300251E52 /* FeedsModel */ = {
@@ -1643,6 +1657,7 @@
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
 				38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */,
 				38CCE64F1B2DDB3700D51D68 /* OptionModel.h in Headers */,
+				4A7757B61B2F38E10006A5B1 /* VideoModel.h in Headers */,
 				38CCE6361B2DD9BF00D51D68 /* JFWPollsView.h in Headers */,
 				4AEAC6261B1AE7F80050DBD7 /* MFReachability.h in Headers */,
 				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
@@ -1929,6 +1944,7 @@
 				4AEAC6381B1B06D80050DBD7 /* JFWSignUpModel.m in Sources */,
 				38CCE6471B2DDAE100D51D68 /* JFWQuestionViewController.m in Sources */,
 				4ACFBA701AF3F94400C82325 /* MMLogoView.m in Sources */,
+				4A7757B71B2F38E10006A5B1 /* VideoModel.m in Sources */,
 				38CCE6441B2DDAE100D51D68 /* JFWQuestionView.m in Sources */,
 				4AF66E651AF864B900115840 /* JFWFilterView.m in Sources */,
 				4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */,

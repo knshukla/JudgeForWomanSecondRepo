@@ -172,4 +172,65 @@
     NSMutableArray *dataArray = [JFWParserManager parseFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
 }
+
+-(void)requestAddFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createAddFeedRequestDictionary:feedModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleAddFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+
+}
+
+- (void)handleAddFeedsResponse:(NSDictionary *)responseDictionary
+{
+    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+    
+//    NSMutableArray *dataArray = [parserManager parseFeedsResponseWith:responseDictionary];
+//    self.successBlock(dataArray);
+    
+    
+}
+
+-(void)requestVideoFeedApiWithVideoModel:(VideoModel *)videoModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createVideoFeedRequestDictionary:videoModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleVideoFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+
+}
+
+- (void)handleVideoFeedsResponse:(NSDictionary *)responseDictionary
+{
+    
+    NSMutableArray *dataArray = [JFWParserManager parseVideoFeedsResponseWith:responseDictionary];
+    self.successBlock(dataArray);
+}
 @end

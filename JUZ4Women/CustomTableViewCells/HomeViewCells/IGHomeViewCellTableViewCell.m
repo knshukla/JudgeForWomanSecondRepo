@@ -9,6 +9,8 @@
 #import "IGHomeViewCellTableViewCell.h"
 #import "JFWFeedsModel.h"
 #import "UIImageView+AFNetworking.h"
+#import "JFWAppConstants.h"
+
 @implementation IGHomeViewCellTableViewCell
 
 - (void)awakeFromNib
@@ -36,7 +38,8 @@
     
     
     //NSString *defaultImage = kDefaultLiveEventPlaceholderImage;
-    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:feedModel.userAvatorUrl]];
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,feedModel.userAvatorUrl];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
     [self.userImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
      {
          [self.userImageView setImage:image];

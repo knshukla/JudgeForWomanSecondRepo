@@ -40,7 +40,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     // Override point for customization after application launch.
         
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];
-    UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
