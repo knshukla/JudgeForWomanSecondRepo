@@ -156,27 +156,25 @@
             }
                 
             case 2:
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWArticleViewController"];
-                break;
-            case 3:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWLegalAdviseViewController"];
                 break;
-            case 4:
+            case 3:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSuccessStoriesViewController"];
+                break;
+            case 4:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
                 break;
                 
             case 5:
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
-                break;
-            case 6:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
                 break;
-            case 7:
+            case 6:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWContactUsViewController"];
                 break;
-            case 8:
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
+            case 7:
+                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
                 break;
+            
         }
         UINavigationController *navControllerObj = [[UINavigationController alloc]initWithRootViewController:viewControllerObj];
         [self.mm_drawerController setCenterViewController:navControllerObj withCloseAnimation:YES completion:nil];
@@ -200,7 +198,7 @@
     
      JFWMenuItemModel *menuItemModelObj2 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Post" withImageName:@"post_icon"];
     
-    JFWMenuItemModel *menuItemModelObj3 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Article" withImageName:@"article_icon"];
+//    JFWMenuItemModel *menuItemModelObj3 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Article" withImageName:@"article_icon"];
     
     JFWMenuItemModel *menuItemModelObj4 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Legal Advice" withImageName:@"video_icon"];
     
@@ -217,7 +215,7 @@
     
     JFWMenuItemModel *menuItemModelObj10 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Sign Out" withImageName:@"sign_out_icon"];
     
-NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6,menuItemModelObj7,menuItemModelObj8,menuItemModelObj9,menuItemModelObj10, nil];
+NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6,menuItemModelObj7,menuItemModelObj8,menuItemModelObj9,menuItemModelObj10, nil];
     
     return menuItemsArray;
 }

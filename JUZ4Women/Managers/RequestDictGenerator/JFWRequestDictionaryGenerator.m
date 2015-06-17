@@ -13,6 +13,7 @@
 #import "DateModel.h"
 #import "VideoModel.h"
 #import "JFWFeedsModel.h"
+#import "ArticleModel.h"
 @implementation JFWRequestDictionaryGenerator
 
 -(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel
@@ -149,4 +150,22 @@
     return dataDict;
 
 }
+
+-(NSMutableDictionary *)createArticleFeedRequestDictionary:(ArticleModel *)articleModel
+{
+    NSNumber *postId = [NSNumber numberWithInt:1];
+    
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    [dataDict setObject:@"getArticleScreenDetails" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+    [dataDict setObject:postId forKey:@"last_article_id"];
+    return dataDict;
+    
+}
+
 @end

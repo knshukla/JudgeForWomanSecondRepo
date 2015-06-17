@@ -16,6 +16,7 @@
 #import "JFWParserManager.h"
 #import "UserModel.h"
 #import "JFWFeedsModel.h"
+#import "ArticleModel.h"
 
 @interface JFWWebserviceManager()
 
@@ -239,6 +240,36 @@
     JFWParserManager *parserManager = [[JFWParserManager alloc]init];
     
     NSMutableArray *dataArray = [parserManager parseVideoFeedsResponseWith:responseDictionary];
+    self.successBlock(dataArray);
+}
+
+-(void)requestArticleFeedApiWithArticleModel:(ArticleModel *)articleModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createArticleFeedRequestDictionary:articleModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleArticleFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+
+}
+
+- (void)handleArticleFeedsResponse:(NSDictionary *)responseDictionary
+{
+    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+    
+    NSMutableArray *dataArray = [parserManager parseArticleFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
 }
 @end

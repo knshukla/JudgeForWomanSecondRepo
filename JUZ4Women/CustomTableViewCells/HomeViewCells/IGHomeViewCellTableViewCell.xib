@@ -23,11 +23,11 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IF4-cJ-41R">
-                        <rect key="frame" x="0.0" y="71" width="320" height="2"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="0.0" y="72" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.50980392156862742" green="0.5607843137254902" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="320" id="0SQ-l9-y4y"/>
-                            <constraint firstAttribute="height" constant="2" id="xKh-Av-CaF"/>
+                            <constraint firstAttribute="height" constant="1" id="xKh-Av-CaF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got Promotion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIl-gK-7gw">
@@ -80,7 +80,7 @@
                     <constraint firstAttribute="centerX" secondItem="nGs-fI-1aA" secondAttribute="centerX" id="ae6-Mb-cu7"/>
                     <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="ecE-Wx-auA" secondAttribute="bottom" constant="6" id="ain-wP-4mw"/>
                     <constraint firstItem="DIl-gK-7gw" firstAttribute="leading" secondItem="nGs-fI-1aA" secondAttribute="trailing" constant="30" id="avH-iF-TtU"/>
-                    <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="ecE-Wx-auA" secondAttribute="bottom" constant="9" id="dIW-Za-GQZ"/>
+                    <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="ecE-Wx-auA" secondAttribute="bottom" constant="10" id="dIW-Za-GQZ"/>
                     <constraint firstItem="nGs-fI-1aA" firstAttribute="top" secondItem="c79-zw-zOU" secondAttribute="top" constant="12" id="hO3-wD-JTG"/>
                     <constraint firstItem="IF4-cJ-41R" firstAttribute="leading" secondItem="c79-zw-zOU" secondAttribute="leading" id="l7A-Ec-4hO"/>
                     <constraint firstAttribute="trailing" secondItem="GuP-NK-G8r" secondAttribute="trailing" constant="-2" id="lA2-CI-jGt"/>

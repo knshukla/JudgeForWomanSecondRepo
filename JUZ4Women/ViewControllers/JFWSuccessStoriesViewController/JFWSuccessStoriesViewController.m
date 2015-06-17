@@ -16,6 +16,9 @@
 #import "JFWAddPostViewController.h"
 #import "JFWFilterView.h"
 #import "SuccessStoriesCell.h"
+#import "JFWWebserviceManager.h"
+#import "ArticleModel.h"
+
 @interface JFWSuccessStoriesViewController ()
 {
     NSMutableArray *cellImageArray;
@@ -24,6 +27,8 @@
     UILabel *messageLabel;
     JFWFilterView *filterViewObj;
     BOOL isTableOpened;
+    NSArray *responseArray;
+    
     
 }
 @end
@@ -33,8 +38,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.homeTableView.rowHeight = UITableViewAutomaticDimension;
+    self.homeTableView.estimatedRowHeight = 30.0;
+    
     // Do any additional setup after loading the view.
     [self commanInit];
+    [self fetchArticleFeedDetail];
     self.title = @"Success Stories";
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
@@ -148,7 +158,7 @@
 {
     //Returing number of rows in section of tableview
     
-    return 10;
+    return responseArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -164,14 +174,14 @@
     {
         cell = [[SuccessStoriesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"IGHomeViewCellTableViewCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SuccessStoriesCell" owner:self options:nil];
         cell =  (SuccessStoriesCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     cell.backgroundColor = [UIColor clearColor];
     
-    
+    [cell configureCellWithModel:[responseArray objectAtIndex:indexPath.row]];
     return cell;
     
 }
@@ -231,5 +241,20 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController.view insertSubview:filterViewObj atIndex:2];
     //Initlizing tableview and setting its properties
 }
+
+-(void)fetchArticleFeedDetail
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestArticleFeedApiWithArticleModel:nil withSuccessBlock:^(id dataArray)
+     {
+         responseArray = (NSArray *)dataArray;
+         [self.homeTableView reloadData];
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
+
 
 @end

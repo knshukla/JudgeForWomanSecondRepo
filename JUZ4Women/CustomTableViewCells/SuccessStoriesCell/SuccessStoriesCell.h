@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ArticleModel;
 
 @interface SuccessStoriesCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *timeLable;
+
+-(void)configureCellWithModel:(ArticleModel *)articleModel;
 
 @end

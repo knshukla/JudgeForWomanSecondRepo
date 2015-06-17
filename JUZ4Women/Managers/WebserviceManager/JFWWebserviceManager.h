@@ -13,6 +13,7 @@
 @class UserModel;
 @class JFWFeedsModel;
 @class VideoModel;
+@class ArticleModel;
 
 typedef void (^SuccessBlock)(id);
 typedef void (^FailureBlock)(NSError *);
@@ -31,6 +32,7 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestVideoFeedApiWithVideoModel:(VideoModel *)videoModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestArticleFeedApiWithArticleModel:(ArticleModel *)articleModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 
 @property (copy, nonatomic) SuccessBlock successBlock;

@@ -13,6 +13,7 @@
 #import "UserModel.h"
 #import "JFWFeedsModel.h"
 #import "VideoModel.h"
+#import "ArticleModel.h"
 
 @implementation JFWParserManager
 
@@ -65,6 +66,21 @@
         VideoModel *videoModel = [[VideoModel alloc]initWithVideoName:[dict objectForKey:@"name"] withVideoUrl:[dict objectForKey:@"url"] withVideoTags:[dict objectForKey:@"tags"] withVideoLikes:[[dict objectForKey:@"likes"] longValue] withVideoInspires:[[dict objectForKey:@"inspire"] longValue] withVideoId:[[dict objectForKey:@"id"] intValue] withDescription:[dict objectForKey:@"description"] withThumbnailUrl:[dict objectForKey:@"thumbnail_url"]];
         
         [feedsArray addObject:videoModel];
+    }
+    return feedsArray;
+}
+
+-(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict
+{
+    NSMutableArray *feedsArray = [[NSMutableArray alloc]init];
+    
+    NSArray *dataArray = [responseDict objectForKey:@"responseArray"];
+    
+    for(NSDictionary *dict in dataArray)
+    {
+        ArticleModel *articleModel = [[ArticleModel alloc]initWithArticleTitle:[dict objectForKey:@"article_title"] withDate:[dict objectForKey:@"article_date"] withArticleTags:[dict objectForKey:@"tags"] withArticleLikes:[[dict objectForKey:@"article_like_count"] longValue] withArticleInspires:[[dict objectForKey:@"article_inspired_count"] longValue]withAritcleId:[[dict objectForKey:@"article_id"] intValue]withDescription:[dict objectForKey:@"article_description"] withThumbnailUrl:[dict objectForKey:@"user_profile_pic"] withConclusion:[dict objectForKey:@"article_conclusion"] withPostComment:[[dict objectForKey:@"post_no_of_comments"]longValue] withTime:[dict objectForKey:@"article_time"]];
+        
+        [feedsArray addObject:articleModel];
     }
     return feedsArray;
 }

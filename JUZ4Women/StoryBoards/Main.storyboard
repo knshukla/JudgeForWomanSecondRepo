@@ -178,10 +178,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-RB-1bs">
-                                <rect key="frame" x="0.0" y="198" width="280" height="370"/>
+                                <rect key="frame" x="0.0" y="198" width="320" height="370"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="8jo-fH-CZo"/>
+                                    <constraint firstAttribute="width" constant="320" id="8jo-fH-CZo"/>
                                     <constraint firstAttribute="height" constant="370" id="Ebj-RU-hXC"/>
                                 </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
@@ -351,7 +351,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4Je-RB-1bs" secondAttribute="trailing" constant="40" id="GYN-Ks-Hnt"/>
+                            <constraint firstAttribute="trailing" secondItem="4Je-RB-1bs" secondAttribute="trailing" id="GYN-Ks-Hnt"/>
                             <constraint firstItem="4Je-RB-1bs" firstAttribute="leading" secondItem="sJs-50-Sb7" secondAttribute="leading" id="GyG-EK-nnn"/>
                             <constraint firstItem="YTR-cf-zm7" firstAttribute="top" secondItem="4Je-RB-1bs" secondAttribute="bottom" id="eUw-2T-G2x"/>
                             <constraint firstItem="4Je-RB-1bs" firstAttribute="top" secondItem="nKR-cL-QAB" secondAttribute="bottom" constant="178" id="v5e-RS-vnd"/>

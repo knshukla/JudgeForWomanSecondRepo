@@ -7,6 +7,9 @@
 //
 
 #import "SuccessStoriesCell.h"
+#import "ArticleModel.h"
+#import "UIImageView+AFNetworking.h"
+#import "JFWAppConstants.h"
 
 @implementation SuccessStoriesCell
 
@@ -18,6 +21,24 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)configureCellWithModel:(ArticleModel *)articleModel
+{
+    self.titleLable.text = articleModel.ArticleTitle;
+    self.tagsLabel.text = articleModel.articleTags;
+    
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,articleModel.userThumbnailUrl];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [self.userImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         [self.userImageView setImage:image];
+         
+     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         
+     }];
+
 }
 
 @end

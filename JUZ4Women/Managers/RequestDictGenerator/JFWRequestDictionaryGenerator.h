@@ -12,6 +12,8 @@
 @class UserModel;
 @class JFWFeedsModel;
 @class VideoModel;
+@class ArticleModel;
+
 @interface JFWRequestDictionaryGenerator : NSObject
 
 -(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel;
@@ -23,5 +25,7 @@
 -(NSMutableDictionary *)getSignUpRequestParameter:(UserModel *)userModel;
 -(NSMutableDictionary *)createAddFeedRequestDictionary:(JFWFeedsModel *)feedModel;
 -(NSMutableDictionary *)createVideoFeedRequestDictionary:(VideoModel *)videoModel;
+-(NSMutableDictionary *)createArticleFeedRequestDictionary:(ArticleModel *)articleModel;
+
 
 @end

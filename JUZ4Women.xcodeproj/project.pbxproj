@@ -275,6 +275,8 @@
 		4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */; };
 		4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */; };
 		4AD926EB1AF5E5E800F8CF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */; };
+		4ADDA9B91B2FCCBC002E26C2 /* ArticleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADDA9B71B2FCCBC002E26C2 /* ArticleModel.h */; };
+		4ADDA9BA1B2FCCBC002E26C2 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDA9B81B2FCCBC002E26C2 /* ArticleModel.m */; };
 		4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE103331B25D23D0035C0A6 /* PopUpView.h */; };
 		4AE103371B25D23D0035C0A6 /* PopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE103341B25D23D0035C0A6 /* PopUpView.m */; };
 		4AE103381B25D23D0035C0A6 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE103351B25D23D0035C0A6 /* PopUpView.xib */; };
@@ -643,6 +645,8 @@
 		4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWVideoViewController.h; sourceTree = "<group>"; };
 		4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWVideoViewController.m; sourceTree = "<group>"; };
 		4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4ADDA9B71B2FCCBC002E26C2 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		4ADDA9B81B2FCCBC002E26C2 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
 		4AE103331B25D23D0035C0A6 /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
 		4AE103341B25D23D0035C0A6 /* PopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpView.m; sourceTree = "<group>"; };
 		4AE103351B25D23D0035C0A6 /* PopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
@@ -1156,6 +1160,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4ADDA9B61B2FCCAB002E26C2 /* ArticleModel */,
 				4A7757B31B2F38D30006A5B1 /* VideoModel */,
 				38CCE64C1B2DDB3700D51D68 /* OptionModel */,
 				38CCE6281B2D912A00D51D68 /* DateModel */,
@@ -1518,6 +1523,15 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		4ADDA9B61B2FCCAB002E26C2 /* ArticleModel */ = {
+			isa = PBXGroup;
+			children = (
+				4ADDA9B71B2FCCBC002E26C2 /* ArticleModel.h */,
+				4ADDA9B81B2FCCBC002E26C2 /* ArticleModel.m */,
+			);
+			path = ArticleModel;
+			sourceTree = "<group>";
+		};
 		4AE103321B25D22B0035C0A6 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -1668,6 +1682,7 @@
 				4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */,
 				4AD19CD81B08513100BB2A37 /* JFWVideoCell.h in Headers */,
 				38CCE6491B2DDAE100D51D68 /* OptionTableCell.h in Headers */,
+				4ADDA9B91B2FCCBC002E26C2 /* ArticleModel.h in Headers */,
 				38CCE6261B2D8FAB00D51D68 /* UserModel.h in Headers */,
 				38CCE6461B2DDAE100D51D68 /* JFWQuestionViewController.h in Headers */,
 				4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */,
@@ -1987,6 +2002,7 @@
 				4ACFBA731AF3F94400C82325 /* MMSideDrawerTableViewCell.m in Sources */,
 				4ACFBA681AF3F94400C82325 /* MMDrawerController.m in Sources */,
 				4A6D15161AF27D2C003A1708 /* UIWebView+AFNetworking.m in Sources */,
+				4ADDA9BA1B2FCCBC002E26C2 /* ArticleModel.m in Sources */,
 				4A6D15081AF27D2C003A1708 /* AFHTTPSessionManager.m in Sources */,
 				4AD2B2541AF559290089DB7F /* JFWSignOutViewController.m in Sources */,
 				4ACFBA751AF3F94400C82325 /* NewControllerViewController.m in Sources */,

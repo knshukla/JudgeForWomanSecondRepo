@@ -11,12 +11,14 @@
 @class JFWLeftMenuModel;
 @class UserModel;
 @class VideoModel;
+@class ArticleModel;
+
 @interface JFWParserManager : NSObject
 
 -(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
 -(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
 -(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict;
 -(NSMutableArray *)parseVideoFeedsResponseWith:(NSDictionary *)responseDict;
-
+-(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict;
 
 @end
