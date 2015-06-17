@@ -62,13 +62,11 @@
 
 - (void)handleReceviedResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
-    
     [[NSUserDefaults standardUserDefaults]setObject:[responseDictionary objectForKey:kUid] forKey:kUid];
     
     [[NSUserDefaults standardUserDefaults]setObject:[responseDictionary objectForKey:kUserName] forKey:kUserName];
 
-    UserModel *userModel = [parserManager parseLoginResponseWith:responseDictionary];
+    UserModel *userModel = [JFWParserManager parseLoginResponseWith:responseDictionary];
     
     self.successBlock(userModel);
 }
@@ -127,13 +125,12 @@
     self.failureBlock = failureBlock;
     
     NSMutableDictionary *dataDict = [requestGeneratorManager getSignUpRequestParameter:userModel];;
-    
-    NSLog(@"Request dict is %@",dataDict);
-    
+        
     [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //API successful
         NSLog(@"Successful response");
-        [self handleLeftMenuResponse:responseObject];
+        self.successBlock(responseObject);
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //API failed
         NSLog(@"Failure response");
@@ -144,11 +141,11 @@
 
 - (void)handleLeftMenuResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
-   UserModel *userModel = [parserManager parseLeftMenuResponseWith:responseDictionary];
+   UserModel *userModel = [JFWParserManager parseLeftMenuResponseWith:responseDictionary];
     self.successBlock(userModel);
     NSLog(@"Response dict is %@",responseDictionary);
 }
+
 
 -(void)requestFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 {
@@ -173,12 +170,8 @@
 
 - (void)handleFeedsResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
-
-    NSMutableArray *dataArray = [parserManager parseFeedsResponseWith:responseDictionary];
+    NSMutableArray *dataArray = [JFWParserManager parseFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
-    
-    
 }
 
 -(void)requestAddFeedApiWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
@@ -237,9 +230,8 @@
 
 - (void)handleVideoFeedsResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
     
-    NSMutableArray *dataArray = [parserManager parseVideoFeedsResponseWith:responseDictionary];
+    NSMutableArray *dataArray = [JFWParserManager parseVideoFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
 }
 

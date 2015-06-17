@@ -138,6 +138,11 @@
     
     [signUpViewCellObj setDelegate:self];
     
+    if (!user) {
+        user = [[UserModel alloc]init];
+    }
+    
+    [signUpViewCellObj setUser:user];
     [signUpViewCellObj setSignUpScreenType:indexPath.row];
     [signUpViewCellObj setSignUpOption:signUpOption];
     
@@ -389,6 +394,38 @@
     [self callSignUpWebService];
 }
 
+-(void)showImagePicker
+{
+    [self openImagePickerView];
+}
+
+#pragma mark - UIImagePickerController Methods
+
+-(void)openImagePickerView
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    user.image = image;
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 #pragma mark - Web serice method
 
 -(void)callSignUpWebService
@@ -401,12 +438,45 @@
          
      } withFailureBlock:^(NSError *error)
      {
-         
+         [self showAlert: NSLocalizedString(@"SIGNUP_ERROR", nil)];
      }];
 }
 
--(void)handleSignUpResposne:(id)model
+-(void)handleSignUpResposne:(NSDictionary *)responseDic
 {
+    NSString *string = nil;
     
+    if (!responseDic)
+    {
+        string = NSLocalizedString(@"SIGNUP_ERROR", nil);
+    }
+    
+    if ([responseDic objectForKey:kSuccess]) {
+        [self loadHomeViewController];
+        
+        return;
+    }
+    else
+    {
+        if (![[responseDic objectForKey:kIsEmailID] boolValue]) {
+            string = NSLocalizedString(@"SIGNUP_ERROR_EMAIL", nil);
+        }
+        else if (![[responseDic objectForKey:kIsPhoneNumber] boolValue])
+            string = NSLocalizedString(@"SIGNUP_ERROR_MOBILE", nil);
+        else if (![[responseDic objectForKey:kIsUserName] boolValue])
+            string = NSLocalizedString(@"SIGNUP_ERROR_USERNAME", nil);
+        else
+            string = NSLocalizedString(@"SIGNUP_ERROR", nil);
+    }
+    
+    [self showAlert:string];
 }
+
+-(void)showAlert:(NSString *)message
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    
+    [alert show];
+}
+
 @end

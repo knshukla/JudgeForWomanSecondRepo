@@ -113,6 +113,7 @@
 +(void)setPlaceHolderTextColor:(UITextField *)textField color:(UIColor *)color;
 +(UIColor *)placeHolderTextColor;
 
-
++ (NSString *)encodeToBase64String:(UIImage *)image;
++ (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
 
 @end

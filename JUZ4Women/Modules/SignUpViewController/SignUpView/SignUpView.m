@@ -76,7 +76,10 @@
 
 - (IBAction)cameraButtonTapped:(id)sender
 {
-    
+    if ([self.delegate respondsToSelector:@selector(showImagePicker)])
+    {
+        [self.delegate showImagePicker];
+    }
 }
 
 -(BOOL)checkAllMandatoryFields
@@ -102,4 +105,7 @@
     
     return YES;
 }
+
+
+
 @end

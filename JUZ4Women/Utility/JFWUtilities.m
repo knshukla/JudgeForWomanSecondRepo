@@ -132,6 +132,17 @@ static BOOL OSVersionIsAtLeastiOS7() {
     }
 }
 
++ (NSString *)encodeToBase64String:(UIImage *)image
+{
+    return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+}
+
++ (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData
+{
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data];
+}
+
 +(UIColor *)placeHolderTextColor
 {
     return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:.6];
