@@ -264,8 +264,8 @@
 		4AD2B23A1AF54FB00089DB7F /* JFWMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2381AF54FB00089DB7F /* JFWMenuItemModel.m */; };
 		4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2411AF558E10089DB7F /* JFWAboutUsViewController.h */; };
 		4AD2B2441AF558E10089DB7F /* JFWAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2421AF558E10089DB7F /* JFWAboutUsViewController.m */; };
-		4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */; };
-		4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */; };
+		4AD2B2471AF558F30089DB7F /* JFWProfileViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2451AF558F30089DB7F /* JFWProfileViewController.h */; };
+		4AD2B2481AF558F30089DB7F /* JFWProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2461AF558F30089DB7F /* JFWProfileViewController.m */; };
 		4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */; };
 		4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */; };
 		4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B24D1AF559170089DB7F /* JFWPostViewController.h */; };
@@ -287,6 +287,14 @@
 		4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */; };
 		4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */; };
 		4AE310891AF67C4B00D1E343 /* JFWFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */; };
+		4AE333BC1B31184C0013DE97 /* ProfileTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE333B91B31184C0013DE97 /* ProfileTableViewCell.h */; };
+		4AE333BD1B31184C0013DE97 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE333BA1B31184C0013DE97 /* ProfileTableViewCell.m */; };
+		4AE333BE1B31184C0013DE97 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE333BB1B31184C0013DE97 /* ProfileTableViewCell.xib */; };
+		4AE549FB1B33221B0001B784 /* FilterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE549F91B33221B0001B784 /* FilterViewController.h */; };
+		4AE549FC1B33221B0001B784 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE549FA1B33221B0001B784 /* FilterViewController.m */; };
+		4AE54A011B3324020001B784 /* FilterTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE549FE1B3324020001B784 /* FilterTableViewCell.h */; };
+		4AE54A021B3324020001B784 /* FilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE549FF1B3324020001B784 /* FilterTableViewCell.m */; };
+		4AE54A031B3324020001B784 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE54A001B3324020001B784 /* FilterTableViewCell.xib */; };
 		4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAC6181B1AE7F80050DBD7 /* JFWCachingManager.h */; };
 		4AEAC6241B1AE7F80050DBD7 /* JFWCachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6191B1AE7F80050DBD7 /* JFWCachingManager.m */; };
 		4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */; };
@@ -634,8 +642,8 @@
 		4AD2B2381AF54FB00089DB7F /* JFWMenuItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWMenuItemModel.m; sourceTree = "<group>"; };
 		4AD2B2411AF558E10089DB7F /* JFWAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWAboutUsViewController.h; sourceTree = "<group>"; };
 		4AD2B2421AF558E10089DB7F /* JFWAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWAboutUsViewController.m; sourceTree = "<group>"; };
-		4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWArticleViewController.h; sourceTree = "<group>"; };
-		4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWArticleViewController.m; sourceTree = "<group>"; };
+		4AD2B2451AF558F30089DB7F /* JFWProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWProfileViewController.h; sourceTree = "<group>"; };
+		4AD2B2461AF558F30089DB7F /* JFWProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWProfileViewController.m; sourceTree = "<group>"; };
 		4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPollsViewController.h; sourceTree = "<group>"; };
 		4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWPollsViewController.m; sourceTree = "<group>"; };
 		4AD2B24D1AF559170089DB7F /* JFWPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPostViewController.h; sourceTree = "<group>"; };
@@ -657,6 +665,14 @@
 		4AE310841AF67C4B00D1E343 /* JFWFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFilterTableViewCell.h; sourceTree = "<group>"; };
 		4AE310851AF67C4B00D1E343 /* JFWFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFilterTableViewCell.m; sourceTree = "<group>"; };
 		4AE310861AF67C4B00D1E343 /* JFWFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWFilterTableViewCell.xib; sourceTree = "<group>"; };
+		4AE333B91B31184C0013DE97 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewCell.h; path = ../../../../../../Documents/ProfileTableViewCell.h; sourceTree = "<group>"; };
+		4AE333BA1B31184C0013DE97 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewCell.m; path = ../../../../../../Documents/ProfileTableViewCell.m; sourceTree = "<group>"; };
+		4AE333BB1B31184C0013DE97 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileTableViewCell.xib; path = ../../../../../../Documents/ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		4AE549F91B33221B0001B784 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		4AE549FA1B33221B0001B784 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		4AE549FE1B3324020001B784 /* FilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterTableViewCell.h; sourceTree = "<group>"; };
+		4AE549FF1B3324020001B784 /* FilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterTableViewCell.m; sourceTree = "<group>"; };
+		4AE54A001B3324020001B784 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 		4AEAC6181B1AE7F80050DBD7 /* JFWCachingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWCachingManager.h; sourceTree = "<group>"; };
 		4AEAC6191B1AE7F80050DBD7 /* JFWCachingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWCachingManager.m; sourceTree = "<group>"; };
 		4AEAC61B1B1AE7F80050DBD7 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
@@ -1126,6 +1142,7 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AE549F81B3321F80001B784 /* FilterViewController */,
 				38CCE6391B2DDAE100D51D68 /* JFWQuestionViewController */,
 				4A176D1C1B08D2C8006E4836 /* JFWAddVideoViewController */,
 				4A176D171B08D298006E4836 /* Notifications */,
@@ -1373,6 +1390,8 @@
 		4ACFBA981AF3FD3600C82325 /* CustomTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4AE549FD1B3323E10001B784 /* FilterCell */,
+				4AE333B21B3117640013DE97 /* ProfileCell */,
 				4A176D101B08584A006E4836 /* LegalAdviceCell */,
 				4AD19CDB1B08517800BB2A37 /* SuccessStoriesCell */,
 				4AD19CD41B08513100BB2A37 /* VideoCell */,
@@ -1467,8 +1486,8 @@
 		4AD2B23C1AF558C70089DB7F /* JFWArticleViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */,
-				4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */,
+				4AD2B2451AF558F30089DB7F /* JFWProfileViewController.h */,
+				4AD2B2461AF558F30089DB7F /* JFWProfileViewController.m */,
 			);
 			path = JFWArticleViewController;
 			sourceTree = "<group>";
@@ -1571,6 +1590,36 @@
 			path = FilterTableViewCell;
 			sourceTree = "<group>";
 		};
+		4AE333B21B3117640013DE97 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AE333B91B31184C0013DE97 /* ProfileTableViewCell.h */,
+				4AE333BA1B31184C0013DE97 /* ProfileTableViewCell.m */,
+				4AE333BB1B31184C0013DE97 /* ProfileTableViewCell.xib */,
+			);
+			name = ProfileCell;
+			path = ../Images/ProfileCell;
+			sourceTree = "<group>";
+		};
+		4AE549F81B3321F80001B784 /* FilterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AE549F91B33221B0001B784 /* FilterViewController.h */,
+				4AE549FA1B33221B0001B784 /* FilterViewController.m */,
+			);
+			path = FilterViewController;
+			sourceTree = "<group>";
+		};
+		4AE549FD1B3323E10001B784 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AE549FE1B3324020001B784 /* FilterTableViewCell.h */,
+				4AE549FF1B3324020001B784 /* FilterTableViewCell.m */,
+				4AE54A001B3324020001B784 /* FilterTableViewCell.xib */,
+			);
+			path = FilterCell;
+			sourceTree = "<group>";
+		};
 		4AEAC6171B1AE7F80050DBD7 /* CachingManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1703,7 @@
 				4A2EE4D31B0782580078E322 /* JFWNotificationViewController.h in Headers */,
 				38CCE6431B2DDAE100D51D68 /* JFWQuestionView.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
+				4AE549FB1B33221B0001B784 /* FilterViewController.h in Headers */,
 				4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */,
@@ -1665,7 +1715,8 @@
 				4AD19CDF1B08517800BB2A37 /* SuccessStoriesCell.h in Headers */,
 				4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */,
 				4A176D1F1B08D2EC006E4836 /* JFWAddVideoViewController.h in Headers */,
-				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
+				4AD2B2471AF558F30089DB7F /* JFWProfileViewController.h in Headers */,
+				4AE54A011B3324020001B784 /* FilterTableViewCell.h in Headers */,
 				38CCE6331B2DD9BF00D51D68 /* JFWPollCell.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
@@ -1685,6 +1736,7 @@
 				4ADDA9B91B2FCCBC002E26C2 /* ArticleModel.h in Headers */,
 				38CCE6261B2D8FAB00D51D68 /* UserModel.h in Headers */,
 				38CCE6461B2DDAE100D51D68 /* JFWQuestionViewController.h in Headers */,
+				4AE333BC1B31184C0013DE97 /* ProfileTableViewCell.h in Headers */,
 				4AEAC62D1B1AEC7D0050DBD7 /* MFAppConstants.h in Headers */,
 				38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
@@ -1838,12 +1890,14 @@
 				381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */,
 				381C74481AF53C82003290CF /* dislike_small_icon_selected@2x.png in Resources */,
 				381C74731AF53C82003290CF /* splash_screen@2x.jpg in Resources */,
+				4AE54A031B3324020001B784 /* FilterTableViewCell.xib in Resources */,
 				381C74441AF53C82003290CF /* dislike_icon_dark_red@2x.png in Resources */,
 				4A76DA501AFF9E1F00BCFFEE /* titleBox@2x.png in Resources */,
 				381C745E1AF53C82003290CF /* mobile_gray_icon@2x.png in Resources */,
 				381C74671AF53C82003290CF /* profile_icon@2x.png in Resources */,
 				4A76DA3E1AFF4C5D00BCFFEE /* emailBackground@2x.png in Resources */,
 				381C74571AF53C82003290CF /* light_pink_poll_dot@2x.png in Resources */,
+				4AE333BE1B31184C0013DE97 /* ProfileTableViewCell.xib in Resources */,
 				4ACFBAAD1AF49CDE00C82325 /* menu_icon.png in Resources */,
 				381C743E1AF53C82003290CF /* comment_medium_icon@2x.png in Resources */,
 				381C74601AF53C82003290CF /* poll_default_icon@2x.png in Resources */,
@@ -1979,7 +2033,7 @@
 				4A6D15121AF27D2C003A1708 /* UIButton+AFNetworking.m in Sources */,
 				4A6D15101AF27D2C003A1708 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4AD19CD21B0850EC00BB2A37 /* JFWNotificationCell.m in Sources */,
-				4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */,
+				4AD2B2481AF558F30089DB7F /* JFWProfileViewController.m in Sources */,
 				3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */,
 				4A2EE4DE1B0799310078E322 /* JFWLegalAdviseViewController.m in Sources */,
 				4ACFBA721AF3F94400C82325 /* MMSideDrawerSectionHeaderView.m in Sources */,
@@ -2007,6 +2061,7 @@
 				4AD2B2541AF559290089DB7F /* JFWSignOutViewController.m in Sources */,
 				4ACFBA751AF3F94400C82325 /* NewControllerViewController.m in Sources */,
 				4ACFBA6B1AF3F94400C82325 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				4AE333BD1B31184C0013DE97 /* ProfileTableViewCell.m in Sources */,
 				4ACFBA771AF3F94400C82325 /* SecondViewController.m in Sources */,
 				4ACFBA6D1AF3F94400C82325 /* MMExampleRightSideDrawerViewController.m in Sources */,
 				3873FF141AFF6A9800E5E680 /* ImageContstants.m in Sources */,
@@ -2029,11 +2084,13 @@
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				4A6D150E1AF27D2C003A1708 /* AFURLSessionManager.m in Sources */,
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
+				4AE549FC1B33221B0001B784 /* FilterViewController.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
 				38CCE6271B2D8FAB00D51D68 /* UserModel.m in Sources */,
 				4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */,
 				4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */,
+				4AE54A021B3324020001B784 /* FilterTableViewCell.m in Sources */,
 				4AEAC6241B1AE7F80050DBD7 /* JFWCachingManager.m in Sources */,
 				4AE310881AF67C4B00D1E343 /* JFWFilterTableViewCell.m in Sources */,
 			);

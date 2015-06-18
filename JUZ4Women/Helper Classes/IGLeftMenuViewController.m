@@ -20,7 +20,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "JFWMenuItemModel.h"
 #import "JFWAboutUsViewController.h"
-#import "JFWArticleViewController.h"
+#import "JFWProfileViewController.h"
 #import "JFWPollsViewController.h"
 #import "JFWPostViewController.h"
 #import "JFWSignOutViewController.h"
@@ -34,6 +34,8 @@
 #import "UserModel.h"
 #import "UIImageView+AFNetworking.h"
 #import "JFWAppConstants.h"
+#import "JFWProfileViewController.h"
+
 @interface IGLeftMenuViewController()
 {
     NSMutableArray *menuItemArray;
@@ -233,5 +235,22 @@ NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItem
          
      }];
 
+}
+
+-(void)configureTapGesture
+{
+    self.profileImageView.userInteractionEnabled = YES;
+    
+    UIGestureRecognizer *singleTap = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(onProfileImageTapped:)];
+    [self.profileImageView addGestureRecognizer:singleTap];
+}
+
+
+- (void)onProfileImageTapped:(UIGestureRecognizer *)singleTap
+{
+    JFWProfileViewController *profileController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:profileController];
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 @end

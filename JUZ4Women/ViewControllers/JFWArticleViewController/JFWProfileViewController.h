@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JFWArticleViewController : UIViewController
+@interface JFWProfileViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *profileTableView;
+
+
 
 @end

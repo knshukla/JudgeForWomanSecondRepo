@@ -198,7 +198,7 @@
 
 - (void)handleAddFeedsResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
+//    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
     
 //    NSMutableArray *dataArray = [parserManager parseFeedsResponseWith:responseDictionary];
 //    self.successBlock(dataArray);
@@ -259,9 +259,7 @@
 
 - (void)handleArticleFeedsResponse:(NSDictionary *)responseDictionary
 {
-    JFWParserManager *parserManager = [[JFWParserManager alloc]init];
-    
-    NSMutableArray *dataArray = [parserManager parseArticleFeedsResponseWith:responseDictionary];
+    NSMutableArray *dataArray = [JFWParserManager parseArticleFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
 }
 @end

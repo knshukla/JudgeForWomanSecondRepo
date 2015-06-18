@@ -15,10 +15,10 @@
 
 @interface JFWParserManager : NSObject
 
--(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
--(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
--(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict;
--(NSMutableArray *)parseVideoFeedsResponseWith:(NSDictionary *)responseDict;
--(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict;
++(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict;
++(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict;
++(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict;
++(NSMutableArray *)parseVideoFeedsResponseWith:(NSDictionary *)responseDict;
++(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict;
 
 @end

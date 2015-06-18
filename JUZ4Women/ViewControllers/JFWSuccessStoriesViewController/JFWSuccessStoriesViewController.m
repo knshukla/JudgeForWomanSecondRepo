@@ -39,8 +39,8 @@
 {
     [super viewDidLoad];
     
-    self.homeTableView.rowHeight = UITableViewAutomaticDimension;
-    self.homeTableView.estimatedRowHeight = 30.0;
+    self.successStoriesTableView.rowHeight = UITableViewAutomaticDimension;
+    self.successStoriesTableView.estimatedRowHeight = 30.0;
     
     // Do any additional setup after loading the view.
     [self commanInit];
@@ -249,7 +249,7 @@
     [webServiceManager requestArticleFeedApiWithArticleModel:nil withSuccessBlock:^(id dataArray)
      {
          responseArray = (NSArray *)dataArray;
-         [self.homeTableView reloadData];
+         [self.successStoriesTableView reloadData];
      } withFailureBlock:^(NSError *error)
      {
          

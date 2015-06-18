@@ -14,7 +14,7 @@
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTask;
 @property (nonatomic) UIWindow *statusWindow;
 
-@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
+@property (weak, nonatomic) IBOutlet UITableView *successStoriesTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *postTopViewObj;
 

@@ -19,6 +19,8 @@
 #import "PopUpView.h"
 #import "JFWFeedsModel.h"
 #import "JFWWebserviceManager.h"
+#import "FilterViewController.h"
+
 
 @interface IGHomeViewController()
 {
@@ -219,13 +221,23 @@
 
 - (IBAction)onFilterButtonTapped:(id)sender
 {
-    NSArray *nibObjects=[[NSBundle mainBundle] loadNibNamed:@"PopUpView" owner:nil options:nil];
+//    NSArray *nibObjects=[[NSBundle mainBundle] loadNibNamed:@"PopUpView" owner:nil options:nil];
+//    
+//    demoView = [nibObjects objectAtIndex:0];
+//    [demoView setFrame:CGRectMake(30, 150, 300, 270)];
+//    demoView.backgroundColor = [UIColor greenColor];
+//    
+//    [self.view addSubview:demoView];
     
-    demoView = [nibObjects objectAtIndex:0];
-    [demoView setFrame:CGRectMake(30, 150, 300, 270)];
-    demoView.backgroundColor = [UIColor greenColor];
+    FilterViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterViewController"];
     
-    [self.view addSubview:demoView];
+    [self addChildViewController:viewController];
+    
+    [viewController.view setFrame:CGRectMake(20, 200, 280, 300)];
+    
+    [self.view addSubview:viewController.view];
+    
+    [viewController didMoveToParentViewController:self];
 }
 
 

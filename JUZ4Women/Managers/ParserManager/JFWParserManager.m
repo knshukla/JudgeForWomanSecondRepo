@@ -71,7 +71,7 @@
     return feedsArray;
 }
 
--(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict
++(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict
 {
     NSMutableArray *feedsArray = [[NSMutableArray alloc]init];
     
