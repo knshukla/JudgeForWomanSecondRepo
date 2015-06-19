@@ -21,10 +21,15 @@
 #import "JFWWebserviceManager.h"
 #import "JFWLoginModel.h"
 #import "UserModel.h"
+#import "JFWForgotPasswordViewController.h"
 
 @interface JFWLoginViewController ()
-@property (nonatomic,strong) MMDrawerController * drawerController;
+{
 
+    JFWForgotPasswordViewController *viewController;
+
+}
+@property (nonatomic,strong) MMDrawerController * drawerController;
 @end
 
 @implementation JFWLoginViewController
@@ -149,10 +154,32 @@
 
 - (IBAction)onForgotPasswordButtonTapped:(id)sender
 {
-    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWForgotPasswordViewControllerId"];
+
     
-    [self presentViewController:viewController animated:YES completion:nil];
+
+    viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWForgotPasswordViewControllerId"];
+    //viewController.delegate = self;
+    
+    // [self addChildViewController:viewController];
+    
+    [viewController.view setFrame:CGRectMake(20, 240, 280, 173)];
+    
+    viewController.view.layer.cornerRadius = 5.0;
+    viewController.view.layer.masksToBounds = YES;
+    
+    [self.view addSubview:viewController.view];
+    
+    [viewController didMoveToParentViewController:self];
 }
+
+
+- (void)onCancelButtonTapped
+{
+    [viewController.view removeFromSuperview];
+}
+
+
+
 
 - (IBAction)onSignUpButtonTapped:(id)sender
 {
