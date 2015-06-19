@@ -175,4 +175,17 @@
     
 }
 
+
+-(NSMutableDictionary *)createForgotPasswordRequestDictionary:(NSString *)password
+{
+    
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    
+    [dataDict setObject:@"forgetPassword" forKey:kRequestType];
+    [dataDict setObject:password forKey:@"input_field"];
+    return dataDict;
+    
+}
+
 @end

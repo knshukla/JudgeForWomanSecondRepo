@@ -34,6 +34,7 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestArticleFeedApiWithArticleModel:(ArticleModel *)articleModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestForgotPasswordApiWithPassword:(NSString *)password withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;

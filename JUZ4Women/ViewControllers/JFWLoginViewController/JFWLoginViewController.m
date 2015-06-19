@@ -23,7 +23,7 @@
 #import "UserModel.h"
 #import "JFWForgotPasswordViewController.h"
 
-@interface JFWLoginViewController ()
+@interface JFWLoginViewController ()<ForgetPasswordDelegate>
 {
 
     JFWForgotPasswordViewController *viewController;
@@ -154,11 +154,8 @@
 
 - (IBAction)onForgotPasswordButtonTapped:(id)sender
 {
-
-    
-
     viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWForgotPasswordViewControllerId"];
-    //viewController.delegate = self;
+    viewController.delegate = self;
     
     // [self addChildViewController:viewController];
     
@@ -173,13 +170,24 @@
 }
 
 
-- (void)onCancelButtonTapped
+- (void)onSubmitButtonTapped:(NSString *)password
 {
-    [viewController.view removeFromSuperview];
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestForgotPasswordApiWithPassword:password withSuccessBlock:^(id modal)
+     {
+        
+         NSLog(@"User name is");
+         [viewController.view removeFromSuperview];
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         [viewController.view removeFromSuperview];
+
+     }];
+    
+    
 }
-
-
-
 
 - (IBAction)onSignUpButtonTapped:(id)sender
 {

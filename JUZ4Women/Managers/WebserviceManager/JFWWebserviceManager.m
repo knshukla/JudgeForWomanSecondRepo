@@ -262,4 +262,33 @@
     NSMutableArray *dataArray = [JFWParserManager parseArticleFeedsResponseWith:responseDictionary];
     self.successBlock(dataArray);
 }
+
+-(void)requestForgotPasswordApiWithPassword:(NSString *)password withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager createForgotPasswordRequestDictionary:password];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful response");
+        [self handleForgotPasswordResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+
+
+}
+
+- (void)handleForgotPasswordResponse:(NSDictionary *)responseDictionary
+{
+//    NSMutableArray *dataArray = [JFWParserManager parseArticleFeedsResponseWith:responseDictionary];
+//    self.successBlock(dataArray);
+}
 @end

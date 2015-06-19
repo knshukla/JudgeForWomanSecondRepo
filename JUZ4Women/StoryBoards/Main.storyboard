@@ -1920,9 +1920,6 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="onSubmitButtonTapped:" destination="eLb-Mn-DG1" eventType="touchUpInside" id="I8T-Ma-Sbg"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhL-Eg-6bc">
                                 <rect key="frame" x="0.0" y="8" width="280" height="28"/>
@@ -1952,6 +1949,9 @@
                                 <state key="normal" image="submit.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSubmitButtonTapped:" destination="eLb-Mn-DG1" eventType="touchUpInside" id="aun-tY-ujp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your e-mail id to request a password reset." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oA-SZ-Yd0">
                                 <rect key="frame" x="0.0" y="36" width="280" height="41"/>
@@ -1986,6 +1986,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="280" height="173"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Ktz-3G-zGH" id="2Fn-GH-6wk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isj-Wr-qVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

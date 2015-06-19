@@ -34,6 +34,8 @@
 }
 */
 
-- (IBAction)onSubmitButtonTapped:(id)sender {
+- (IBAction)onSubmitButtonTapped:(id)sender
+{
+    [self.delegate onSubmitButtonTapped:self.passwordTextField.text];
 }
 @end

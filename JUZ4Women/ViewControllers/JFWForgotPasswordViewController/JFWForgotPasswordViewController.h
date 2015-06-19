@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ForgetPasswordDelegate
+
+- (void)onSubmitButtonTapped:(NSString *)password;
+
+@end
 @interface JFWForgotPasswordViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)onSubmitButtonTapped:(id)sender;
+
+@property (nonatomic) id <ForgetPasswordDelegate> delegate;
 
 @end

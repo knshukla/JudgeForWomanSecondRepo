@@ -27,5 +27,6 @@
 -(NSMutableDictionary *)createVideoFeedRequestDictionary:(VideoModel *)videoModel;
 -(NSMutableDictionary *)createArticleFeedRequestDictionary:(ArticleModel *)articleModel;
 
+-(NSMutableDictionary *)createForgotPasswordRequestDictionary:(NSString *)password;
 
 @end
