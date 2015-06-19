@@ -21,6 +21,8 @@
     // Do any additional setup after loading the view.
     
     [self configureLeftNavBar];
+    
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
     self.title = @"Profile";

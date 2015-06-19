@@ -146,4 +146,10 @@ static NSString *const kUserLoggedInKey = @"isUserLoggedIn";
 //Webservice blocks
 
 
-
+typedef NS_ENUM(NSInteger, FilterType) {
+    kFeedType,
+    kVideoType,
+    kSuccessStories,
+    kAdvice
+    
+};

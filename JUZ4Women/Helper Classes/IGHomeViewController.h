@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SlideNavigationController.h"
+#import "FilterViewController.h"
 
-@interface IGHomeViewController : UIViewController <SlideNavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface IGHomeViewController : UIViewController <SlideNavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate,FilterDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *searchBeaconImageView;
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTask;

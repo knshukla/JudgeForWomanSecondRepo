@@ -32,6 +32,8 @@
     BOOL isTableOpened;
     PopUpView *demoView;
     NSArray *responseArray;
+    FilterViewController *viewController ;
+    NSMutableArray *filterArray;
 
 }
 @end
@@ -229,17 +231,27 @@
 //    
 //    [self.view addSubview:demoView];
     
-    FilterViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterViewController"];
+    viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterViewController"];
+    viewController.delegate = self;
     
-    [self addChildViewController:viewController];
+   // [self addChildViewController:viewController];
     
-    [viewController.view setFrame:CGRectMake(20, 200, 280, 300)];
+    [viewController.view setFrame:CGRectMake(20, 130, 280, 300)];
+    viewController.filterType = kFeedType;
     
-    [self.view addSubview:viewController.view];
+    viewController.view.layer.cornerRadius = 5.0;
+    viewController.view.layer.masksToBounds = YES;
+    
+    [self.navigationController.view addSubview:viewController.view];
     
     [viewController didMoveToParentViewController:self];
 }
 
+
+- (void)onCancelButtonTapped
+{
+    [viewController.view removeFromSuperview];
+}
 
 
 @end

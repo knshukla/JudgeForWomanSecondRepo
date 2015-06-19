@@ -9,7 +9,11 @@
 #import "FilterViewController.h"
 #import "FilterTableViewCell.h"
 @interface FilterViewController ()
+{
+    NSArray *feedFilterArray;
+    NSArray *videoFilterArray;
 
+}
 @end
 
 @implementation FilterViewController
@@ -17,6 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    feedFilterArray = [self createFilterArray];
+    videoFilterArray = [self createLegalAdviceArray];
+    if(self.filterType == kVideoType)
+    {
+        self.tableViewHeightConstraints.constant = 132;
+        NSLog(@"height is %f",self.tableView.frame.size.height);
+
+    }
+    else
+    {
+        NSLog(@"IN else block");
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +51,22 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Returing number of rows in section of tableview
-    
-    return 5;
+    if(self.filterType == kFeedType)
+    {
+        return feedFilterArray.count;
+
+
+    }
+    else if(self.filterType == kVideoType)
+    {
+        return videoFilterArray.count;
+
+
+    }
+    else
+    {
+        return 2;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,7 +89,22 @@
     }
     cell.backgroundColor = [UIColor clearColor];
     //cell.notificationTitleLabel.text =@"fdjhfjdhfd";
-    cell.titleLabel.text = @"Hello";
+    
+    if(self.filterType == kFeedType)
+    {
+        cell.titleLabel.text = [feedFilterArray objectAtIndex:indexPath.row];
+        
+    }
+    else if(self.filterType == kVideoType)
+    {
+        cell.titleLabel.text = [videoFilterArray objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        cell.titleLabel.text = [feedFilterArray objectAtIndex:indexPath.row];
+    }
+    
+    
     
     return cell;
     
@@ -66,7 +112,37 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
 }
 
+
+- (IBAction)onCancelButtonTapped:(id)sender
+{
+    [self.delegate onCancelButtonTapped];
+}
+
+-(NSMutableArray *)createFilterArray
+{
+    NSMutableArray *filterArray = [[NSMutableArray alloc]init];
+    [filterArray addObject:@"Newest"];
+    [filterArray addObject:@"Most Liked"];
+    [filterArray addObject:@"Admin Post"];
+    [filterArray addObject:@"Most Disliked"];
+    [filterArray addObject:@"Post of the Day"];
+    
+    return filterArray;
+    
+}
+
+-(NSMutableArray *)createLegalAdviceArray
+{
+    NSMutableArray *filterArray = [[NSMutableArray alloc]init];
+    [filterArray addObject:@"Newest"];
+    [filterArray addObject:@"Most Liked"];
+    [filterArray addObject:@"Most Connected"];
+    
+    return filterArray;
+    
+}
 
 @end

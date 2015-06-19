@@ -11,10 +11,12 @@
 #import "JFWVideoCell.h"
 #import "JFWAddVideoViewController.h"
 #import "JFWWebserviceManager.h"
+#import "FilterViewController.h"
 
-@interface JFWVideoViewController ()
+@interface JFWVideoViewController ()<FilterDelegate>
 {
     NSArray *responseArray;
+    FilterViewController *viewController;
 }
 @end
 
@@ -113,7 +115,22 @@
 
 - (IBAction)onFilterButtonTapped:(id)sender
 {
+    viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterViewController"];
+    viewController.filterType = 1;
+
+    viewController.delegate = self;
     
+    // [self addChildViewController:viewController];
+    
+    [viewController.view setFrame:CGRectMake(20, 130, 280, 230)];
+    
+    viewController.view.layer.cornerRadius = 5.0;
+    viewController.view.layer.masksToBounds = YES;
+    
+    [self.navigationController.view addSubview:viewController.view];
+    
+    [viewController didMoveToParentViewController:self];
+
 }
 
 -(void)fetchVideoFeedDetail
@@ -129,6 +146,9 @@
          
      }];
 }
-
+- (void)onCancelButtonTapped
+{
+    [viewController.view removeFromSuperview];
+}
 
 @end

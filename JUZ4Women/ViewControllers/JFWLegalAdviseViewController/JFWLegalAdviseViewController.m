@@ -16,8 +16,9 @@
 #import "JFWAddPostViewController.h"
 #import "JFWFilterView.h"
 #import "JFWLegalAdviceCell.h"
+#import "FilterViewController.h"
 
-@interface JFWLegalAdviseViewController ()
+@interface JFWLegalAdviseViewController ()<FilterDelegate>
 {
     NSMutableArray *cellImageArray;
     UITableView *tableView;
@@ -25,6 +26,7 @@
     UILabel *messageLabel;
     JFWFilterView *filterViewObj;
     BOOL isTableOpened;
+    FilterViewController *viewController;
     
 }
 @end
@@ -39,7 +41,6 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
     
-    [self configureDropDownMenu];
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
@@ -199,37 +200,26 @@
 - (IBAction)onFilterButtonTapped:(id)sender
 {
     
-    [UIView animateWithDuration:0.4f animations:^{
-        if (isTableOpened)
-        {
-            isTableOpened = NO;
-            
-            [filterViewObj setFrame:CGRectMake(180, 110,150 , 0)];
-            
-            
-        }
-        else
-        {
-            isTableOpened = YES;
-            
-            [filterViewObj setFrame:CGRectMake(180, 110,150 , 150)];
-            
-        }
-    }];
+    viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterViewController"];
+    viewController.filterType = 1;
     
+    viewController.delegate = self;
+    
+    // [self addChildViewController:viewController];
+    
+    [viewController.view setFrame:CGRectMake(20, 130, 280, 230)];
+    
+    viewController.view.layer.cornerRadius = 5.0;
+    viewController.view.layer.masksToBounds = YES;
+    
+    [self.navigationController.view addSubview:viewController.view];
+    
+    [viewController didMoveToParentViewController:self];
 }
 
--(void)configureDropDownMenu
+
+- (void)onCancelButtonTapped
 {
-    isTableOpened = NO;
-    
-    //Initilizing View
-    filterViewObj = [[JFWFilterView alloc] initWithFrame:CGRectMake(180, 110,150 , 0)];
-    
-    filterViewObj.backgroundColor = [UIColor grayColor];
-    
-    [[UIApplication sharedApplication].keyWindow.rootViewController.view insertSubview:filterViewObj atIndex:2];
-    //Initlizing tableview and setting its properties
+    [viewController.view removeFromSuperview];
 }
-
 @end
