@@ -9,6 +9,10 @@
 #import "JFWProfileViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "ProfileTableViewCell.h"
+#import "JFWWebserviceManager.h"
+#import "UserModel.h"
+#import "JFWAppConstants.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface JFWProfileViewController ()
 
@@ -21,7 +25,10 @@
     // Do any additional setup after loading the view.
     
     [self configureLeftNavBar];
+    [self fetchUserProfileDetail];
     
+    self.profileImageView.layer.cornerRadius = 25;
+    self.profileImageView.layer.masksToBounds = YES;
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
@@ -106,5 +113,39 @@
 }
 
 - (IBAction)onProfileEditButtonTapped:(id)sender {
+}
+
+-(void)fetchUserProfileDetail
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestUserProfileApiWithUserModal:nil withSuccessBlock:^(id model)
+     {
+         UserModel *userModel = (UserModel *)model;
+         [self updateView:userModel];
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
+
+-(void)updateView:(UserModel *)model
+{
+    self.nameLabel.text = model.userName;
+    NSString *userAge = [NSString stringWithFormat:@"%ld years",model.userAge];
+    self.ageLabel.text = userAge;
+    
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,model.imageUrl];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [self.profileImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         [self.profileImageView setImage:image];
+         
+     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         
+     }];
+
 }
 @end

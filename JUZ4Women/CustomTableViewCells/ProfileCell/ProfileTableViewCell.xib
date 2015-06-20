@@ -108,6 +108,9 @@
                         <state key="normal" backgroundImage="like_small_icon.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="onLikedButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="E7d-ky-jk7"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njt-s8-Esw">
                         <rect key="frame" x="161" y="51" width="20" height="20"/>
@@ -118,6 +121,9 @@
                         <state key="normal" backgroundImage="dislike_small_icon.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="onDislikeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zn-xL-P0R"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccn-ML-QRS">
                         <rect key="frame" x="219" y="49" width="20" height="20"/>
@@ -128,6 +134,9 @@
                         <state key="normal" backgroundImage="comment_medium_icon.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="onCommentButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xSP-jJ-Pve"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-az-Ord">
                         <rect key="frame" x="266" y="49" width="20" height="20"/>
@@ -138,6 +147,9 @@
                         <state key="normal" backgroundImage="upload_small_icon_selected.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="onShareButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DEI-dj-76R"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmR-Bd-u8p">
                         <rect key="frame" x="1" y="0.0" width="5" height="73"/>
@@ -185,6 +197,15 @@
                     <constraint firstItem="njt-s8-Esw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="153" id="z11-vZ-1wU"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentsLabel" destination="4Qn-Mb-wog" id="zCs-Cd-ECS"/>
+                <outlet property="dateLabel" destination="E7q-as-k5a" id="pVq-L4-avI"/>
+                <outlet property="disLikeLabel" destination="n2b-rJ-eSP" id="sTa-ca-LhX"/>
+                <outlet property="likeLabel" destination="SlR-ts-uBg" id="Nrv-qt-m4I"/>
+                <outlet property="profileImageView" destination="qSD-ah-yLD" id="NEL-fI-LJW"/>
+                <outlet property="tagLabel" destination="E7q-as-k5a" id="Usl-fk-6DF"/>
+                <outlet property="titleLabel" destination="t8F-H3-NpK" id="UKB-zE-nSu"/>
+            </connections>
             <point key="canvasLocation" x="270" y="172.5"/>
         </tableViewCell>
     </objects>

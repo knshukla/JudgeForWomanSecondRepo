@@ -10,7 +10,7 @@
 
 @implementation UserModel
 
--(id)initWithUserId:(NSString *)userId withRealName:(NSString *)realName withDisplayName:(NSString *)displayName withEmailId:(NSString *)emailId withMobileNumber:(NSNumber *)mobileNumber withPassword:(NSString *)password withVerificationCode:(NSNumber *)code withDateModel:(DateModel *)dateModel withSignUpOption:(SignUpOption)option withCityName:(NSString *)city withCountry:(NSString *)country withImageUrl:(NSString *)imageUrl withUserName:(NSString *)userName withPostCount:(long)postCount withCommentsCount:(long)commentsCount withProfileViewsCount:(long)profileViewsCount withPostShareCount:(long)postShareCount
+-(id)initWithUserId:(NSString *)userId withRealName:(NSString *)realName withDisplayName:(NSString *)displayName withEmailId:(NSString *)emailId withMobileNumber:(NSNumber *)mobileNumber withPassword:(NSString *)password withVerificationCode:(NSNumber *)code withDateModel:(DateModel *)dateModel withSignUpOption:(SignUpOption)option withCityName:(NSString *)city withCountry:(NSString *)country withImageUrl:(NSString *)imageUrl withUserName:(NSString *)userName withPostCount:(long)postCount withCommentsCount:(long)commentsCount withProfileViewsCount:(long)profileViewsCount withPostShareCount:(long)postShareCount withPostAnswerd:(long)postAnswerd withFavoriteArticle:(long)favoriteArticel withFavoriteVideos:(long)favoriteVideo withTotalRecommendation:(long)recommendation withTotalProfileLikes:(long)profileLikes withRatingStars:(long)ratingStars withArticleArray:(NSMutableArray *)articleArray withPostArray:(NSMutableArray *)postArray withAge:(long )age
 
 {
     self = [super init];
@@ -33,6 +33,15 @@
         self.userTotalProfileViews = profileViewsCount;
         self.userTotalPostShares = postShareCount;
         self.uId = userId;
+        self.userTotalPostAnswerd = postAnswerd;
+        self.userTotalFavoriteVideos = favoriteArticel;
+        self.userTotalFavoriteVideos = favoriteVideo;
+        self.userTotalRecommendation = recommendation;
+        self.userTotalprofileLikes = profileLikes;
+        self.userTotalRatingStars = ratingStars;
+        self.articleArray = articleArray;
+        self.postArray = postArray;
+        self.userAge = age;
     }
     return self;
 }

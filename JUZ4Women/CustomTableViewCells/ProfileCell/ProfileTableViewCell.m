@@ -20,4 +20,15 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)onLikedButtonTapped:(id)sender {
+}
+
+- (IBAction)onDislikeButtonTapped:(id)sender {
+}
+
+- (IBAction)onCommentButtonTapped:(id)sender {
+}
+
+- (IBAction)onShareButtonTapped:(id)sender {
+}
 @end

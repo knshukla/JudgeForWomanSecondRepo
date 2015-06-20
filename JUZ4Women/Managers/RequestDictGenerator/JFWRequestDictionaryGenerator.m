@@ -205,4 +205,18 @@
     
 }
 
+-(NSMutableDictionary *)createUserProfileRequestDictionary:(UserModel *)userModel
+{
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    [dataDict setObject:@"getProfileScreenData" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+    return dataDict;
+    
+}
+//
 @end

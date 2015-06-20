@@ -19,7 +19,7 @@
 
 +(UserModel *)parseLoginResponseWith:(NSDictionary *)responseDict
 {
-    UserModel *userModel = [[UserModel alloc]initWithUserId:[responseDict objectForKey:kUid] withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kUserName] withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:[responseDict objectForKey:kUid] withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:[responseDict objectForKey:kUserName] withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0 withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:0.0];
     
     return userModel;
 
@@ -28,7 +28,7 @@
 +(UserModel *)parseLeftMenuResponseWith:(NSDictionary *)responseDict
 {
     NSString *imageUrl = [responseDict objectForKey:@"user_profile_picture"];
-    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue]];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue] withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:0.0];
 
     
     return userModel;
@@ -85,5 +85,18 @@
     }
     return feedsArray;
 }
++(UserModel *)parseUserProfileResponseWith:(NSDictionary *)profileResponseDict
+{
+    NSDictionary *responseDict = [profileResponseDict objectForKey:@"basic_details"];
+    NSArray *articleArray = [profileResponseDict objectForKey:@"articlesArray"];
+    NSArray *postArray = [profileResponseDict objectForKey:@"postArray"];
 
+    
+    NSString *imageUrl = [responseDict objectForKey:@"user_profile_picture"];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:kMenuUserName withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue] withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:[[responseDict objectForKey:@"user_dob"]longValue]];
+    
+    
+    return userModel;
+
+}
 @end

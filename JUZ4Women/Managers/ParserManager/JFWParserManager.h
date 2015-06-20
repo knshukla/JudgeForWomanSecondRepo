@@ -20,5 +20,6 @@
 +(NSMutableArray *)parseFeedsResponseWith:(NSDictionary *)responseDict;
 +(NSMutableArray *)parseVideoFeedsResponseWith:(NSDictionary *)responseDict;
 +(NSMutableArray *)parseArticleFeedsResponseWith:(NSDictionary *)responseDict;
++(UserModel *)parseUserProfileResponseWith:(NSDictionary *)responseDict;
 
 @end

@@ -10,4 +10,25 @@
 
 @interface ProfileTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *disLikeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
+
+
+- (IBAction)onLikedButtonTapped:(id)sender;
+
+- (IBAction)onDislikeButtonTapped:(id)sender;
+
+- (IBAction)onCommentButtonTapped:(id)sender;
+
+- (IBAction)onShareButtonTapped:(id)sender;
+
+
 @end

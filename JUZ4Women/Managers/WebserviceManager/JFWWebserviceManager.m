@@ -314,4 +314,33 @@
     
 }
 
+
+-(void)requestUserProfileApiWithUserModal:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createUserProfileRequestDictionary:userModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful Legal advice response");
+        [self handleUserProfileResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure Legal advice response");
+        
+        self.failureBlock(error);
+    }];
+}
+
+
+- (void)handleUserProfileResponse:(NSDictionary *)responseDictionary
+{
+    UserModel *userModel = [JFWParserManager parseUserProfileResponseWith:responseDictionary];
+    self.successBlock(userModel);
+    NSLog(@"Response dict is %@",responseDictionary);
+}
 @end
