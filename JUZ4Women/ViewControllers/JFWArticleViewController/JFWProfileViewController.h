@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *profileTableView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
+- (IBAction)onProfileEditButtonTapped:(id)sender;
 
 @end

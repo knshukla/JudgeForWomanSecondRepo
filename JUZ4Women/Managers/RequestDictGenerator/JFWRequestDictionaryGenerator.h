@@ -28,5 +28,7 @@
 -(NSMutableDictionary *)createArticleFeedRequestDictionary:(ArticleModel *)articleModel;
 
 -(NSMutableDictionary *)createForgotPasswordRequestDictionary:(NSString *)password;
+-(NSMutableDictionary *)createLegalAdviceFeedRequestDictionary:(ArticleModel *)articleModel;
+
 
 @end

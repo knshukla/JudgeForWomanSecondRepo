@@ -14,7 +14,7 @@
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTask;
 @property (nonatomic) UIWindow *statusWindow;
 
-@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
+@property (weak, nonatomic) IBOutlet UITableView *legalAdviceTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *postTopViewObj;
 
@@ -23,4 +23,5 @@
 - (IBAction)onEditPostButtonTapped:(id)sender;
 
 - (IBAction)onFilterButtonTapped:(id)sender;
+
 @end

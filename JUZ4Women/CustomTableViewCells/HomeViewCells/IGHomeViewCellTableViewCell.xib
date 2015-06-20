@@ -60,6 +60,14 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t77-dy-aix">
+                        <rect key="frame" x="1" y="0.0" width="5" height="73"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.75294117647058822" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="73" id="Ri9-Cf-dAb"/>
+                            <constraint firstAttribute="width" constant="5" id="qfz-OA-OwB"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="DIl-gK-7gw" firstAttribute="top" secondItem="c79-zw-zOU" secondAttribute="top" constant="16" id="1G3-QS-sN5"/>
@@ -69,6 +77,7 @@
                     <constraint firstAttribute="trailing" secondItem="IF4-cJ-41R" secondAttribute="trailing" id="D8E-pq-rCd"/>
                     <constraint firstAttribute="centerY" secondItem="nGs-fI-1aA" secondAttribute="centerY" id="EgV-cu-eAm"/>
                     <constraint firstItem="ecE-Wx-auA" firstAttribute="top" secondItem="DIl-gK-7gw" secondAttribute="bottom" constant="1" id="IXO-Ob-j9t"/>
+                    <constraint firstItem="t77-dy-aix" firstAttribute="leading" secondItem="c79-zw-zOU" secondAttribute="leading" constant="1" id="L0L-Fx-387"/>
                     <constraint firstItem="GuP-NK-G8r" firstAttribute="leading" secondItem="nGs-fI-1aA" secondAttribute="trailing" constant="167" id="MA0-bx-cYT"/>
                     <constraint firstItem="GuP-NK-G8r" firstAttribute="top" secondItem="c79-zw-zOU" secondAttribute="top" constant="8" id="Nhl-qq-LHO"/>
                     <constraint firstAttribute="trailing" secondItem="DIl-gK-7gw" secondAttribute="trailing" constant="80" id="Nkc-7u-OLg"/>
@@ -76,6 +85,7 @@
                     <constraint firstItem="nGs-fI-1aA" firstAttribute="leading" secondItem="c79-zw-zOU" secondAttribute="leading" constant="20" id="Pk9-jP-pZN"/>
                     <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="ecE-Wx-auA" secondAttribute="bottom" constant="6" id="Rjc-c8-Mfg"/>
                     <constraint firstAttribute="bottom" secondItem="IF4-cJ-41R" secondAttribute="bottom" constant="1" id="SrW-6P-H6y"/>
+                    <constraint firstItem="t77-dy-aix" firstAttribute="top" secondItem="c79-zw-zOU" secondAttribute="top" id="U3q-0V-df3"/>
                     <constraint firstItem="ecE-Wx-auA" firstAttribute="leading" secondItem="nGs-fI-1aA" secondAttribute="trailing" constant="30" id="Vxv-Jw-Wzm"/>
                     <constraint firstAttribute="centerX" secondItem="nGs-fI-1aA" secondAttribute="centerX" id="ae6-Mb-cu7"/>
                     <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="ecE-Wx-auA" secondAttribute="bottom" constant="6" id="ain-wP-4mw"/>
@@ -86,6 +96,7 @@
                     <constraint firstAttribute="trailing" secondItem="GuP-NK-G8r" secondAttribute="trailing" constant="-2" id="lA2-CI-jGt"/>
                     <constraint firstAttribute="trailing" secondItem="ecE-Wx-auA" secondAttribute="trailing" constant="8" id="wD9-4l-nai"/>
                     <constraint firstItem="IF4-cJ-41R" firstAttribute="top" secondItem="nGs-fI-1aA" secondAttribute="bottom" constant="14" id="wf7-q0-oa8"/>
+                    <constraint firstAttribute="bottom" secondItem="t77-dy-aix" secondAttribute="bottom" constant="1" id="zTb-8Y-WOZ"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

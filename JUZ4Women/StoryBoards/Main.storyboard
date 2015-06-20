@@ -591,7 +591,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTP-bq-Asc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="Wuh-5q-Q4w"/>
@@ -1751,6 +1751,41 @@
             </objects>
             <point key="canvasLocation" x="1603.5" y="311.25"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1WY-G1-2Ba">
+            <objects>
+                <viewController id="34Z-Jj-gMP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iTr-hy-skZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ntq-Nq-eul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w1F-GT-Fyk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="doE-FR-cD8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="JUc-go-ZcF"/>
+                                    <constraint firstAttribute="width" constant="320" id="kpY-je-Lre"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="doE-FR-cD8" firstAttribute="leading" secondItem="w1F-GT-Fyk" secondAttribute="leading" id="OAm-wf-1XD"/>
+                            <constraint firstItem="doE-FR-cD8" firstAttribute="top" secondItem="w1F-GT-Fyk" secondAttribute="top" id="aub-To-Xjf"/>
+                            <constraint firstItem="Ntq-Nq-eul" firstAttribute="top" secondItem="doE-FR-cD8" secondAttribute="bottom" id="cLJ-gS-dWo"/>
+                            <constraint firstAttribute="trailing" secondItem="doE-FR-cD8" secondAttribute="trailing" id="mIG-zD-NZ4"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlO-lI-a78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="340"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="1mA-BL-6vE">
             <objects>
@@ -1774,16 +1809,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHs-0D-83A">
-                                        <rect key="frame" x="119" y="53" width="83" height="87"/>
+                                        <rect key="frame" x="119" y="74" width="83" height="87"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvS-HL-bKs">
-                                        <rect key="frame" x="0.0" y="154" width="320" height="21"/>
+                                        <rect key="frame" x="0.0" y="164" width="320" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay5-wb-gVk">
-                                        <rect key="frame" x="0.0" y="178" width="320" height="21"/>
+                                        <rect key="frame" x="0.0" y="188" width="320" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1793,6 +1829,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onProfileEditButtonTapped:" destination="Jo6-AK-TkF" eventType="touchUpInside" id="KMk-BK-QO8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1808,14 +1847,14 @@
                                     <constraint firstAttribute="width" constant="320" id="daJ-4b-kq5"/>
                                     <constraint firstAttribute="height" constant="253" id="fen-ks-mAR"/>
                                 </constraints>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Jo6-AK-TkF" id="A5a-OA-SOW"/>
                                     <outlet property="delegate" destination="Jo6-AK-TkF" id="2Mh-UO-ZT5"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A8D-eY-HRC" secondAttribute="trailing" id="3lh-db-uM4"/>
                             <constraint firstItem="ak3-Bz-k12" firstAttribute="top" secondItem="A8D-eY-HRC" secondAttribute="bottom" id="7v5-CI-7hb"/>
@@ -1834,6 +1873,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="ageLabel" destination="Ay5-wb-gVk" id="6fY-bY-KCv"/>
+                        <outlet property="nameLabel" destination="IvS-HL-bKs" id="E2h-ba-UIu"/>
+                        <outlet property="profileImageView" destination="EHs-0D-83A" id="4pk-kB-uoj"/>
                         <outlet property="profileTableView" destination="ak3-Bz-k12" id="abj-P4-w25"/>
                     </connections>
                 </viewController>
@@ -3287,9 +3329,14 @@
                                     <outlet property="delegate" destination="e0O-eD-BI2" id="fmb-da-190"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Dqu-1n-rWo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Dqu-1n-rWo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e0O-eD-BI2" id="oi2-IX-lsW"/>
+                                    <outlet property="delegate" destination="e0O-eD-BI2" id="P7n-lr-cnr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3369,7 +3416,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="homeTableView" destination="gLS-Uk-ACJ" id="LFs-mM-Ft0"/>
+                        <outlet property="legalAdviceTableView" destination="Dqu-1n-rWo" id="Tvc-Hd-KNZ"/>
                         <outlet property="postTopViewObj" destination="1Gg-df-rmU" id="WeV-hd-38S"/>
                     </connections>
                 </viewController>

@@ -77,7 +77,7 @@
     
     //Intilizing the table cell
     static NSString* cellIdentifier = @"cellIdentifier";
-    
+    self.profileTableView.backgroundColor = [UIColor clearColor];
     ProfileTableViewCell *cell = (ProfileTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
@@ -98,8 +98,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75.0;
+}
 
-
+- (IBAction)onProfileEditButtonTapped:(id)sender {
+}
 @end

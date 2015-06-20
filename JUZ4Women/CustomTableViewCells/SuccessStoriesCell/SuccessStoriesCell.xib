@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -65,11 +66,16 @@
                             <constraint firstAttribute="height" constant="1" id="p9B-tG-pVn"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mag-Po-oQn">
+                        <rect key="frame" x="1" y="0.0" width="5" height="70"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.75294117647058822" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1ho-fl-w1Y" firstAttribute="top" secondItem="sVa-6c-Jk4" secondAttribute="bottom" constant="18" id="3G3-4l-QdH"/>
                     <constraint firstItem="sVa-6c-Jk4" firstAttribute="top" secondItem="iDY-CT-cht" secondAttribute="bottom" id="3Ka-Ar-7qc"/>
                     <constraint firstItem="1ho-fl-w1Y" firstAttribute="top" secondItem="NLc-UP-beJ" secondAttribute="bottom" constant="7" id="4Cz-hb-QmK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mag-Po-oQn" secondAttribute="bottom" constant="-9" id="4iL-dn-FQT"/>
                     <constraint firstAttribute="trailing" secondItem="iDY-CT-cht" secondAttribute="trailing" constant="28" id="62Q-Tv-w6P"/>
                     <constraint firstItem="NLc-UP-beJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="96D-Jg-j1c"/>
                     <constraint firstItem="sVa-6c-Jk4" firstAttribute="top" secondItem="iDY-CT-cht" secondAttribute="bottom" id="9ZC-b9-oBU"/>
@@ -81,12 +87,15 @@
                     <constraint firstAttribute="bottom" secondItem="jUO-be-jpd" secondAttribute="bottom" id="M3F-LZ-gea"/>
                     <constraint firstItem="jUO-be-jpd" firstAttribute="leading" secondItem="NLc-UP-beJ" secondAttribute="trailing" constant="19" id="R8e-eF-rvm"/>
                     <constraint firstItem="1ho-fl-w1Y" firstAttribute="top" secondItem="NLc-UP-beJ" secondAttribute="bottom" constant="7" id="RGS-Vv-vUi"/>
+                    <constraint firstItem="mag-Po-oQn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-14" id="Zf4-d0-zZl"/>
+                    <constraint firstItem="NLc-UP-beJ" firstAttribute="leading" secondItem="mag-Po-oQn" secondAttribute="trailing" constant="2" id="ax8-q0-fpj"/>
                     <constraint firstItem="iDY-CT-cht" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="c28-sR-FRS"/>
                     <constraint firstItem="iDY-CT-cht" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cbl-PY-iEQ"/>
                     <constraint firstAttribute="trailing" secondItem="sVa-6c-Jk4" secondAttribute="trailing" constant="8" id="dOH-mK-7UQ"/>
                     <constraint firstAttribute="trailing" secondItem="jUO-be-jpd" secondAttribute="trailing" constant="8" id="diq-x8-bPv"/>
                     <constraint firstItem="1ho-fl-w1Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dpz-Gm-DGY"/>
                     <constraint firstItem="iDY-CT-cht" firstAttribute="leading" secondItem="NLc-UP-beJ" secondAttribute="trailing" constant="19" id="hUC-ls-OoJ"/>
+                    <constraint firstItem="mag-Po-oQn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mIU-1t-9yY"/>
                     <constraint firstItem="sVa-6c-Jk4" firstAttribute="leading" secondItem="NLc-UP-beJ" secondAttribute="trailing" constant="19" id="prH-qt-bx9"/>
                     <constraint firstItem="jUO-be-jpd" firstAttribute="top" secondItem="iDY-CT-cht" secondAttribute="bottom" constant="19" id="qeB-pA-qUm"/>
                     <constraint firstItem="iDY-CT-cht" firstAttribute="leading" secondItem="NLc-UP-beJ" secondAttribute="trailing" constant="19" id="vPm-k0-5Jp"/>

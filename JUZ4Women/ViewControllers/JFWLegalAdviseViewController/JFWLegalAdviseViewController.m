@@ -17,6 +17,8 @@
 #import "JFWFilterView.h"
 #import "JFWLegalAdviceCell.h"
 #import "FilterViewController.h"
+#import "JFWWebserviceManager.h"
+
 
 @interface JFWLegalAdviseViewController ()<FilterDelegate>
 {
@@ -27,6 +29,7 @@
     JFWFilterView *filterViewObj;
     BOOL isTableOpened;
     FilterViewController *viewController;
+    NSArray *responseArray;
     
 }
 @end
@@ -37,6 +40,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self commanInit];
+    [self fetchAdviceFeedDetail];
+    
+    self.legalAdviceTableView.rowHeight = UITableViewAutomaticDimension;
+    self.legalAdviceTableView.estimatedRowHeight = 30.0;
     self.title = @"Legal Advice";
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
@@ -149,7 +156,7 @@
 {
     //Returing number of rows in section of tableview
     
-    return 10;
+    return responseArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -165,13 +172,15 @@
     {
         cell = [[JFWLegalAdviceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"IGHomeViewCellTableViewCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"JFWLegalAdviceCell" owner:self options:nil];
         cell =  (JFWLegalAdviceCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
     cell.backgroundColor = [UIColor clearColor];
+    [cell configureCellWithModel:[responseArray objectAtIndex:indexPath.row]];
+    
     
     return cell;
     
@@ -222,4 +231,21 @@
 {
     [viewController.view removeFromSuperview];
 }
+
+-(void)fetchAdviceFeedDetail
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestLegalAdviceApiWithArticleModel:nil withSuccessBlock:^(id dataArray)
+     {
+         responseArray = (NSArray *)dataArray;
+         
+         [self.legalAdviceTableView reloadData];
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         
+     }];
+}
+
 @end

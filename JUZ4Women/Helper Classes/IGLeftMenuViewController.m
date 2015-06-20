@@ -58,6 +58,7 @@
 {
 	[super viewDidLoad];
     NSLog(@"Controll came here");
+    [self configureTapGesture];
     
       menuItemArray = [self createMenuItemArray];
     
@@ -142,7 +143,7 @@
 	
 	UIViewController *viewControllerObj ;
     
-    if(indexPath.row !=6)
+    if(indexPath.row !=8)
     {
         switch (indexPath.row)
         {
@@ -174,7 +175,10 @@
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWContactUsViewController"];
                 break;
             case 7:
-                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
+//                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
+                
+                //
                 break;
             
         }
@@ -185,7 +189,7 @@
     }
     else
     {
-        viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
+        viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWLoginViewControllerId"];
         JFWAppDelegate *delegateObj = [UIApplication sharedApplication].delegate;
         
         [delegateObj.window setRootViewController:viewControllerObj];
@@ -251,6 +255,5 @@ NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItem
     JFWProfileViewController *profileController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:profileController];
     
-    [self presentViewController:navController animated:YES completion:nil];
-}
+    [self.mm_drawerController setCenterViewController:navController withCloseAnimation:YES completion:nil];}
 @end

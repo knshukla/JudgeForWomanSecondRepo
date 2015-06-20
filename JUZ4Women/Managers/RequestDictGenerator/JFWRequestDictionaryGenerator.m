@@ -175,6 +175,23 @@
     
 }
 
+-(NSMutableDictionary *)createLegalAdviceFeedRequestDictionary:(ArticleModel *)articleModel
+{
+    NSNumber *postId = [NSNumber numberWithInt:0];
+    
+    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    [dataDict setObject:@"getLegalAdviceScreenDetails" forKey:kRequestType];
+    [dataDict setObject:userName forKey:kUserName];
+    [dataDict setObject:uid forKey:kUid];
+    [dataDict setObject:postId forKey:@"last_article_id"];
+    return dataDict;
+    
+}
+
 
 -(NSMutableDictionary *)createForgotPasswordRequestDictionary:(NSString *)password
 {

@@ -291,4 +291,27 @@
 //    NSMutableArray *dataArray = [JFWParserManager parseArticleFeedsResponseWith:responseDictionary];
 //    self.successBlock(dataArray);
 }
+
+-(void)requestLegalAdviceApiWithArticleModel:(ArticleModel *)articleModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    NSMutableDictionary *dataDict = [requestGeneratorManager createLegalAdviceFeedRequestDictionary:articleModel];
+    
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful Legal advice response");
+        [self handleArticleFeedsResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure Legal advice response");
+        
+        self.failureBlock(error);
+    }];
+    
+}
+
 @end

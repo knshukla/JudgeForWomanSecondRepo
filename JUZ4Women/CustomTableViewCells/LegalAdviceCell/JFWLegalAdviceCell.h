@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ArticleModel;
 @interface JFWLegalAdviceCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *userProfileImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *dateLable;
+
+-(void)configureCellWithModel:(ArticleModel *)articleModel;
 
 @end
