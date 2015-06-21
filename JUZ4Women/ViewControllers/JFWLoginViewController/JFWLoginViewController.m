@@ -22,9 +22,11 @@
 #import "JFWLoginModel.h"
 #import "UserModel.h"
 #import "JFWForgotPasswordViewController.h"
+#import "IGSocialManager.h"
 
 @interface JFWLoginViewController ()<ForgetPasswordDelegate>
 {
+    IGSocialManager *socialManagerObj;
 
     JFWForgotPasswordViewController *viewController;
 
@@ -150,7 +152,26 @@
 - (IBAction)onGooglePlusButtonTapped:(id)sender
 {
     
+        [socialManagerObj googlePlusLogin];
 }
+
+-(void)onGooglePlusLoginDoneWithData :(id)jsonResponseData withError:(NSError *)error
+{
+    if(!error)
+    {
+        NSString *userEmailId = (NSString *)jsonResponseData;
+        
+        NSLog(@"%@", userEmailId);
+        
+       
+    }
+    else
+    {
+        
+    }
+}
+
+
 
 - (IBAction)onForgotPasswordButtonTapped:(id)sender
 {

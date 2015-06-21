@@ -7,6 +7,11 @@
 //
 
 #import "ProfileTableViewCell.h"
+#import "JFWFeedsModel.h"
+#import "ArticleModel.h"
+#import "UIImageView+AFNetworking.h"
+#import "JFWAppConstants.h"
+
 
 @implementation ProfileTableViewCell
 
@@ -30,5 +35,40 @@
 }
 
 - (IBAction)onShareButtonTapped:(id)sender {
+}
+
+-(void)configureCellWithArticleModel:(ArticleModel *)articleModel
+{
+    self.titleLabel.text = articleModel.ArticleTitle;
+    self.tagLabel.text = articleModel.articleTags;
+    
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,articleModel.userThumbnailUrl];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [self.profileImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         [self.profileImageView setImage:image];
+         
+     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         
+     }];
+
+}
+-(void)configureCellWithFeedModel:(JFWFeedsModel *)feedModel
+{
+    self.titleLabel.text = feedModel.postTitle;
+    self.tagLabel.text = feedModel.tags;
+    
+    NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,feedModel.userAvatorUrl];
+    NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [self.profileImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         [self.profileImageView setImage:image];
+         
+     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         
+     }];
+
 }
 @end

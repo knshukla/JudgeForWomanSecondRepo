@@ -89,11 +89,38 @@
 {
     NSDictionary *responseDict = [profileResponseDict objectForKey:@"basic_details"];
     NSArray *articleArray = [profileResponseDict objectForKey:@"articlesArray"];
-    NSArray *postArray = [profileResponseDict objectForKey:@"postArray"];
+    NSArray *postDataArray = [profileResponseDict objectForKey:@"postArray"];
+    
+    
+    NSMutableArray *articleDataArray = [[NSMutableArray alloc]init];
+
+    for(NSDictionary *dict in articleArray)
+    {
+        ArticleModel *articleModel = [[ArticleModel alloc]initWithArticleTitle:[dict objectForKey:@"article_title"] withDate:[dict objectForKey:@"article_date"] withArticleTags:[dict objectForKey:@"tags"] withArticleLikes:[[dict objectForKey:@"article_like_count"] longValue] withArticleInspires:[[dict objectForKey:@"article_inspired_count"] longValue]withAritcleId:[[dict objectForKey:@"article_id"] intValue]withDescription:[dict objectForKey:@"article_description"] withThumbnailUrl:[dict objectForKey:@"user_profile_pic"] withConclusion:[dict objectForKey:@"article_conclusion"] withPostComment:[[dict objectForKey:@"post_no_of_comments"]longValue] withTime:[dict objectForKey:@"article_time"]];
+        
+        [articleDataArray addObject:articleModel];
+    }
+    
+    NSMutableArray *postArray = [[NSMutableArray alloc]init];
+    
+    
+    for(NSDictionary *dict in postDataArray)
+    {
+        NSString *tagString = [dict objectForKey:@"tags"];
+        if([tagString isEqual:[NSNull null]])
+        {
+            tagString = @"";
+        }
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
+        
+        [postArray addObject:feedModel];
+    }
+
+
 
     
     NSString *imageUrl = [responseDict objectForKey:@"user_profile_picture"];
-    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:kMenuUserName withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue] withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:[[responseDict objectForKey:@"user_dob"]longValue]];
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:kMenuUserName withDisplayName:[responseDict objectForKey:kUserAlisName] withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:imageUrl withUserName:[responseDict objectForKey:kMenuUserName] withPostCount:[[responseDict objectForKey:kUserTotalPost] longValue] withCommentsCount:[[responseDict objectForKey:kUserTotalComments] longValue] withProfileViewsCount:[[responseDict objectForKey:kUserTotalProfileViews] longValue] withPostShareCount:[[responseDict objectForKey:kUserTotalPostShares] longValue] withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:articleDataArray withPostArray:postArray withAge:[[responseDict objectForKey:@"user_dob"]longValue]];
     
     
     return userModel;

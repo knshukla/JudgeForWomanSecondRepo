@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ArticleModel;
+@class JFWFeedsModel;
 
 @interface ProfileTableViewCell : UITableViewCell
 
@@ -30,5 +32,7 @@
 
 - (IBAction)onShareButtonTapped:(id)sender;
 
+-(void)configureCellWithArticleModel:(ArticleModel *)articleModel;
+-(void)configureCellWithFeedModel:(JFWFeedsModel *)feedModel;
 
 @end

@@ -15,7 +15,10 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface JFWProfileViewController ()
-
+{
+    UIView *headerView;
+    UserModel *userModel;
+}
 @end
 
 @implementation JFWProfileViewController
@@ -26,8 +29,9 @@
     
     [self configureLeftNavBar];
     [self fetchUserProfileDetail];
+    [self configureHeaderView];
     
-    self.profileImageView.layer.cornerRadius = 25;
+    self.profileImageView.layer.cornerRadius = 42;
     self.profileImageView.layer.masksToBounds = YES;
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
@@ -68,14 +72,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Returing number of rows in section of tableview
-    
-    return 10;
+    if(section == 0)
+    {
+        NSArray *postArray = userModel.postArray;
+        return postArray.count;
+    }
+    else
+    {
+        
+        NSArray *articleArray = userModel.articleArray;
+        return articleArray.count;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,6 +111,19 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     cell.backgroundColor = [UIColor clearColor];
+    cell.profileImageView.layer.cornerRadius = 23;
+    cell.profileImageView.layer.masksToBounds = YES;
+    if(indexPath.section == 0)
+    {
+       [cell configureCellWithFeedModel:[userModel.postArray objectAtIndex:indexPath.row]];
+    }
+    else
+    {
+        
+        
+         [cell configureCellWithArticleModel:[userModel.articleArray objectAtIndex:indexPath.row]];
+
+    }
     
     return cell;
     
@@ -121,8 +147,9 @@
     
     [webServiceManager requestUserProfileApiWithUserModal:nil withSuccessBlock:^(id model)
      {
-         UserModel *userModel = (UserModel *)model;
+         userModel = (UserModel *)model;
          [self updateView:userModel];
+         [self.profileTableView reloadData];
          
      } withFailureBlock:^(NSError *error)
      {
@@ -147,5 +174,40 @@
          
      }];
 
+}
+
+-(void)configureHeaderView
+{
+    headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 70)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    NSString *string;
+    label.textColor = [UIColor whiteColor];
+    if(section == 0)
+    {
+        string =@"Recent Post";
+    }
+    else
+    {
+       string =@"Recent Articles";
+    }
+    
+    
+    UIImageView *borderImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 1)];
+    
+    borderImageView.backgroundColor = [UIColor colorWithRed:130.0/255.0 green:143.0/255.0 blue:160.0/255.0 alpha:1];
+    
+    [view addSubview:borderImageView];
+    view.backgroundColor = [UIColor clearColor];
+    
+    [label setText:string];
+    [view addSubview:label];
+    return view;
 }
 @end
