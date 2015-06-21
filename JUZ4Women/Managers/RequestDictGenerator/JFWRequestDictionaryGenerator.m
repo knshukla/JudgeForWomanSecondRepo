@@ -23,8 +23,10 @@
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
     [dataDict setObject:@"loginAuthentication" forKey:kRequestType];
-    [dataDict setObject:@"vivekbansal" forKey:kUserName];
-    [dataDict setObject:@"vivek123" forKey:kPassword];
+    [dataDict setObject:userModel.realName forKey:kUserName];
+    [dataDict setObject:userModel.password forKey:kPassword];
+    //vivekbansal
+    //vivek123
     
     return dataDict;
 }

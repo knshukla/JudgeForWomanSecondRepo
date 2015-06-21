@@ -25,10 +25,15 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)onLikedButtonTapped:(id)sender {
+- (IBAction)onLikedButtonTapped:(id)sender
+{
+    NSLog(@"like button tapped");
 }
 
-- (IBAction)onDislikeButtonTapped:(id)sender {
+- (IBAction)onDislikeButtonTapped:(id)sender
+{
+    NSLog(@"Dislike button tapped");
+
 }
 
 - (IBAction)onCommentButtonTapped:(id)sender {

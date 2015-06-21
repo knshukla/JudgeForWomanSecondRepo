@@ -73,7 +73,11 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
-    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:nil withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:nil withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:nil withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0 withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:nil];
+    if([self.usernameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] )
+        return;
+
+    
+    UserModel *userModel = [[UserModel alloc]initWithUserId:nil withRealName:self.usernameTextField.text withDisplayName:nil withEmailId:nil withMobileNumber:nil withPassword:self.passwordTextField.text withVerificationCode:nil withDateModel:nil withSignUpOption:0 withCityName:nil withCountry:nil withImageUrl:nil withUserName:nil withPostCount:0.0 withCommentsCount:0.0 withProfileViewsCount:0.0 withPostShareCount:0.0 withPostAnswerd:0.0 withFavoriteArticle:0.0 withFavoriteVideos:0.0 withTotalRecommendation:0.0 withTotalProfileLikes:0.0 withRatingStars:0.0 withArticleArray:nil withPostArray:nil withAge:0.0];
     
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
@@ -193,6 +197,9 @@
 
 - (void)onSubmitButtonTapped:(NSString *)password
 {
+    [viewController.view removeFromSuperview];
+
+    
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
     [webServiceManager requestForgotPasswordApiWithPassword:password withSuccessBlock:^(id modal)
@@ -222,4 +229,6 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
 @end
