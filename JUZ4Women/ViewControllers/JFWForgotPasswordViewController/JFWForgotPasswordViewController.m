@@ -7,6 +7,7 @@
 //
 
 #import "JFWForgotPasswordViewController.h"
+#import "JFWUtilities.h"
 
 @interface JFWForgotPasswordViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+     [JFWUtilities setPlaceHolderTextColor:self.passwordTextField color:[JFWUtilities placeHolderTextColor]];
 }
 
 - (void)didReceiveMemoryWarning {

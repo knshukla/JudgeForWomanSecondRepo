@@ -591,7 +591,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTP-bq-Asc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="Wuh-5q-Q4w"/>
@@ -2018,7 +2018,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.23921568627450979" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gvK-xW-JDa" firstAttribute="top" secondItem="Ktz-3G-zGH" secondAttribute="bottom" constant="11" id="CVI-2y-PRV"/>
                             <constraint firstAttribute="trailing" secondItem="6oA-SZ-Yd0" secondAttribute="trailing" id="CrG-O7-Yg7"/>
@@ -3072,7 +3072,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-g8-Tgz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-g8-Tgz">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter As" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh5-JO-1HK">
@@ -3082,7 +3082,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83921568627450982" green="0.27058823529411763" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.61568627450980395" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="gA0-Sh-35C"/>
                                     <constraint firstAttribute="height" constant="50" id="oSc-Yu-9pV"/>
@@ -3095,15 +3095,15 @@
                                     <constraint firstAttribute="height" constant="210" id="Gbb-uO-rq5"/>
                                     <constraint firstAttribute="width" constant="280" id="MDf-61-NnO"/>
                                 </constraints>
-                                <color key="sectionIndexBackgroundColor" red="1" green="0.3105273261" blue="0.60578239420000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95294117647058818" green="0.83137254901960778" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="SLr-cH-SE8" id="fhc-bv-s8s"/>
                                     <outlet property="delegate" destination="SLr-cH-SE8" id="Hy0-fG-mwc"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aby-YE-bb3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aby-YE-bb3">
                                 <rect key="frame" x="99" y="263" width="82" height="30"/>
-                                <color key="backgroundColor" red="0.83921568627450982" green="0.27058823529411763" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.61568627450980395" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="4sl-q8-5hS"/>
                                     <constraint firstAttribute="height" constant="30" id="aBj-6d-HCZ"/>
@@ -3117,7 +3117,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.83137254901960778" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aby-YE-bb3" firstAttribute="leading" secondItem="5RD-wf-b9y" secondAttribute="leadingMargin" constant="83" id="5in-OX-hMU"/>
                             <constraint firstItem="Qe8-61-iTS" firstAttribute="leading" secondItem="5RD-wf-b9y" secondAttribute="leading" id="7IR-Aj-HcF"/>
@@ -3141,6 +3141,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Baf-kk-B44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5935" y="177"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SPa-f5-grS">
+            <objects>
+                <viewController id="ffw-Ly-DsV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gx8-m1-wu5"/>
+                        <viewControllerLayoutGuide type="bottom" id="bRm-mw-JbE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PR6-Qg-94I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfE-bD-qYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6335" y="301"/>
         </scene>
         <!--Legal Advise View Controller-->
         <scene sceneID="RQo-U3-5Cs">

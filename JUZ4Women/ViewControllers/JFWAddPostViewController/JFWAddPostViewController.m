@@ -96,7 +96,7 @@
 
 - (IBAction)onSubmitButtonTapped:(id)sender
 {
-    JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:1 withLikeCount:0.0 withDislikeCount:0.0 withcommentsCount:0.0 withPostTitle:self.titleTextFieldObj.text withTags:nil withUserAvatorUrl:nil withTag1:self.tag1TextFieldObj.text withTag2:self.tag2TextFieldObj.text withTag3:self.tag3TextFieldObj.text withPostDescription:self.textViewObj.text];
+    JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:1 withLikeCount:0.0 withDislikeCount:0.0 withcommentsCount:0.0 withPostTitle:self.titleTextFieldObj.text withTags:nil withUserAvatorUrl:nil withTag1:self.tag1TextFieldObj.text withTag2:self.tag2TextFieldObj.text withTag3:self.tag3TextFieldObj.text withPostDescription:self.textViewObj.text withPostDate:nil withPostTime:nil];
     
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     

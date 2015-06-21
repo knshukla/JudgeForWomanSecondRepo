@@ -188,6 +188,8 @@
     
     viewController.view.layer.cornerRadius = 5.0;
     viewController.view.layer.masksToBounds = YES;
+    viewController.view.layer.borderWidth = 1.0;
+    viewController.view.layer.borderColor = [UIColor whiteColor].CGColor;
     
     [self.view addSubview:viewController.view];
     

@@ -48,7 +48,7 @@
         {
             tagString = @"";
         }
-        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil withPostDate:[dict objectForKey:@"post_date"] withPostTime:[dict objectForKey:@"post_time"]];
         
         [feedsArray addObject:feedModel];
     }
@@ -111,7 +111,7 @@
         {
             tagString = @"";
         }
-        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil];
+        JFWFeedsModel *feedModel = [[JFWFeedsModel alloc]initWithPostId:[[dict objectForKey:@"post_id"] intValue] withLikeCount:[[dict objectForKey:@"no_of_likes"] longValue] withDislikeCount:[[dict objectForKey:@"no_of_dislikes"] longValue]withcommentsCount:[[dict objectForKey:@"post_no_of_comments"] longValue] withPostTitle:[dict objectForKey:@"post_title"] withTags:tagString withUserAvatorUrl:[dict objectForKey:@"user_profile_pic"] withTag1:nil withTag2:nil withTag3:nil withPostDescription:nil withPostDate:nil withPostTime:nil];
         
         [postArray addObject:feedModel];
     }

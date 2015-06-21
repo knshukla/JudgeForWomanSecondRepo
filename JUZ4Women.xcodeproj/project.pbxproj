@@ -290,6 +290,10 @@
 		4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */; };
 		4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */; };
 		4AD926EB1AF5E5E800F8CF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */; };
+		4ADB609F1B36E35E00CFA8BC /* NSDate+TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADB609D1B36E35E00CFA8BC /* NSDate+TimeAgo.h */; };
+		4ADB60A01B36E35E00CFA8BC /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB609E1B36E35E00CFA8BC /* NSDate+TimeAgo.m */; };
+		4ADB60A31B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADB60A11B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h */; };
+		4ADB60A41B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB60A21B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m */; };
 		4ADDA9B91B2FCCBC002E26C2 /* ArticleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ADDA9B71B2FCCBC002E26C2 /* ArticleModel.h */; };
 		4ADDA9BA1B2FCCBC002E26C2 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDA9B81B2FCCBC002E26C2 /* ArticleModel.m */; };
 		4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE103331B25D23D0035C0A6 /* PopUpView.h */; };
@@ -680,6 +684,10 @@
 		4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWVideoViewController.h; sourceTree = "<group>"; };
 		4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWVideoViewController.m; sourceTree = "<group>"; };
 		4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4ADB609D1B36E35E00CFA8BC /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		4ADB609E1B36E35E00CFA8BC /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		4ADB60A11B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
+		4ADB60A21B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
 		4ADDA9B71B2FCCBC002E26C2 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
 		4ADDA9B81B2FCCBC002E26C2 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
 		4AE103331B25D23D0035C0A6 /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
@@ -1173,6 +1181,10 @@
 		4A6D14D11AF2796F003A1708 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4ADB60A11B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h */,
+				4ADB60A21B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m */,
+				4ADB609D1B36E35E00CFA8BC /* NSDate+TimeAgo.h */,
+				4ADB609E1B36E35E00CFA8BC /* NSDate+TimeAgo.m */,
 				4A6D15181AF27E91003A1708 /* JFWUtilities.h */,
 				4A6D15191AF27E91003A1708 /* JFWUtilities.m */,
 			);
@@ -1754,6 +1766,7 @@
 				4A2EE4DD1B0799310078E322 /* JFWLegalAdviseViewController.h in Headers */,
 				4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */,
 				4AEAC6291B1AE7F80050DBD7 /* JFWWebserviceManager.h in Headers */,
+				4ADB609F1B36E35E00CFA8BC /* NSDate+TimeAgo.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */,
 				4AEAC6271B1AE7F80050DBD7 /* JFWParserManager.h in Headers */,
@@ -1765,6 +1778,7 @@
 				4AE549FB1B33221B0001B784 /* FilterViewController.h in Headers */,
 				4AE103361B25D23D0035C0A6 /* PopUpView.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
+				4ADB60A31B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h in Headers */,
 				4AB64C5D1B2BDDA200251E52 /* JFWFeedsModel.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
@@ -2068,6 +2082,7 @@
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,
 				4A6D15071AF27D2C003A1708 /* AFHTTPRequestOperationManager.m in Sources */,
+				4ADB60A01B36E35E00CFA8BC /* NSDate+TimeAgo.m in Sources */,
 				4A176D151B08585A006E4836 /* JFWLegalAdviceCell.m in Sources */,
 				4A76DA0E1AFF0FB200BCFFEE /* JFWLoginViewController.m in Sources */,
 				4A2EE4D41B0782580078E322 /* JFWNotificationViewController.m in Sources */,
@@ -2149,6 +2164,7 @@
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
 				4AE549FC1B33221B0001B784 /* FilterViewController.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
+				4ADB60A41B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
 				38CCE6271B2D8FAB00D51D68 /* UserModel.m in Sources */,
 				4AEAC6251B1AE7F80050DBD7 /* IGReachability.m in Sources */,

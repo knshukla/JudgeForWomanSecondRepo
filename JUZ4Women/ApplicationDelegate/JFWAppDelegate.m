@@ -20,6 +20,11 @@
 #import "JFWLoginViewController.h"
 #import "UserPreference.h"
 #import "JFWAppConstants.h"
+#import "JFWUtilities.h"
+#import "NSDate+TimeAgo.h"
+#import "NSDate+NVTimeAgo.h"
+
+
 
 static BOOL OSVersionIsAtLeastiOS7() {
     return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
@@ -38,7 +43,35 @@ static BOOL OSVersionIsAtLeastiOS7() {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-        
+//    
+//    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:0];
+//    NSString *ago = [date timeAgo];
+    
+//    NSDate *todayDate = [NSDate date];
+//    int daysToAdd = 2;
+//
+//    NSDate *newDate1 = [todayDate dateByAddingTimeInterval:60*60*24*daysToAdd];
+//    NSTimeInterval interval = [newDate1 timeIntervalSinceReferenceDate];
+//
+//    
+//    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:0];
+//    NSString *ago = [date timeAgo];
+//    
+//   int differece = (int) [JFWUtilities daysBetweenDate:todayDate andDate:newDate1];
+    NSDate *theDate = [NSDate date];
+    
+    
+    
+    NSDate *newDate = [[NSDate alloc] initWithTimeInterval:-60*60*24*7
+                                                  sinceDate:theDate];
+
+    
+    NSString *date = [newDate formattedAsTimeAgo];
+
+    
+    
+
+    
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];
     UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];;
     

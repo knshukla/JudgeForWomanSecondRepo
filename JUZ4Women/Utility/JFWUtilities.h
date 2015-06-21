@@ -115,5 +115,7 @@
 
 + (NSString *)encodeToBase64String:(UIImage *)image;
 + (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
++ (NSInteger)daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime;
+
 
 @end
