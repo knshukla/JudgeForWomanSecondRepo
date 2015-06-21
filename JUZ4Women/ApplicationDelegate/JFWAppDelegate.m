@@ -23,7 +23,7 @@
 #import "JFWUtilities.h"
 #import "NSDate+TimeAgo.h"
 #import "NSDate+NVTimeAgo.h"
-
+#import "NSDate+Formatting.h"
 
 
 static BOOL OSVersionIsAtLeastiOS7() {
@@ -58,18 +58,18 @@ static BOOL OSVersionIsAtLeastiOS7() {
 //    NSString *ago = [date timeAgo];
 //    
 //   int differece = (int) [JFWUtilities daysBetweenDate:todayDate andDate:newDate1];
+    
     NSDate *theDate = [NSDate date];
-    
-    
-    
+
     NSDate *newDate = [[NSDate alloc] initWithTimeInterval:-60*60*24*7
                                                   sinceDate:theDate];
 
-    
+    NSString *ago = [newDate timeAgo];
     NSString *date = [newDate formattedAsTimeAgo];
 
     
-    
+    NSDate* oldDate = [NSDate dateWithTimeIntervalSinceNow:1800];
+    NSLog(@"Date was %@", oldDate.timeAgoInWords);
 
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];
