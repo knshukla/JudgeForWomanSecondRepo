@@ -23,7 +23,7 @@
 {
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:10];
     
-    for(int i = 0; i < 2; i ++)
+    for(int i = 0; i < 5; i ++)
     {
         //Generate Random Number
         NSNumber *one = [NSNumber numberWithInt:rand()%60+20];
