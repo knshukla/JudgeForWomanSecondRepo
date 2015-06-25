@@ -336,6 +336,26 @@
     }];
 }
 
+-(void)requestVideoApiWithVideoModal:(VideoModel *)videoModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager getVideoLikeRequestDictionary:videoModelObj andInspiredValue:inspiredValue];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful video like response");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure video like response");
+        
+        self.failureBlock(error);
+    }];
+}
 
 - (void)handleUserProfileResponse:(NSDictionary *)responseDictionary
 {
