@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JFWAppConstants.h"
+
 @class VideoModel;
+
+@protocol VideoCellDelegate <NSObject>
+
+-(void)likeInspiredButtonTapped:(VideoModel *)videoModel andValue:(LikeInspiredValue)inspiredValue;
+
+@end
+
 @interface JFWVideoCell : UITableViewCell
+{
+    VideoModel *videoModelObj;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *videoName;
 @property (weak, nonatomic) IBOutlet UILabel *videoTags;
@@ -20,6 +32,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *videoTime;
 
+@property(nonatomic,weak) id <VideoCellDelegate> delegate;
 
 -(void)configureCellWithModel:(VideoModel *)videoModel;
+
+- (IBAction)inspiredButtonTapped:(id)sender;
+- (IBAction)likeButtonTapped:(id)sender;
+
 @end

@@ -9,7 +9,6 @@
 #import "JFWVideoCell.h"
 #import "VideoModel.h"
 #import "UIImageView+AFNetworking.h"
-#import "JFWAppConstants.h"
 
 @implementation JFWVideoCell
 
@@ -25,6 +24,8 @@
 
 -(void)configureCellWithModel:(VideoModel *)videoModel;
 {
+    videoModelObj = videoModel;
+    
     NSString *likeString = [NSString stringWithFormat:@"%ld",videoModel.videoLikes];
     NSString *inspireString = [NSString stringWithFormat:@"%ld",videoModel.videoInspire];
 
@@ -44,5 +45,21 @@
          
      }];
 
+}
+
+- (IBAction)inspiredButtonTapped:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(likeInspiredButtonTapped:andValue:)])
+    {
+        [self.delegate likeInspiredButtonTapped:videoModelObj andValue:Inspired];
+    }
+}
+
+- (IBAction)likeButtonTapped:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(likeInspiredButtonTapped:andValue:)])
+    {
+        [self.delegate likeInspiredButtonTapped:videoModelObj andValue:Like];
+    }
 }
 @end

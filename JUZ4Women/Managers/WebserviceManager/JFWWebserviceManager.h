@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JFWAppConstants.h"
+
 @class MFMediaModal;
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
@@ -39,6 +41,8 @@ typedef void (^FailureBlock)(NSError *);
 -(void)requestLegalAdviceApiWithArticleModel:(ArticleModel *)articleModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 -(void)requestUserProfileApiWithUserModal:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+
+-(void)requestVideoLikeApiWithVideoModal:(VideoModel *)videoModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;

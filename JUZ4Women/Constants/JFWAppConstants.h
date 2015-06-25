@@ -154,7 +154,9 @@ static NSString *const kUserLoggedInKey = @"isUserLoggedIn";
 
 
 //Webservice blocks
-
+static NSString *const kMessageKey = @"message";
+static NSString *const kNumOfInspiredKey = @"no_of_inspired";
+static NSString *const kNumOfLikesKey = @"no_of_likes";
 
 typedef NS_ENUM(NSInteger, FilterType) {
     kFeedType,
