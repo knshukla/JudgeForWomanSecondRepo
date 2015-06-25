@@ -13,8 +13,10 @@
 #import "UserModel.h"
 #import "JFWAppConstants.h"
 #import "UIImageView+AFNetworking.h"
+#import "JFWUtilities.h"
+#import "ArticleModel.h"
 
-@interface JFWProfileViewController ()
+@interface JFWProfileViewController ()<ProfileTableViewCellDelegate>
 {
     UIView *headerView;
     UserModel *userModel;
@@ -109,6 +111,8 @@
         cell =  (ProfileTableViewCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        [cell setDelegate:self];
     }
     cell.backgroundColor = [UIColor clearColor];
     cell.profileImageView.layer.cornerRadius = 23;
@@ -210,4 +214,35 @@
     [view addSubview:label];
     return view;
 }
+
+-(void)likeInspiredButtonTapped:(ArticleModel *)articleModel andValue:(LikeInspiredValue)inspiredValue
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestArticleLikeApiWithVideoModal:articleModel inspiredValue:inspiredValue withSuccessBlock:^(NSDictionary *responseDic)
+     {
+         if (!responseDic)
+         {
+             [JFWUtilities showAlert:@"Unknown error occured"];
+             
+             return;
+         }
+         
+         if ([[responseDic allKeys] containsObject:kMessageKey])
+         {
+             [JFWUtilities showAlert:[responseDic objectForKey:kMessageKey]];
+         }
+         
+         articleModel.articleLikes = [[responseDic valueForKey:kNumOfLikesKey] longValue];
+         articleModel.articleInspired = [[responseDic valueForKey:kNumOfInspiredKey] longValue];
+         
+         
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         [JFWUtilities showAlert:error.description];
+     }];
+    
+}
+
 @end

@@ -253,4 +253,39 @@
     
     return postData;
 }
+
+
+-(NSMutableDictionary *)getArticleLikeRequestDictionary:(ArticleModel *)articleModelObj andInspiredValue:(LikeInspiredValue) inspiredValue
+{
+    if (!articleModelObj) {
+        return nil;
+    }
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    NSMutableDictionary *postData = [[NSMutableDictionary alloc]init];
+    
+    [postData setObject:@"getLikeDislikeForArticles" forKey:kRequestType];
+    
+    [postData setObject:userName forKey:kUserName];
+    [postData setObject:uid forKey:kUid];
+    
+    [postData setObject:[NSString stringWithFormat:@"%d",articleModelObj.articleId] forKey:kVideoID];
+    
+    switch (inspiredValue)
+    {
+        case Like:
+            [postData setObject:@"like" forKey:kLikeInspiredValue];
+            break;
+            
+        case Inspired:
+            [postData setObject:@"inspired" forKey:kLikeInspiredValue];
+            
+        default:
+            break;
+    }
+    
+    return postData;
+}
 @end

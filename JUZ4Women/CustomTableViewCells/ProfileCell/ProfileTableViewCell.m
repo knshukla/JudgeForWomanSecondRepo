@@ -10,7 +10,6 @@
 #import "JFWFeedsModel.h"
 #import "ArticleModel.h"
 #import "UIImageView+AFNetworking.h"
-#import "JFWAppConstants.h"
 
 
 @implementation ProfileTableViewCell
@@ -28,6 +27,11 @@
 - (IBAction)onLikedButtonTapped:(id)sender
 {
     NSLog(@"like button tapped");
+    
+    if ([self.delegate respondsToSelector:@selector(likeInspiredButtonTapped:andValue:)])
+    {
+        [self.delegate likeInspiredButtonTapped:articleModelObj andValue:Inspired];
+    }
 }
 
 - (IBAction)onDislikeButtonTapped:(id)sender

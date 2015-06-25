@@ -43,6 +43,7 @@ typedef void (^FailureBlock)(NSError *);
 -(void)requestUserProfileApiWithUserModal:(UserModel *)userModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 -(void)requestVideoLikeApiWithVideoModal:(VideoModel *)videoModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
+-(void)requestArticleLikeApiWithVideoModal:(ArticleModel *)articleModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;

@@ -34,5 +34,5 @@
 -(NSMutableDictionary *)createUserProfileRequestDictionary:(UserModel *)userModel;
 
 -(NSMutableDictionary *)getVideoLikeRequestDictionary:(VideoModel *)videoModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
-
+-(NSMutableDictionary *)getArticleLikeRequestDictionary:(ArticleModel *)articleModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
 @end

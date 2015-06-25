@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "JFWAppConstants.h"
+
 @class ArticleModel;
 @class JFWFeedsModel;
 
-@interface ProfileTableViewCell : UITableViewCell
+@protocol ProfileTableViewCellDelegate <NSObject>
 
+-(void)likeInspiredButtonTapped:(ArticleModel *)articleModel andValue:(LikeInspiredValue)inspiredValue;
+
+@end
+
+@interface ProfileTableViewCell : UITableViewCell
+{
+    ArticleModel * articleModelObj;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagLabel;
@@ -23,6 +34,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
 
+@property (nonatomic, weak) id <ProfileTableViewCellDelegate> delegate;
 
 - (IBAction)onLikedButtonTapped:(id)sender;
 
