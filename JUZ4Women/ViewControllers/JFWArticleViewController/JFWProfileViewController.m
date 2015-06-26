@@ -15,6 +15,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "JFWUtilities.h"
 #import "ArticleModel.h"
+#import "ProfileEditViewController.h"
 
 @interface JFWProfileViewController ()<ProfileTableViewCellDelegate>
 {
@@ -142,7 +143,9 @@
     return 75.0;
 }
 
-- (IBAction)onProfileEditButtonTapped:(id)sender {
+- (IBAction)onProfileEditButtonTapped:(id)sender
+{
+    ProfileEditViewController *profileEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileEditViewController"];
 }
 
 -(void)fetchUserProfileDetail

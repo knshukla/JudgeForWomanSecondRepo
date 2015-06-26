@@ -131,6 +131,8 @@
 		4A176D161B08585A006E4836 /* JFWLegalAdviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */; };
 		4A176D1F1B08D2EC006E4836 /* JFWAddVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A176D1D1B08D2EC006E4836 /* JFWAddVideoViewController.h */; };
 		4A176D201B08D2EC006E4836 /* JFWAddVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A176D1E1B08D2EC006E4836 /* JFWAddVideoViewController.m */; };
+		4A1EF1F21B3DBA66001909E9 /* ProfileEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1EF1F01B3DBA66001909E9 /* ProfileEditViewController.h */; };
+		4A1EF1F31B3DBA66001909E9 /* ProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1EF1F11B3DBA66001909E9 /* ProfileEditViewController.m */; };
 		4A2EE4C81B0770270078E322 /* JFWContactUsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2EE4C61B0770270078E322 /* JFWContactUsViewController.h */; };
 		4A2EE4C91B0770270078E322 /* JFWContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2EE4C71B0770270078E322 /* JFWContactUsViewController.m */; };
 		4A2EE4CD1B077C1D0078E322 /* contactusButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2EE4CA1B077C1D0078E322 /* contactusButton@2x.png */; };
@@ -472,6 +474,8 @@
 		4A176D131B08585A006E4836 /* JFWLegalAdviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFWLegalAdviceCell.xib; sourceTree = "<group>"; };
 		4A176D1D1B08D2EC006E4836 /* JFWAddVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWAddVideoViewController.h; sourceTree = "<group>"; };
 		4A176D1E1B08D2EC006E4836 /* JFWAddVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWAddVideoViewController.m; sourceTree = "<group>"; };
+		4A1EF1F01B3DBA66001909E9 /* ProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileEditViewController.h; sourceTree = "<group>"; };
+		4A1EF1F11B3DBA66001909E9 /* ProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileEditViewController.m; sourceTree = "<group>"; };
 		4A2EE4C61B0770270078E322 /* JFWContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWContactUsViewController.h; sourceTree = "<group>"; };
 		4A2EE4C71B0770270078E322 /* JFWContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWContactUsViewController.m; sourceTree = "<group>"; };
 		4A2EE4CA1B077C1D0078E322 /* contactusButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactusButton@2x.png"; sourceTree = "<group>"; };
@@ -1023,6 +1027,15 @@
 			path = JFWAddVideoViewController;
 			sourceTree = "<group>";
 		};
+		4A1EF1EF1B3DB487001909E9 /* ProfileEditController */ = {
+			isa = PBXGroup;
+			children = (
+				4A1EF1F01B3DBA66001909E9 /* ProfileEditViewController.h */,
+				4A1EF1F11B3DBA66001909E9 /* ProfileEditViewController.m */,
+			);
+			path = ProfileEditController;
+			sourceTree = "<group>";
+		};
 		4A2EE4C51B0770110078E322 /* JFWContactUsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1211,6 +1224,7 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A1EF1EF1B3DB487001909E9 /* ProfileEditController */,
 				4ADB60AE1B37325500CFA8BC /* JFWGraphVIewController */,
 				4AD028501B35263D008FF8EE /* PostDescription */,
 				4AE549F81B3321F80001B784 /* FilterViewController */,
@@ -1801,6 +1815,7 @@
 				381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */,
 				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
 				4A2EE4DD1B0799310078E322 /* JFWLegalAdviseViewController.h in Headers */,
+				4A1EF1F21B3DBA66001909E9 /* ProfileEditViewController.h in Headers */,
 				4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */,
 				4AEAC6291B1AE7F80050DBD7 /* JFWWebserviceManager.h in Headers */,
 				4ADB609F1B36E35E00CFA8BC /* NSDate+TimeAgo.h in Headers */,
@@ -2206,6 +2221,7 @@
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				4A6D150E1AF27D2C003A1708 /* AFURLSessionManager.m in Sources */,
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
+				4A1EF1F31B3DBA66001909E9 /* ProfileEditViewController.m in Sources */,
 				4AE549FC1B33221B0001B784 /* FilterViewController.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				4ADB60A41B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m in Sources */,
