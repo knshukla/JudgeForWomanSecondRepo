@@ -8,7 +8,7 @@
 
 #import "JFWPostViewController.h"
 #import "UIViewController+MMDrawerController.h"
-
+#import "PostDescriptionViewController.h"
 
 @interface JFWPostViewController ()
 

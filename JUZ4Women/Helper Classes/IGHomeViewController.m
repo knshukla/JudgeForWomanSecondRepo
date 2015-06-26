@@ -20,7 +20,7 @@
 #import "JFWFeedsModel.h"
 #import "JFWWebserviceManager.h"
 #import "FilterViewController.h"
-
+#import "PostDescriptionViewController.h"
 
 @interface IGHomeViewController()
 {
@@ -203,6 +203,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PostDescriptionViewController *postDescriptionController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDescriptionViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:postDescriptionController];
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 
