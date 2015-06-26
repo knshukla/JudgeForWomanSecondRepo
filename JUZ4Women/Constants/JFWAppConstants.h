@@ -27,7 +27,8 @@ typedef NS_ENUM(NSInteger, SignUpOption)
 typedef NS_ENUM(NSInteger, LikeInspiredValue)
 {
     Like,
-    Inspired
+    Inspired,
+    DisLike
 };
 
 //iPhone View Controller Id

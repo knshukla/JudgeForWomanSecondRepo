@@ -34,7 +34,7 @@
         self.userTotalPostShares = postShareCount;
         self.uId = userId;
         self.userTotalPostAnswerd = postAnswerd;
-        self.userTotalFavoriteVideos = favoriteArticel;
+        self.userTotalFavoriteArticle = favoriteArticel;
         self.userTotalFavoriteVideos = favoriteVideo;
         self.userTotalRecommendation = recommendation;
         self.userTotalprofileLikes = profileLikes;

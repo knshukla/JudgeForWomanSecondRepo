@@ -18,4 +18,14 @@
 
 - (IBAction)onProfileEditButtonTapped:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *postCountLabel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *postAnswerdCountLabel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *favoritArticleCountLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *favoriteVideoCountLabel;
+
 @end

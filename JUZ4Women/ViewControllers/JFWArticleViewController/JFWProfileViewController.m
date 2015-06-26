@@ -168,6 +168,17 @@
     self.ageLabel.text = userAge;
     
     NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,model.imageUrl];
+    
+    self.postCountLabel.text = [NSString stringWithFormat:@"%ld",userModel.userTotalPostCount];
+    
+    self.postAnswerdCountLabel.text = [NSString stringWithFormat:@"%ld",userModel.userTotalPostAnswerd];
+    
+    self.favoriteVideoCountLabel.text = [NSString stringWithFormat:@"%ld",userModel.userTotalFavoriteVideos];
+
+    
+    self.favoritArticleCountLabel.text = [NSString stringWithFormat:@"%ld",userModel.userTotalFavoriteArticle];
+
+
     NSMutableURLRequest *imageRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
     [self.profileImageView setImageWithURLRequest:imageRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
      {
@@ -208,7 +219,7 @@
     borderImageView.backgroundColor = [UIColor colorWithRed:130.0/255.0 green:143.0/255.0 blue:160.0/255.0 alpha:1];
     
     [view addSubview:borderImageView];
-    view.backgroundColor = [UIColor clearColor];
+    view.backgroundColor = [UIColor colorWithRed:38/255.0 green:27/255.0 blue:57/255.0 alpha:1];
     
     [label setText:string];
     [view addSubview:label];
