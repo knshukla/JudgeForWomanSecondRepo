@@ -39,6 +39,8 @@
 @interface IGLeftMenuViewController()
 {
     NSMutableArray *menuItemArray;
+    
+    UITapGestureRecognizer *singleTap;
 }
 
 @end
@@ -58,7 +60,6 @@
 {
 	[super viewDidLoad];
     NSLog(@"Controll came here");
-    [self configureTapGesture];
     
       menuItemArray = [self createMenuItemArray];
     
@@ -72,6 +73,15 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self configureTapGesture];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.profileImageView removeGestureRecognizer:singleTap];
+}
 -(void)fetchLeftMenuDetails
 {
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
@@ -244,8 +254,12 @@ NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItem
 -(void)configureTapGesture
 {
     self.profileImageView.userInteractionEnabled = YES;
+    [self.view bringSubviewToFront:self.profileImageView];
+    if (!singleTap) {
+        singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onProfileImageTapped:)];
+        [singleTap setDelegate:self];
+    }
     
-    UIGestureRecognizer *singleTap = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(onProfileImageTapped:)];
     [self.profileImageView addGestureRecognizer:singleTap];
 }
 
@@ -255,5 +269,11 @@ NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItem
     JFWProfileViewController *profileController = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:profileController];
     
-    [self.mm_drawerController setCenterViewController:navController withCloseAnimation:YES completion:nil];}
+    [self.mm_drawerController setCenterViewController:navController withCloseAnimation:YES completion:nil];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return YES;
+}
 @end

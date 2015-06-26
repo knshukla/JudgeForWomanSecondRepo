@@ -223,7 +223,6 @@
 - (IBAction)onEditPostButtonTapped:(id)sender
 {
     [self presentSearchViewController];
-
 }
 
 - (IBAction)onFilterButtonTapped:(id)sender
