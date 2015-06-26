@@ -11,12 +11,14 @@
 #import "AFNetworking.h"
 #import "UIKit+AFNetworking.h"
 #import "JFWLoginModel.h"
-#import "JFWAppConstants.h"
+
 #import "JFWRequestDictionaryGenerator.h"
 #import "JFWParserManager.h"
 #import "UserModel.h"
 #import "JFWFeedsModel.h"
 #import "ArticleModel.h"
+
+#import "VideoModel.h"
 
 @interface JFWWebserviceManager()
 
@@ -336,6 +338,50 @@
     }];
 }
 
+-(void)requestVideoLikeApiWithVideoModal:(VideoModel *)videoModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager getVideoLikeRequestDictionary:videoModelObj andInspiredValue:inspiredValue];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful video like response");
+        self.successBlock(responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure video like response");
+        
+        self.failureBlock(error);
+    }];
+}
+
+
+-(void)requestArticleLikeApiWithVideoModal:(ArticleModel *)articleModelObj inspiredValue:(LikeInspiredValue)inspiredValue withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager getArticleLikeRequestDictionary:articleModelObj andInspiredValue:inspiredValue];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //API successful
+        NSLog(@"Successful article like response");
+        self.successBlock(responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure article like response");
+        
+        self.failureBlock(error);
+    }];
+}
 
 - (void)handleUserProfileResponse:(NSDictionary *)responseDictionary
 {

@@ -166,4 +166,11 @@ static BOOL OSVersionIsAtLeastiOS7() {
     return [difference day];
 }
 
++(void)showAlert:(NSString *)message
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    
+    [alert show];
+}
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JFWAppConstants.h"
+
 @class JFWLoginModel;
 @class JFWLeftMenuModel;
 @class UserModel;
@@ -31,5 +33,6 @@
 -(NSMutableDictionary *)createLegalAdviceFeedRequestDictionary:(ArticleModel *)articleModel;
 -(NSMutableDictionary *)createUserProfileRequestDictionary:(UserModel *)userModel;
 
-
+-(NSMutableDictionary *)getVideoLikeRequestDictionary:(VideoModel *)videoModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
+-(NSMutableDictionary *)getArticleLikeRequestDictionary:(ArticleModel *)articleModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
 @end

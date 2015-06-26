@@ -117,5 +117,6 @@
 + (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
 + (NSInteger)daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime;
 
++(void)showAlert:(NSString *)message;
 
 @end

@@ -12,8 +12,10 @@
 #import "JFWAddVideoViewController.h"
 #import "JFWWebserviceManager.h"
 #import "FilterViewController.h"
+#import "JFWUtilities.h"
+#import "VideoModel.h"
 
-@interface JFWVideoViewController ()<FilterDelegate>
+@interface JFWVideoViewController ()<FilterDelegate, VideoCellDelegate>
 {
     NSArray *responseArray;
     FilterViewController *viewController;
@@ -92,6 +94,8 @@
         cell =  (JFWVideoCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        [cell setDelegate:self];
     }
     cell.backgroundColor = [UIColor clearColor];
     [cell configureCellWithModel:[responseArray objectAtIndex:indexPath.row]];
@@ -151,4 +155,40 @@
     [viewController.view removeFromSuperview];
 }
 
+#pragma mark - video cell delegate methods
+
+-(void)likeInspiredButtonTapped:(VideoModel *)videoModel andValue:(LikeInspiredValue)inspiredValue
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestVideoLikeApiWithVideoModal:videoModel inspiredValue:inspiredValue withSuccessBlock:^(NSDictionary *responseDic)
+    {
+        if (!responseDic)
+        {
+            [JFWUtilities showAlert:@"Unknown error occured"];
+            
+            return;
+        }
+        
+        if ([[responseDic allKeys] containsObject:kMessageKey])
+        {
+            [JFWUtilities showAlert:[responseDic objectForKey:kMessageKey]];
+        }
+        
+        videoModel.videoLikes = [[responseDic valueForKey:kNumOfLikesKey] longValue];
+        videoModel.videoInspire = [[responseDic valueForKey:kNumOfInspiredKey] longValue];
+        
+        [self reloadVideoCell:videoModel];
+        
+    } withFailureBlock:^(NSError *error)
+     {
+         [JFWUtilities showAlert:error.description];
+    }];
+
+}
+
+-(void)reloadVideoCell:(VideoModel *)videoModelObj
+{
+    [self.videoTableView reloadData];
+}
 @end

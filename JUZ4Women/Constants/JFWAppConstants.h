@@ -24,6 +24,12 @@ typedef NS_ENUM(NSInteger, SignUpOption)
     MOBILE
 };
 
+typedef NS_ENUM(NSInteger, LikeInspiredValue)
+{
+    Like,
+    Inspired
+};
+
 //iPhone View Controller Id
 static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
 
@@ -61,6 +67,10 @@ static NSString * const kMenuUserName = @"user_name";
 static NSString * const kIsEmailID = @"isEmailID";
 static NSString * const kIsPhoneNumber = @"isPhoneNumber";
 static NSString * const kIsUserName = @"IsUserName";
+
+static NSString * const kVideoID = @"video_id";
+static NSString *const kLikeInspiredValue = @"like_inspired_value";
+
 
 #define kFontSize18           18.0
 
@@ -144,7 +154,9 @@ static NSString *const kUserLoggedInKey = @"isUserLoggedIn";
 
 
 //Webservice blocks
-
+static NSString *const kMessageKey = @"message";
+static NSString *const kNumOfInspiredKey = @"no_of_inspired";
+static NSString *const kNumOfLikesKey = @"no_of_likes";
 
 typedef NS_ENUM(NSInteger, FilterType) {
     kFeedType,
