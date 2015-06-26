@@ -185,8 +185,8 @@
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWContactUsViewController"];
                 break;
             case 7:
-//                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
+                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
+                //viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWProfileViewController"];
                 
                 //
                 break;

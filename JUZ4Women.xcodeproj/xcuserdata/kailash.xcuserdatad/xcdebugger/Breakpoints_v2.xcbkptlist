@@ -527,7 +527,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "-fetchLeftMenuDetails"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -543,7 +543,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "-fetchLeftMenuDetails"
+            landmarkName = "-viewWillDisappear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -591,7 +591,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "-updateView:"
+            landmarkName = "-fetchLeftMenuDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -894,9 +894,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-fetchFeedDetail"
-            landmarkType = "5">
+            endingLineNumber = "70">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -937,7 +935,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "229"
             endingLineNumber = "229"
-            landmarkName = "-downloadProfileImage:withUrl:"
+            landmarkName = "-createMenuItemArray"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1160,9 +1158,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "258"
-            endingLineNumber = "258"
-            landmarkName = "-onCancelButtonTapped"
-            landmarkType = "5">
+            endingLineNumber = "258">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1497,7 +1493,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "255"
             endingLineNumber = "255"
-            landmarkName = "-onProfileImageTapped:"
+            landmarkName = "-configureTapGesture"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1513,7 +1509,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "-configureTapGesture"
+            landmarkName = "-downloadProfileImage:withUrl:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
