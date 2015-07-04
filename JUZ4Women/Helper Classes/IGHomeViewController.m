@@ -210,6 +210,32 @@
     [self presentViewController:navController animated:YES completion:nil];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Obviously, if this returns no, the edit option won't even populate
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Nothing gets called here if you invoke `tableView:editActionsForRowAtIndexPath:` according to Apple docs so just leave this method blank
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *delete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                    {
+                                        // Delete something here
+                                    }];
+    delete.backgroundColor = [UIColor redColor];
+    
+    UITableViewRowAction *more = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@" More " handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                  {
+                                      //Just as an example :
+                                      NSLog(@"zcx");
+                                  }];
+    more.backgroundColor = [UIColor colorWithRed:0.188 green:0.514 blue:0.984 alpha:1];
+    
+    return @[delete, more]; //array with all the buttons you want. 1,2,3, etc...
+}
 
 - (IBAction)onAddPostButtonTapped:(id)sender
 {
