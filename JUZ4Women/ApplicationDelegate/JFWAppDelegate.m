@@ -24,7 +24,8 @@
 #import "NSDate+TimeAgo.h"
 #import "NSDate+NVTimeAgo.h"
 #import "NSDate+Formatting.h"
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 static BOOL OSVersionIsAtLeastiOS7() {
     return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
@@ -73,7 +74,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
 
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];
-    UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];;
+    UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -202,6 +203,12 @@ static BOOL OSVersionIsAtLeastiOS7() {
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 @end

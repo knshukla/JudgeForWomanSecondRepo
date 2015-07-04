@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.intelligrape.xyz </string>
+	<string>com.ttndevelopment.ttnpush</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -24,15 +24,21 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.intelligrape.attendence</string>
+			<string>com.ttndevelopment.ttnpush</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.intelligrape.attendence</string>
+				<string>com.ttndevelopment.ttnpush</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1463485777300760</string>
+	<key>FacebookDisplayName</key>
+	<string>JUZ4Women</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

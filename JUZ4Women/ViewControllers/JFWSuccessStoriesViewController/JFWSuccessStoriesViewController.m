@@ -41,8 +41,11 @@
 {
     [super viewDidLoad];
     
+//    self.successStoriesTableView.rowHeight = UITableViewAutomaticDimension;
+//    self.successStoriesTableView.estimatedRowHeight = 70.0;
+    
+    self.successStoriesTableView.estimatedRowHeight = 44.0;
     self.successStoriesTableView.rowHeight = UITableViewAutomaticDimension;
-    self.successStoriesTableView.estimatedRowHeight = 30.0;
     
     // Do any additional setup after loading the view.
     [self commanInit];

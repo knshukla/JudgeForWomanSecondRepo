@@ -7,6 +7,14 @@
 //
 
 #import "ProfileEditViewController.h"
+#import "UIViewController+MMDrawerController.h"
+#import "ProfileTableViewCell.h"
+#import "JFWWebserviceManager.h"
+#import "UserModel.h"
+#import "JFWAppConstants.h"
+#import "UIImageView+AFNetworking.h"
+#import "JFWUtilities.h"
+#import "ArticleModel.h"
 
 @interface ProfileEditViewController ()
 
@@ -17,6 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
+    
+    self.title = @"Profile Edit";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+    [self configureLeftNavBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +39,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)configureLeftNavBar
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    rightButton.frame = CGRectMake(0, 0, 30, 30);
+    
+    [rightButton setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
+    
+    [rightButton addTarget:self action:@selector(onNavBarButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    
 }
-*/
+
+-(void)onNavBarButtonTapped
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

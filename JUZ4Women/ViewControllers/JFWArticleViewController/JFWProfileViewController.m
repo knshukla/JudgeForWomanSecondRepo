@@ -170,7 +170,13 @@
     return @[delete, more]; //array with all the buttons you want. 1,2,3, etc...
 }
 
-- (IBAction)onProfileEditButtonTapped:(id)sender {
+- (IBAction)onProfileEditButtonTapped:(id)sender
+{
+    ProfileEditViewController *profileEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileEditViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:profileEditController];
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 -(void)fetchUserProfileDetail

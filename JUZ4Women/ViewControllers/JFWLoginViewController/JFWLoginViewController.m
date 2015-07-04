@@ -23,12 +23,21 @@
 #import "UserModel.h"
 #import "JFWForgotPasswordViewController.h"
 #import "IGSocialManager.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "JFWGraphViewController.h"
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
 
-@interface JFWLoginViewController ()<ForgetPasswordDelegate>
+
+@interface JFWLoginViewController ()<ForgetPasswordDelegate,FBSDKLoginButtonDelegate,SocialManagerDelegate>
 {
     IGSocialManager *socialManagerObj;
 
     JFWForgotPasswordViewController *viewController;
+    
+    
+    __weak IBOutlet UIView *topView;
 
 }
 @property (nonatomic,strong) MMDrawerController * drawerController;
@@ -39,6 +48,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    socialManagerObj = [[IGSocialManager alloc]init];
+    socialManagerObj.socialLoginDelegate = self;
+    [socialManagerObj getRequestToken];
+    
+//    FBSDKLoginButton *fbLoginButton = [[FBSDKLoginButton alloc] initWithFrame:CGRectMake(80, 480, 41, 37)];
+//    [fbLoginButton setDelegate:self];
+//      UIImage *fbIconImage = [UIImage imageNamed:@"facebook_icon.png"];
+//    fbLoginButton.titleLabel.text = @"";
+//    
+//    fbLoginButton.backgroundColor = [UIColor clearColor];
+//    [fbLoginButton setBackgroundImage:fbIconImage forState:UIControlStateNormal];
+//    
+//    [fbLoginButton setBackgroundImage:fbIconImage forState:UIControlStateSelected];
+
+    
+    
+  
+    
+   // [fbLoginButton setImage:nil forState:UIControlStateNormal];
+    
+    // fbLoginButton.center = self.view.center;
+    //[self.view addSubview:fbLoginButton];
 
     [self configureStatusBar];
     [self configureTextField];
@@ -47,7 +79,9 @@
 
 -(void)configureScrollView
 {
-    self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
+    //self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
+    
+    //topView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 }
 
 -(void)configureStatusBar
@@ -73,6 +107,7 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
+    
     if([self.usernameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] )
         return;
 
@@ -84,6 +119,8 @@
    [webServiceManager requestLoginApiWithLoginModal:userModel withSuccessBlock:^(id modal)
     {
         UserModel *userModel = (UserModel *)modal;
+        NSLog(@"User name is %@",userModel.userName);
+
         [self handleLoginResponse:modal];
         NSLog(@"User name is %@",userModel.userName);
        
@@ -155,8 +192,7 @@
 
 - (IBAction)onGooglePlusButtonTapped:(id)sender
 {
-    
-        [socialManagerObj googlePlusLogin];
+     [socialManagerObj googlePlusLogin];
 }
 
 -(void)onGooglePlusLoginDoneWithData :(id)jsonResponseData withError:(NSError *)error
@@ -232,5 +268,17 @@
     return YES;
 }
 
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error
+{
+    [loginButton setDelegate:self];
+    UIImage *fbIconImage = [UIImage imageNamed:@"facebook_icon.png"];
+    loginButton.titleLabel.text = @"";
+    
+    loginButton.backgroundColor = [UIColor clearColor];
+    [loginButton setBackgroundImage:fbIconImage forState:UIControlStateNormal];
 
+    
+}
 @end

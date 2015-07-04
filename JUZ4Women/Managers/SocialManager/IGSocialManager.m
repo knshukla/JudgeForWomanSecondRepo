@@ -9,6 +9,8 @@
 #import "IGSocialManager.h"
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import "Constant.h"
+#import "IGReachability.h"
 #import <GoogleOpenSource/GoogleOpenSource.h>
 #import <GooglePlus/GooglePlus.h>
 
@@ -19,6 +21,7 @@
     GTLServicePlus* plusService;
     GPPSignIn *signIn;
 }
+@property (nonatomic,strong) IGReachability *reachabilityObj;
 
 @property(nonatomic,retain) ACAccountStore *accountStore;
 @property(nonatomic,retain)ACAccount *userAccount;
@@ -42,6 +45,71 @@
 /*
  * This method will allow the user to login through social account
  */
+-(void)socialLogin
+{
+    self.accountStore = [[ACAccountStore alloc]init];
+    self.userAccount=[[ACAccount alloc]init];
+    socialNetwork=[[NSString alloc]init];
+    
+    NSString *fbApplicationkey;
+    NSDictionary *optionDictFB;
+    
+    /*
+     * This will check atleast one social account is configured in device
+     */
+    if([self checkAccountConfiguration]==YES)
+    {
+        /*
+         * Check user want to login through facebook or twitter
+         */
+        if(socialType==SocialManagerTypeFacebook)
+        {
+            self.userAccountType= [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+            fbApplicationkey =FbAppId;
+            optionDictFB = [NSDictionary dictionaryWithObjectsAndKeys:fbApplicationkey,ACFacebookAppIdKey,@[@"email"],ACFacebookAudienceFriends, nil];
+            
+        }
+        else
+        {
+            self.userAccountType= [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+            
+        }
+        /*
+         * This will request to access the configured account in device
+         */
+        [self.accountStore requestAccessToAccountsWithType:self.userAccountType options:optionDictFB completion:
+         ^(BOOL granted, NSError *error) {
+             if (granted)
+             {
+                 /*
+                  * Get accounts configured in device and put them in array
+                  */
+                 NSArray *arrayOfAccounts = [self.accountStore accountsWithAccountType:self.userAccountType];
+                 /*
+                  * From arrayOfAccounts put the last configured account in ACAccount i.e. userAccount
+                  */
+                 self.userAccount = [arrayOfAccounts lastObject];
+                 [self getAccessToken];
+                 [self fetchDataFromServer];//:TwitterUrl];
+             }
+             /*
+              * If permission is not granted then display alert message
+              */
+             else
+             {
+                 NSString *msg=[NSString stringWithFormat:@"Please check access permission for %@ in settings",socialNetwork ];
+                 [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(msg, @"")];
+             }
+         }];
+    }
+    /*
+     * Show AlertBox if no account is configured in device
+     */
+    else{
+        NSString *msg=[NSString stringWithFormat:@"Please add your %@ account from settings",socialNetwork ];
+        [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(msg, @"")];
+    }
+}
 
 /*
  * This method will check atleast one social account is configured in device, if configured return YES else return NO
@@ -73,12 +141,114 @@
 /*
  * This method will provide the access token for facebook user
  */
-
-
+-(void)getAccessToken
+{
+    if(socialType==SocialManagerTypeFacebook)
+    {
+        ACAccountCredential *facebookCredential = [self.userAccount credential];
+        NSString *accessToken = [facebookCredential oauthToken];
+        
+        NSLog(@"Facebook Access Token: %@", accessToken);
+    }
+    
+}
 
 /*
  * This method will fetch the data from the social account if the permission to access account is granted
  */
+-(void)fetchDataFromServer//:(NSString *)str
+{
+    NSURL *requestURL;
+    SLRequest *request;
+    NSDictionary *message=RequestParameterDictionary;
+    if(socialType==SocialManagerTypeFacebook)
+    {
+        requestURL = [NSURL URLWithString:FbUrl];
+        request = [SLRequest requestForServiceType:SLServiceTypeFacebook
+                                     requestMethod:SLRequestMethodGET
+                                               URL:requestURL
+                                        parameters:message];
+    }
+    else
+    {
+        requestURL = [NSURL URLWithString:TwitterUrl];//str];//TwitterUrl];
+        request = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                     requestMethod:SLRequestMethodGET
+                                               URL:requestURL
+                                        parameters:message];
+        
+        _screenNameTwitter=self.userAccount.username;
+        _userIdTwitter=[[self.userAccount valueForKeyPath:@"properties"]objectForKey:@"user_id"];
+//        NSLog(@"%@",_screenNameTwitter);
+//        NSLog(@"%@",_userIdTwitter);
+    }
+    
+    /*
+     *The account object created i.e. userAccount is assigned to the account property of the SLRequest object
+     */
+    request.account = self.userAccount;
+   
+    /*
+     *The request is sent to the social network via a call to the performRequestWithHandler method of
+     *the SLRequest object. The results from the request are passed to the handler code together with an Error object
+     *containing information about the reason for any failure.
+     */
+    [request performRequestWithHandler:^(NSData *data,
+                                         NSHTTPURLResponse *response,
+                                         NSError *error) {
+        NSLog(@"%@",error);
+        
+        if(!error){
+            NSLog(@"HTTP Response Code: %ld",(long)[response statusCode]);
+            /*
+             *Create a Foundation object from JSON data
+             */
+            NSDictionary *responseData =[NSJSONSerialization JSONObjectWithData:data
+                                                                        options:kNilOptions error:&error];
+            NSLog(@"%@",responseData);
+           // NSLog(@"%@",error);
+            /*
+             *Send the fetched data through delegate
+             */
+            if([_socialLoginDelegate respondsToSelector:@selector(sendResponseData:)] &&[response statusCode]==200)
+            {
+//                [_socialLoginDelegate sendResponseData:responseData];
+            }
+            
+            if(socialType==SocialManagerTypeFacebook && [response statusCode]==400)
+            {
+                NSString *code=[[responseData objectForKey:@"error"] objectForKey:@"code"];
+                NSString *errorSubCode=[[responseData objectForKey:@"error"] objectForKey:@"error_subcode"];
+                /*
+                 *Show AlertBox if username or password for facebook is incorrect or changed
+                 */
+                if([code integerValue]==190 && [errorSubCode integerValue]==460)
+                    [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(@"Password Changed Please Check Account Details",@"")];
+                
+                /*
+                 * If access token expires then call renewCredentials method
+                 */
+                if([code integerValue]==190 && [errorSubCode integerValue]==463 )
+                {
+                    [self renewCredentials];
+                }
+            }
+        }
+        else
+        {
+            NSLog(@"HTTP Response Code: %li",(long)[response statusCode]);
+            if(socialType==SocialManagerTypeTwitter && [response statusCode]==401)
+            {
+                /*
+                 *Show AlertBox if username or password for twitter is incorrect or changed
+                 */
+                [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(@"UserName or Password Changed Please Check Account Details in Settings",@"")];
+            }
+            NSLog(@"%@",error);
+        }
+        
+    }];
+}
 
 /*
  * This will renew the access token for Facebook
@@ -172,24 +342,32 @@
 {
     //[[GPPSignIn sharedInstance] signOut];
 
+    self.reachabilityObj = [IGReachability reachabilityForInternetConnection];
+//    if ([self isNetworkConnectionAvailable]) {
     
-    signIn = [GPPSignIn sharedInstance];
-    signIn.delegate = self;
+        
+        signIn = [GPPSignIn sharedInstance];
+        signIn.delegate = self;
+        
+        signIn.shouldFetchGooglePlusUser = YES;
+        signIn.shouldFetchGoogleUserEmail = YES;
+        
+        // You previously set kClientId in the "Initialize the Google+ client" step
+        signIn.clientID = @"961565929366-1oo5tp9ea1jngr36l9o1qid8g21tn3b3.apps.googleusercontent.com";
+        
+        // Uncomment one of these two statements for the scope you chose in the previous step
+        signIn.scopes = [NSArray arrayWithObject:@"https://www.googleapis.com/auth/plus.login"];
+        //@[ kGTLAuthScopePlusLogin ];  // "https://www.googleapis.com/auth/plus.login" scope
+        
+        
+        //[signIn trySilentAuthentication];
+        [signIn authenticate];
     
-    signIn.shouldFetchGooglePlusUser = YES;
-    signIn.shouldFetchGoogleUserEmail = YES;
-    
-    // You previously set kClientId in the "Initialize the Google+ client" step
-    signIn.clientID = @"419060592954-fhkh8ok40kp4o5njm83r58dorf44ofor.apps.googleusercontent.com";;
-    
-    // Uncomment one of these two statements for the scope you chose in the previous step
-    signIn.scopes = [NSArray arrayWithObject:@"https://www.googleapis.com/auth/plus.login"];
-    //@[ kGTLAuthScopePlusLogin ];  // "https://www.googleapis.com/auth/plus.login" scope
-    
-    
-    //[signIn trySilentAuthentication];
-    [signIn authenticate];
-    
+//    else
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"connect to network" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil  , nil];
+//        [alert show];
+//    }
 }
 
 /*
@@ -275,7 +453,7 @@
                     NSLog(@"%ld",(long)[error code]);
                     switch ([error code]) {
                         case 401:
-                           
+                            [self refreshCredentialGoogle];
                             break;
                         case 503:
                             [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(@"Please Try After Some time\n Server Not Responding", @"")];
@@ -310,6 +488,7 @@
                     NSLog(@"%ld",(long)[error code]);
                     switch ([error code]) {
                         case 401:
+                             [self refreshCredentialGoogle];
                             break;
                         case 503:
                             [self showAlertWithTitle:NSLocalizedString(@"Message", @"") withMessage:NSLocalizedString(@"Please Try After Some time\n Server Not Responding", @"")];
@@ -332,7 +511,53 @@
 /*
  * This will renew the access token for Google+
  */
-
+-(void)refreshCredentialGoogle
+{
+    NSString *ClientID=ClientId;
+    NSString *ClientSecretKey=ClientSecret;
+    NSString *post =[[NSString alloc] initWithFormat:@"client_secret=%@&grant_type=refresh_token&refresh_token=%@&client_id=%@",ClientSecretKey,_refreshTokenGoogle,ClientID];
+    NSLog(@"%@",post);
+    NSURL *url=[NSURL URLWithString:@"https://accounts.google.com/o/oauth2/token"];
+    
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
+    [request setURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    
+    NSError *error;
+    NSURLResponse *response;
+    NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+   // NSString *data=[[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+    NSDictionary *dict =[NSJSONSerialization JSONObjectWithData:urlData
+                                                                options:kNilOptions error:&error];
+    NSLog(@"%@",[dict objectForKey:@"access_token"]);
+    _accessTokenGoogle=[dict objectForKey:@"access_token"];
+   NSLog(@"%@",dict);
+}
+//-(BOOL)isNetworkConnectionAvailable
+//{
+//    NetworkStatus networkStatus = [self.reachabilityObj currentReachabilityStatus];
+//    
+//    if (networkStatus == NotReachable)
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Event Management" message:@"Network connectivity is required for this application to work" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
+//        return NO;
+//    }
+//    else
+//    {
+//        return YES;
+//    }
+//    
+//}
 -(void)getRequestToken
 {
     //socialType=SocialManagerTypeTwitter;
