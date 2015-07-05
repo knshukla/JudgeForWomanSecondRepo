@@ -125,7 +125,11 @@
 
 -(void)loadPlayerWithVideoID:(NSString *)videoID
 {
-    [self.playerViewObj loadWithVideoId:videoID];
+    NSDictionary *playerVars = @{
+                                 @"playsinline" : @1,
+                                 };
+    
+    [self.playerViewObj loadWithVideoId:videoID playerVars:playerVars];
 }
 
 

@@ -108,6 +108,7 @@
 		388CC5901B496FDE006D1CF2 /* PollModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC58E1B496FDE006D1CF2 /* PollModel.m */; };
 		388CC5931B49904B006D1CF2 /* NSDate+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */; };
 		388CC5941B49904B006D1CF2 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */; };
+		388CC5961B49AFA5006D1CF2 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 388CC5951B49AFA5006D1CF2 /* Assets */; };
 		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
 		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
 		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
@@ -347,7 +348,6 @@
 		4AF9D2B31B499026002F769D /* VideoDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2AB1B499026002F769D /* VideoDescriptionViewController.h */; };
 		4AF9D2B41B499026002F769D /* VideoDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2AC1B499026002F769D /* VideoDescriptionViewController.m */; };
 		4AF9D2B51B499026002F769D /* VideoDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2AD1B499026002F769D /* VideoDescriptionViewController.xib */; };
-		4AF9D2B61B499026002F769D /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */; };
 		4AF9D2B71B499026002F769D /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2B11B499026002F769D /* YTPlayerView.h */; };
 		4AF9D2B81B499026002F769D /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2B21B499026002F769D /* YTPlayerView.m */; };
 /* End PBXBuildFile section */
@@ -465,6 +465,7 @@
 		388CC58E1B496FDE006D1CF2 /* PollModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollModel.m; sourceTree = "<group>"; };
 		388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		388CC5951B49AFA5006D1CF2 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
 		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -764,7 +765,6 @@
 		4AF9D2AB1B499026002F769D /* VideoDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDescriptionViewController.h; sourceTree = "<group>"; };
 		4AF9D2AC1B499026002F769D /* VideoDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDescriptionViewController.m; sourceTree = "<group>"; };
 		4AF9D2AD1B499026002F769D /* VideoDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDescriptionViewController.xib; sourceTree = "<group>"; };
-		4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		4AF9D2B11B499026002F769D /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		4AF9D2B21B499026002F769D /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1870,19 +1870,11 @@
 		4AF9D2AE1B499026002F769D /* YoutubePlayer */ = {
 			isa = PBXGroup;
 			children = (
-				4AF9D2AF1B499026002F769D /* Assets */,
+				388CC5951B49AFA5006D1CF2 /* Assets */,
 				4AF9D2B11B499026002F769D /* YTPlayerView.h */,
 				4AF9D2B21B499026002F769D /* YTPlayerView.m */,
 			);
 			path = YoutubePlayer;
-			sourceTree = "<group>";
-		};
-		4AF9D2AF1B499026002F769D /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2084,6 +2076,7 @@
 				381C74551AF53C82003290CF /* inspried_small_icon@2x.png in Resources */,
 				381C74561AF53C82003290CF /* inspried_small_icon_selected@2x.png in Resources */,
 				381C74651AF53C82003290CF /* profile_back@2x.png in Resources */,
+				388CC5961B49AFA5006D1CF2 /* Assets in Resources */,
 				381C747B1AF53C82003290CF /* upload_small_icon_selected@2x.png in Resources */,
 				4A76DA211AFF441600BCFFEE /* usernameBackground@2x.png in Resources */,
 				381C744F1AF53C82003290CF /* facebook_icon@2x.png in Resources */,
@@ -2157,7 +2150,6 @@
 				4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */,
 				381C74611AF53C82003290CF /* poll_icon@2x.png in Resources */,
 				381C74661AF53C82003290CF /* profile_camera_icon@2x.png in Resources */,
-				4AF9D2B61B499026002F769D /* YTPlayerView-iframe-player.html in Resources */,
 				381C743F1AF53C82003290CF /* comment_medium_icon_selected@2x.png in Resources */,
 				381C74591AF53C82003290CF /* like_medium_icon@2x.png in Resources */,
 				4A76DA2F1AFF47E200BCFFEE /* mail@2x.png in Resources */,
