@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class UserModel;
 @interface ProfileEditViewController : UIViewController
 
+@property (nonatomic,strong) UserModel *userModel;
 @end

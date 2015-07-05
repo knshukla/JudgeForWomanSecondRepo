@@ -33,6 +33,38 @@
             endingLineNumber = "169"
             landmarkName = "-requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JFWWebserviceManager requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:]"
+                  moduleName = "JUZ4Women"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kailash/Desktop/JUZ4Woman/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
+                  timestampString = "457794534.486072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "270">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[JFWWebserviceManager requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:]_block_invoke"
+                  moduleName = "JUZ4Women"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kailash/Desktop/JUZ4Woman/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
+                  timestampString = "457794534.486614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ViewControllers/JFWLoginViewController/JFWLoginViewController.m"
-            timestampString = "457781663.168755"
+            timestampString = "457795225.410248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "-onSubmitButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ViewControllers/JFWLoginViewController/JFWLoginViewController.m"
-            timestampString = "457781681.160536"
+            timestampString = "457795225.410248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-onSignInButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ViewControllers/JFWLoginViewController/JFWLoginViewController.m"
-            timestampString = "457781697.327298"
+            timestampString = "457795225.410248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-onSignInButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>

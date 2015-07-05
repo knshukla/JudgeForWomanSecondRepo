@@ -174,6 +174,8 @@
 {
     ProfileEditViewController *profileEditController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileEditViewController"];
     
+    profileEditController.userModel = userModel;
+    
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:profileEditController];
     
     [self presentViewController:navController animated:YES completion:nil];

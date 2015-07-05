@@ -8,7 +8,7 @@
 
 
 //iPhone View Controller Id
-static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
+//static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";
 static NSString * const kMFForgotPasswordViewControllerId = @"MFForgotPasswordViewControllerId";
 static NSString * const kMFSignUpViewControllerId = @"MFSignUpViewControllerId";
 static NSString * const kMFHomeViewControllerId = @"MFHomeViewControllerId";
@@ -56,7 +56,6 @@ static NSString * const kMFCommentsViewAllCellId = @"MFCommentsViewAllCellId";
 static NSString * const kMFViewMoreCellId = @"MFViewMoreCellId";
 
 //Font related constants
-static NSString * const kHelveticaNeue = @"HelveticaNeue";
 static NSString * const kHelveticaNeueMedium = @"HelveticaNeue-Medium";
 static NSString * const kHelveticaNeueBold = @"HelveticaNeue-Bold";
 static NSString * const kHelveticaNeueRegular = @"HelveticaNeue-Regular";
@@ -72,7 +71,6 @@ static NSString * const kChromeCastAppId = @"1C9494C0";
 #define kFontSize17           17.0
 #define kFontSize18           18.0
 
-static NSString * const kDefaultMediaImage = @"Default-Media-640x390_0";
 
 
 static NSString * const kDefaultSponsorPlaceholderImage = @"sponsortile";
@@ -91,11 +89,11 @@ static NSString *const kMediaContentType = @"video/mp4";
 
 
 //HomeViewController
-static NSString * const kHomeLogoImage_0 = @"7tennis_logo";
+//static NSString * const kHomeLogoImage_0 = @"7tennis_logo";
 
 #define kCollectionViewBackgroundColor         [UIColor colorWithRed:33.0/255.0 green:33.0/255.0 blue:33.0/255.0 alpha:1.0]
 
-static NSString * const kCheckInternetConnectionMessage = @"Check your internet connection and tap to retry";
+//static NSString * const kCheckInternetConnectionMessage = @"Check your internet connection and tap to retry";
 
 //Player related
 
@@ -145,13 +143,8 @@ typedef NS_ENUM(NSInteger, EventType) {
 //Api related constant
 //http://hls-test.hostworks.com.au/intelligrape/response.json
 
-static NSString * const kMediaListApi = @"http://hls-test.hostworks.com.au/intelligrape/response2.json";
-static NSString * const kMediaMoreListApi = @"api/listVideo?items_per_page=10&page=%d";
 
 //No Network
-static NSString *const kNoNetworkMessage = @"Network connectivity is required for this application to work";
-static NSString *const kAlertMessage = @"Alert";
-static NSString *const kOKMessage = @"OK";
 
 /*Webservice Response key*/
 
