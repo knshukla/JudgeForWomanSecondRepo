@@ -24,6 +24,25 @@
 
 -(void)configureCellWithModel:(VideoModel *)videoModel;
 {
+    if(videoModel.isLikedVideo)
+    {
+        self.likeImageview.image = [UIImage imageNamed:@"like_medium_icon_selected.png"];
+        
+    }
+    else
+    {
+        self.likeImageview.image = [UIImage imageNamed:@"like_medium_icon.png"];
+    }
+    
+    if(videoModel.isInspiredVideo)
+    {
+        self.inspiredImageView.image = [UIImage imageNamed:@"inspried_medium_icon_selected.png"];
+        
+    }
+    else
+    {
+        self.inspiredImageView.image = [UIImage imageNamed:@"inspried_medium_icon.png"];
+    }
     videoModelObj = videoModel;
     
     NSString *likeString = [NSString stringWithFormat:@"%ld",videoModel.videoLikes];

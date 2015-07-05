@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -121,7 +121,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJD-mA-Cw7">
-                        <rect key="frame" x="125" y="60" width="41" height="20"/>
+                        <rect key="frame" x="125" y="60" width="20" height="20"/>
                         <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -196,8 +196,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="inspireLabel" destination="Vl7-gV-TKK" id="fe6-M3-O2d"/>
+                <outlet property="inspiredImageView" destination="hPG-5A-C7v" id="15e-gL-VBb"/>
+                <outlet property="likeImageview" destination="hTB-SE-6bW" id="aB2-fo-bkF"/>
                 <outlet property="likesLabel" destination="qqi-hZ-g5N" id="Fzi-wk-THn"/>
                 <outlet property="videoImageView" destination="kai-NZ-gaT" id="JBh-GV-cTx"/>
+                <outlet property="videoInspiredButton" destination="ebb-lx-2sX" id="X5u-Ew-8aJ"/>
+                <outlet property="videoLikeButton" destination="ZJD-mA-Cw7" id="zOC-Tp-miv"/>
                 <outlet property="videoName" destination="TAy-xF-xkd" id="81q-AU-8JG"/>
                 <outlet property="videoTags" destination="bKL-66-fCq" id="g9P-hG-oFm"/>
                 <outlet property="videoTime" destination="g76-xk-iO2" id="IAv-OO-Kmv"/>

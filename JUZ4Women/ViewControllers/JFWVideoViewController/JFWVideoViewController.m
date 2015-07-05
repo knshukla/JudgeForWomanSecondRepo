@@ -159,8 +159,7 @@
 
 #pragma mark - video cell delegate methods
 
--(void)likeInspiredButtonTapped:(VideoModel *)videoModel andValue:(LikeInspiredValue)inspiredValue
-{
+-(void)likeInspiredButtonTapped:(VideoModel *)videoModel andValue:(LikeInspiredValue)inspiredValue {
     JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
     
     [webServiceManager requestVideoLikeApiWithVideoModal:videoModel inspiredValue:inspiredValue withSuccessBlock:^(NSDictionary *responseDic)
@@ -179,6 +178,8 @@
         
         videoModel.videoLikes = [[responseDic valueForKey:kNumOfLikesKey] longValue];
         videoModel.videoInspire = [[responseDic valueForKey:kNumOfInspiredKey] longValue];
+        videoModel.isLikedVideo = [responseDic valueForKey:@"isLikedVideo"];
+        videoModel.isInspiredVideo = [responseDic valueForKey:@"isInspiredVideo"];
         
         [self reloadVideoCell:videoModel];
         

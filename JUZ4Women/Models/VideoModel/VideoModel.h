@@ -21,6 +21,10 @@
 @property (assign) long videoInspire;
 @property (assign) int videoId;
 
--(id)initWithVideoName:(NSString *)videoName withVideoUrl:(NSString *)videoUrl withVideoTags:(NSString *)videoTags withVideoLikes:(long)videoLikes withVideoInspires:(long)videoInspires withVideoId:(int)videoId withDescription:(NSString *)description withThumbnailUrl:(NSString *)url;
+@property (assign) BOOL isLikedVideo;
+@property (assign) BOOL isInspiredVideo;
+
+
+-(id)initWithVideoName:(NSString *)videoName withVideoUrl:(NSString *)videoUrl withVideoTags:(NSString *)videoTags withVideoLikes:(long)videoLikes withVideoInspires:(long)videoInspires withVideoId:(int)videoId withDescription:(NSString *)description withThumbnailUrl:(NSString *)url withIsLikedVideo:(BOOL)isLiked withIsInspiredVideo:(BOOL)isInspired;
 
 @end

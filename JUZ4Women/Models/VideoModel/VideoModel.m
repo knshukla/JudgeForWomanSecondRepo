@@ -10,7 +10,7 @@
 
 @implementation VideoModel
 
--(id)initWithVideoName:(NSString *)videoName withVideoUrl:(NSString *)videoUrl withVideoTags:(NSString *)videoTags withVideoLikes:(long)videoLikes withVideoInspires:(long)videoInspires withVideoId:(int)videoId withDescription:(NSString *)description withThumbnailUrl:(NSString *)url
+-(id)initWithVideoName:(NSString *)videoName withVideoUrl:(NSString *)videoUrl withVideoTags:(NSString *)videoTags withVideoLikes:(long)videoLikes withVideoInspires:(long)videoInspires withVideoId:(int)videoId withDescription:(NSString *)description withThumbnailUrl:(NSString *)url withIsLikedVideo:(BOOL)isLiked withIsInspiredVideo:(BOOL)isInspired
 {
     self = [super init];
     if(self)
@@ -23,6 +23,8 @@
         self.videoInspire = videoInspires;
         self.videoDescription = description;
         self.videoThumbnailUrl = url;
+        self.isLikedVideo = isLiked;
+        self.isInspiredVideo = isInspired;
     }
     return self;
 }

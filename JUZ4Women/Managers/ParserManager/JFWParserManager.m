@@ -65,7 +65,7 @@
     
     for(NSDictionary *dict in dataArray)
     {
-        VideoModel *videoModel = [[VideoModel alloc]initWithVideoName:[dict objectForKey:@"name"] withVideoUrl:[dict objectForKey:@"url"] withVideoTags:[dict objectForKey:@"tags"] withVideoLikes:[[dict objectForKey:@"likes"] longValue] withVideoInspires:[[dict objectForKey:@"inspire"] longValue] withVideoId:[[dict objectForKey:@"id"] intValue] withDescription:[dict objectForKey:@"description"] withThumbnailUrl:[dict objectForKey:@"thumbnail_url"]];
+        VideoModel *videoModel = [[VideoModel alloc]initWithVideoName:[dict objectForKey:@"name"] withVideoUrl:[dict objectForKey:@"url"] withVideoTags:[dict objectForKey:@"tags"] withVideoLikes:[[dict objectForKey:@"likes"] longValue] withVideoInspires:[[dict objectForKey:@"inspire"] longValue] withVideoId:[[dict objectForKey:@"id"] intValue] withDescription:[dict objectForKey:@"description"] withThumbnailUrl:[dict objectForKey:@"thumbnail_url"] withIsLikedVideo:[[dict objectForKey:@"isLikedVideo"] boolValue] withIsInspiredVideo:[[dict objectForKey:@"isInspiredVideo"]boolValue]];
         
         [feedsArray addObject:videoModel];
     }

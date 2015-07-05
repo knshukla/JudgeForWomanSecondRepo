@@ -21,6 +21,13 @@
 {
     VideoModel *videoModelObj;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *likeImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *inspiredImageView;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *videoLikeButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *videoInspiredButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *videoName;
 @property (weak, nonatomic) IBOutlet UILabel *videoTags;
