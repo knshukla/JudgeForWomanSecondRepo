@@ -126,7 +126,8 @@
        
    } withFailureBlock:^(NSError *error)
     {
-       
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There is some problem in the server please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
    }];
     
 

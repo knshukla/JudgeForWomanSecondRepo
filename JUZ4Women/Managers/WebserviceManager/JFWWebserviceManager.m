@@ -64,6 +64,9 @@
 
 - (void)handleReceviedResponse:(NSDictionary *)responseDictionary
 {
+    BOOL isSuccess = [[responseDictionary objectForKey:@"success"]boolValue];
+    if(isSuccess)
+    {
     [[NSUserDefaults standardUserDefaults]setObject:[responseDictionary objectForKey:kUid] forKey:kUid];
     
     [[NSUserDefaults standardUserDefaults]setObject:[responseDictionary objectForKey:kUserName] forKey:kUserName];
@@ -71,6 +74,13 @@
     UserModel *userModel = [JFWParserManager parseLoginResponseWith:responseDictionary];
     
     self.successBlock(userModel);
+    }
+    else
+    {
+//        NSDictionary *dict = [NSDictionary alloc]initWithObjectsAndKeys:@"", nil
+//        NSError *error = [NSError alloc]initWithDomain:@"" code:0 userInfo:<#(NSDictionary *)#>;
+        self.failureBlock(nil);
+    }
 }
 
 -(void)requestLoginApiWithLoginModal:(UserModel *)userModel withSuccessBlock:(void (^)(id modal))successBlock withFailureBlock:(void (^) (NSError *error))failureBlock
