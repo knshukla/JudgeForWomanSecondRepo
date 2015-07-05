@@ -224,8 +224,7 @@
 
 -(NSMutableDictionary *)createUserProfileRequestDictionary:(UserModel *)userModel
 {
-    if(!userModel)
-        return nil;
+
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
     NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
