@@ -26,7 +26,13 @@
     for(int i = 0; i < 5; i ++)
     {
         //Generate Random Number
-        NSNumber *one = [NSNumber numberWithInt:rand()%60+20];
+        NSNumber *one = nil;
+        
+        if (i%2 == 0) {
+            one = [NSNumber numberWithInt:rand()%60+20];
+        }
+        else
+            one = [NSNumber numberWithInt:rand()%35+10];
         [dataArray addObject:one];
     }
     

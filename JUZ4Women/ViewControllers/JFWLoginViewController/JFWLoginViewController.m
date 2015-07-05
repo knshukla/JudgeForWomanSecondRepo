@@ -23,14 +23,14 @@
 #import "UserModel.h"
 #import "JFWForgotPasswordViewController.h"
 #import "IGSocialManager.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "JFWGraphViewController.h"
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
 
 
-@interface JFWLoginViewController ()<ForgetPasswordDelegate,FBSDKLoginButtonDelegate,SocialManagerDelegate>
+@interface JFWLoginViewController ()<ForgetPasswordDelegate,SocialManagerDelegate>
 {
     IGSocialManager *socialManagerObj;
 
@@ -107,6 +107,9 @@
 
 - (IBAction)onSignInButtonTapped:(id)sender
 {
+    JFWGraphViewController *f = [[JFWGraphViewController alloc]initWithNibName:@"JFWGraphViewController" bundle:nil];
+    [self.navigationController pushViewController:f animated:YES];
+    return;
     
     if([self.usernameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] )
         return;
@@ -269,17 +272,17 @@
     return YES;
 }
 
-- (void)  loginButton:(FBSDKLoginButton *)loginButton
-didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
-                error:(NSError *)error
-{
-    [loginButton setDelegate:self];
-    UIImage *fbIconImage = [UIImage imageNamed:@"facebook_icon.png"];
-    loginButton.titleLabel.text = @"";
-    
-    loginButton.backgroundColor = [UIColor clearColor];
-    [loginButton setBackgroundImage:fbIconImage forState:UIControlStateNormal];
-
-    
-}
+//- (void)  loginButton:(FBSDKLoginButton *)loginButton
+//didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+//                error:(NSError *)error
+//{
+//    [loginButton setDelegate:self];
+//    UIImage *fbIconImage = [UIImage imageNamed:@"facebook_icon.png"];
+//    loginButton.titleLabel.text = @"";
+//    
+//    loginButton.backgroundColor = [UIColor clearColor];
+//    [loginButton setBackgroundImage:fbIconImage forState:UIControlStateNormal];
+//
+//    
+//}
 @end

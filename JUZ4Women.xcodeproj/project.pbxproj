@@ -102,6 +102,8 @@
 		3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 387685071B1D420500CF73A4 /* SearchViewCell.h */; };
 		3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387685081B1D420500CF73A4 /* SearchViewCell.m */; };
 		3876850C1B1D420500CF73A4 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387685091B1D420500CF73A4 /* SearchViewCell.xib */; };
+		388CC58A1B4962FA006D1CF2 /* IGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC5881B4962FA006D1CF2 /* IGReachability.h */; };
+		388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5891B4962FA006D1CF2 /* IGReachability.m */; };
 		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
 		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
 		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
@@ -206,10 +208,6 @@
 		4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */; };
 		4A7757B61B2F38E10006A5B1 /* VideoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A7757B41B2F38E10006A5B1 /* VideoModel.h */; };
 		4A7757B71B2F38E10006A5B1 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7757B51B2F38E10006A5B1 /* VideoModel.m */; };
-		4AA3C87F1B3EDDC200406A93 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA3C87E1B3EDDC200406A93 /* FacebookSDK.framework */; };
-		4AA3C8811B3EDDCF00406A93 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA3C8801B3EDDCF00406A93 /* FBSDKCoreKit.framework */; };
-		4AA3C8831B3EDDD500406A93 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA3C8821B3EDDD500406A93 /* FBSDKLoginKit.framework */; };
-		4AA3C8851B3EDDDE00406A93 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA3C8841B3EDDDE00406A93 /* FBSDKShareKit.framework */; };
 		4AAB48DB1B34943C00999736 /* ProfileTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AAB48D81B34943C00999736 /* ProfileTableViewCell.h */; };
 		4AAB48DC1B34943C00999736 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB48D91B34943C00999736 /* ProfileTableViewCell.m */; };
 		4AAB48DD1B34943C00999736 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB48DA1B34943C00999736 /* ProfileTableViewCell.xib */; };
@@ -280,9 +278,6 @@
 		4AD1EA611B481D93008AE41B /* IGSocialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD1EA5F1B481D93008AE41B /* IGSocialManager.h */; };
 		4AD1EA621B481D93008AE41B /* IGSocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1EA601B481D93008AE41B /* IGSocialManager.m */; };
 		4AD1EA641B481F89008AE41B /* Constant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD1EA631B481F89008AE41B /* Constant.h */; };
-		4AD1EA681B482017008AE41B /* .DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1EA651B482017008AE41B /* .DS_Store */; };
-		4AD1EA691B482017008AE41B /* IGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD1EA661B482017008AE41B /* IGReachability.h */; };
-		4AD1EA6A1B482017008AE41B /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1EA671B482017008AE41B /* IGReachability.m */; };
 		4AD2B2341AF542D00089DB7F /* devider.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2B2321AF542D00089DB7F /* devider.png */; };
 		4AD2B2351AF542D00089DB7F /* devider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2B2331AF542D00089DB7F /* devider@2x.png */; };
 		4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2371AF54FB00089DB7F /* JFWMenuItemModel.h */; };
@@ -454,6 +449,8 @@
 		387685071B1D420500CF73A4 /* SearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewCell.h; sourceTree = "<group>"; };
 		387685081B1D420500CF73A4 /* SearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewCell.m; sourceTree = "<group>"; };
 		387685091B1D420500CF73A4 /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
+		388CC5881B4962FA006D1CF2 /* IGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGReachability.h; sourceTree = "<group>"; };
+		388CC5891B4962FA006D1CF2 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
 		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
 		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -585,10 +582,6 @@
 		4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeyourmind@2x.png"; sourceTree = "<group>"; };
 		4A7757B41B2F38E10006A5B1 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
 		4A7757B51B2F38E10006A5B1 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
-		4AA3C87E1B3EDDC200406A93 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		4AA3C8801B3EDDCF00406A93 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		4AA3C8821B3EDDD500406A93 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		4AA3C8841B3EDDDE00406A93 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		4AAB48D81B34943C00999736 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		4AAB48D91B34943C00999736 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
 		4AAB48DA1B34943C00999736 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -692,9 +685,6 @@
 		4AD1EA5F1B481D93008AE41B /* IGSocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGSocialManager.h; sourceTree = "<group>"; };
 		4AD1EA601B481D93008AE41B /* IGSocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGSocialManager.m; sourceTree = "<group>"; };
 		4AD1EA631B481F89008AE41B /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		4AD1EA651B482017008AE41B /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
-		4AD1EA661B482017008AE41B /* IGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGReachability.h; sourceTree = "<group>"; };
-		4AD1EA671B482017008AE41B /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
 		4AD2B2321AF542D00089DB7F /* devider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devider.png; sourceTree = "<group>"; };
 		4AD2B2331AF542D00089DB7F /* devider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devider@2x.png"; sourceTree = "<group>"; };
 		4AD2B2371AF54FB00089DB7F /* JFWMenuItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWMenuItemModel.h; sourceTree = "<group>"; };
@@ -766,14 +756,10 @@
 			files = (
 				4AD028691B35E12E008FF8EE /* MediaPlayer.framework in Frameworks */,
 				4AD028671B35E119008FF8EE /* Social.framework in Frameworks */,
-				4AA3C8831B3EDDD500406A93 /* FBSDKLoginKit.framework in Frameworks */,
 				4AD028651B35E10E008FF8EE /* CoreMotion.framework in Frameworks */,
 				4AD028631B35E0DD008FF8EE /* AddressBook.framework in Frameworks */,
 				4AD028611B35E0CB008FF8EE /* AssetsLibrary.framework in Frameworks */,
-				4AA3C8851B3EDDDE00406A93 /* FBSDKShareKit.framework in Frameworks */,
-				4AA3C87F1B3EDDC200406A93 /* FacebookSDK.framework in Frameworks */,
 				4AD0285D1B35DDCB008FF8EE /* GoogleOpenSource.framework in Frameworks */,
-				4AA3C8811B3EDDCF00406A93 /* FBSDKCoreKit.framework in Frameworks */,
 				4AD0285F1B35DDCC008FF8EE /* GooglePlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1098,10 +1084,6 @@
 		4A6D149A1AF1390A003A1708 = {
 			isa = PBXGroup;
 			children = (
-				4AA3C8841B3EDDDE00406A93 /* FBSDKShareKit.framework */,
-				4AA3C8821B3EDDD500406A93 /* FBSDKLoginKit.framework */,
-				4AA3C8801B3EDDCF00406A93 /* FBSDKCoreKit.framework */,
-				4AA3C87E1B3EDDC200406A93 /* FacebookSDK.framework */,
 				4AD028681B35E12E008FF8EE /* MediaPlayer.framework */,
 				4AD028661B35E119008FF8EE /* Social.framework */,
 				4AD028641B35E10E008FF8EE /* CoreMotion.framework */,
@@ -1780,9 +1762,8 @@
 		4AEAC61A1B1AE7F80050DBD7 /* NetworkStatusManager */ = {
 			isa = PBXGroup;
 			children = (
-				4AD1EA651B482017008AE41B /* .DS_Store */,
-				4AD1EA661B482017008AE41B /* IGReachability.h */,
-				4AD1EA671B482017008AE41B /* IGReachability.m */,
+				388CC5881B4962FA006D1CF2 /* IGReachability.h */,
+				388CC5891B4962FA006D1CF2 /* IGReachability.m */,
 			);
 			path = NetworkStatusManager;
 			sourceTree = "<group>";
@@ -1856,6 +1837,7 @@
 				4A1EF1F21B3DBA66001909E9 /* ProfileEditViewController.h in Headers */,
 				4A176D141B08585A006E4836 /* JFWLegalAdviceCell.h in Headers */,
 				4AEAC6291B1AE7F80050DBD7 /* JFWWebserviceManager.h in Headers */,
+				388CC58A1B4962FA006D1CF2 /* IGReachability.h in Headers */,
 				4ADB609F1B36E35E00CFA8BC /* NSDate+TimeAgo.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */,
@@ -1882,7 +1864,6 @@
 				4AD2B2471AF558F30089DB7F /* JFWProfileViewController.h in Headers */,
 				4AE54A011B3324020001B784 /* FilterTableViewCell.h in Headers */,
 				38CCE6331B2DD9BF00D51D68 /* JFWPollCell.h in Headers */,
-				4AD1EA691B482017008AE41B /* IGReachability.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
 				38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */,
@@ -2133,7 +2114,6 @@
 				381C746D1AF53C82003290CF /* sign_up_city_county_back@2x.png in Resources */,
 				381C745C1AF53C82003290CF /* like_small_icon_selected@2x.png in Resources */,
 				381C747E1AF53C82003290CF /* videos_icon@2x.png in Resources */,
-				4AD1EA681B482017008AE41B /* .DS_Store in Resources */,
 				381C744E1AF53C82003290CF /* email_icon@2x.png in Resources */,
 				381C74621AF53C82003290CF /* post_add_icon@2x.png in Resources */,
 				381C747C1AF53C82003290CF /* user_icon@2x.png in Resources */,
@@ -2181,7 +2161,6 @@
 				38CCE64A1B2DDAE100D51D68 /* OptionTableCell.m in Sources */,
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,
-				4AD1EA6A1B482017008AE41B /* IGReachability.m in Sources */,
 				4A6D15071AF27D2C003A1708 /* AFHTTPRequestOperationManager.m in Sources */,
 				4ADB60A01B36E35E00CFA8BC /* NSDate+TimeAgo.m in Sources */,
 				4A176D151B08585A006E4836 /* JFWLegalAdviceCell.m in Sources */,
@@ -2261,6 +2240,7 @@
 				4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */,
 				4ACFBA741AF3F94400C82325 /* MMTableViewCell.m in Sources */,
 				4A6D150C1AF27D2C003A1708 /* AFURLRequestSerialization.m in Sources */,
+				388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */,
 				4AEAC62A1B1AE7F80050DBD7 /* JFWWebserviceManager.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
