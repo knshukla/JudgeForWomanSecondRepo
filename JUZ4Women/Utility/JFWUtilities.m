@@ -173,4 +173,20 @@ static BOOL OSVersionIsAtLeastiOS7() {
     [alert show];
 }
 
+-(NSDate *)getDateFromDate:(NSString *)dateString andTime:(NSString *)timeString
+{
+    if (!dateString || !timeString) {
+        return nil;
+    }
+    
+    NSString *completeString = [NSString stringWithFormat:@"%@ %@",dateString, timeString];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-mm-hh HH:mm:ss"];
+    
+    NSDate *date = [dateFormatter dateFromString:completeString];
+    
+    return date;
+    
+}
 @end
