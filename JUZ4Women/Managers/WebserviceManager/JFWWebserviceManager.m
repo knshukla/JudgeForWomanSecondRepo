@@ -399,4 +399,34 @@
     self.successBlock(userModel);
     NSLog(@"Response dict is %@",responseDictionary);
 }
+
+-(void)requestFeedDescriptionWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager getFeedDescriptionRequestDictionary:feedModel];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+        //API successful
+        NSLog(@"Successful article like response");
+        self.successBlock(responseObject);
+          [self handleFeedDescriptionResponse:responseObject];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure article like response");
+        
+        self.failureBlock(error);
+    }];
+
+}
+
+-(void)handleFeedDescriptionResponse:(NSDictionary *)responseDictionary
+{
+    
+}
 @end

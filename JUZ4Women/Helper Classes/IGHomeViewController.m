@@ -45,8 +45,8 @@
     [super viewDidLoad];
     [self commanInit];
     
-    self.homeTableView.rowHeight = UITableViewAutomaticDimension;
-    self.homeTableView.estimatedRowHeight = 30.0;
+//    self.homeTableView.rowHeight = UITableViewAutomaticDimension;
+//    self.homeTableView.estimatedRowHeight = 30.0;
     self.title = @"Post";
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
@@ -204,6 +204,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PostDescriptionViewController *postDescriptionController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDescriptionViewController"];
+    postDescriptionController.feedModel = [responseArray objectAtIndex:indexPath.row];
     
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:postDescriptionController];
     

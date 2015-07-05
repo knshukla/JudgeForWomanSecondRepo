@@ -35,4 +35,6 @@
 
 -(NSMutableDictionary *)getVideoLikeRequestDictionary:(VideoModel *)videoModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
 -(NSMutableDictionary *)getArticleLikeRequestDictionary:(ArticleModel *)articleModelObj andInspiredValue:(LikeInspiredValue) inspiredValue;
+-(NSMutableDictionary *)getFeedDescriptionRequestDictionary:(JFWFeedsModel *)feedModel;
+
 @end

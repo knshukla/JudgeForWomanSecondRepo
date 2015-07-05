@@ -342,6 +342,9 @@
 		4AEAC6381B1B06D80050DBD7 /* JFWSignUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC6361B1B06D80050DBD7 /* JFWSignUpModel.m */; };
 		4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF66E621AF864B900115840 /* JFWFilterView.h */; };
 		4AF66E651AF864B900115840 /* JFWFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF66E631AF864B900115840 /* JFWFilterView.m */; };
+		4AF9D2A71B493915002F769D /* HomeDescriptionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2A41B493915002F769D /* HomeDescriptionCell.h */; };
+		4AF9D2A81B493915002F769D /* HomeDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2A51B493915002F769D /* HomeDescriptionCell.m */; };
+		4AF9D2A91B493915002F769D /* HomeDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2A61B493915002F769D /* HomeDescriptionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -751,6 +754,9 @@
 		4AEAC6361B1B06D80050DBD7 /* JFWSignUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSignUpModel.m; sourceTree = "<group>"; };
 		4AF66E621AF864B900115840 /* JFWFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWFilterView.h; sourceTree = "<group>"; };
 		4AF66E631AF864B900115840 /* JFWFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWFilterView.m; sourceTree = "<group>"; };
+		4AF9D2A41B493915002F769D /* HomeDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDescriptionCell.h; sourceTree = "<group>"; };
+		4AF9D2A51B493915002F769D /* HomeDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDescriptionCell.m; sourceTree = "<group>"; };
+		4AF9D2A61B493915002F769D /* HomeDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDescriptionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1506,6 +1512,7 @@
 		4ACFBA981AF3FD3600C82325 /* CustomTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4AF9D2A31B493915002F769D /* HomeDescriptionCell */,
 				4AAB48D71B34942200999736 /* ProfileCell */,
 				4AE549FD1B3323E10001B784 /* FilterCell */,
 				4A176D101B08584A006E4836 /* LegalAdviceCell */,
@@ -1825,6 +1832,16 @@
 			path = JFWFilterView;
 			sourceTree = "<group>";
 		};
+		4AF9D2A31B493915002F769D /* HomeDescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AF9D2A41B493915002F769D /* HomeDescriptionCell.h */,
+				4AF9D2A51B493915002F769D /* HomeDescriptionCell.m */,
+				4AF9D2A61B493915002F769D /* HomeDescriptionCell.xib */,
+			);
+			path = HomeDescriptionCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1877,6 +1894,7 @@
 				4AB64C671B2D512000251E52 /* JFWRequestDictionaryGenerator.h in Headers */,
 				4AD19CD11B0850EC00BB2A37 /* JFWNotificationCell.h in Headers */,
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
+				4AF9D2A71B493915002F769D /* HomeDescriptionCell.h in Headers */,
 				4AEAC6231B1AE7F80050DBD7 /* JFWCachingManager.h in Headers */,
 				4ADB60A71B37248600CFA8BC /* NSDate+Formatting.h in Headers */,
 				4AD19CD81B08513100BB2A37 /* JFWVideoCell.h in Headers */,
@@ -2063,6 +2081,7 @@
 				4A76DA291AFF45E300BCFFEE /* mm@2x.png in Resources */,
 				381C74351AF53C82003290CF /* arrow_left_icon@2x.png in Resources */,
 				381C74471AF53C82003290CF /* dislike_small_icon@2x.png in Resources */,
+				4AF9D2A91B493915002F769D /* HomeDescriptionCell.xib in Resources */,
 				4AD19CE11B08517800BB2A37 /* SuccessStoriesCell.xib in Resources */,
 				4A176D161B08585A006E4836 /* JFWLegalAdviceCell.xib in Resources */,
 				38CCE64B1B2DDAE100D51D68 /* OptionTableCell.xib in Resources */,
@@ -2158,6 +2177,7 @@
 				4AEAC6341B1B06C60050DBD7 /* JFWLoginModel.m in Sources */,
 				4A6D14D91AF27A21003A1708 /* JFWViewController.m in Sources */,
 				4AD2B2441AF558E10089DB7F /* JFWAboutUsViewController.m in Sources */,
+				4AF9D2A81B493915002F769D /* HomeDescriptionCell.m in Sources */,
 				38CCE64A1B2DDAE100D51D68 /* OptionTableCell.m in Sources */,
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,

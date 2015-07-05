@@ -19,6 +19,9 @@
 
 -(NSMutableDictionary *)createLoginRequestDictionary:(UserModel *)userModel
 {
+    if(!userModel)
+        return nil;
+    
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
     [dataDict setObject:@"loginAuthentication" forKey:kRequestType];
@@ -107,6 +110,7 @@
 }
 -(NSMutableDictionary *)createFeedRequestDictionary:(JFWFeedsModel *)feedModel
 {
+    
     NSNumber *postId = [NSNumber numberWithInt:12];
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
@@ -122,6 +126,9 @@
 
 -(NSMutableDictionary *)createAddFeedRequestDictionary:(JFWFeedsModel *)feedModel
 {
+    if(!feedModel)
+        return nil;
+    
     NSNumber *postId = [NSNumber numberWithInt:12];
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
@@ -144,6 +151,9 @@
 
 -(NSMutableDictionary *)createVideoFeedRequestDictionary:(VideoModel *)videoModel
 {
+    if(!videoModel)
+        return nil;
+    
     NSNumber *postId = [NSNumber numberWithInt:1];
 
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
@@ -161,6 +171,9 @@
 
 -(NSMutableDictionary *)createArticleFeedRequestDictionary:(ArticleModel *)articleModel
 {
+    if(!articleModel)
+        return nil;
+    
     NSNumber *postId = [NSNumber numberWithInt:1];
     
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
@@ -178,6 +191,8 @@
 
 -(NSMutableDictionary *)createLegalAdviceFeedRequestDictionary:(ArticleModel *)articleModel
 {
+    if(!articleModel)
+        return nil;
     NSNumber *postId = [NSNumber numberWithInt:0];
     
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
@@ -196,7 +211,8 @@
 
 -(NSMutableDictionary *)createForgotPasswordRequestDictionary:(NSString *)password
 {
-    
+    if(!password)
+        return nil;
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
     
@@ -208,6 +224,8 @@
 
 -(NSMutableDictionary *)createUserProfileRequestDictionary:(UserModel *)userModel
 {
+    if(!userModel)
+        return nil;
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
     
     NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
@@ -288,4 +306,32 @@
     
     return postData;
 }
+
+-(NSMutableDictionary *)getFeedDescriptionRequestDictionary:(JFWFeedsModel *)feedModel
+{
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    NSMutableDictionary *postData = [[NSMutableDictionary alloc]init];
+
+    
+    [postData setObject:userName forKey:kUserName];
+    [postData setObject:uid forKey:kUid];
+    
+    NSNumber *lastCommentId = [NSNumber numberWithInt:1];
+    
+      NSNumber *postId = [NSNumber numberWithInt:feedModel.postId];
+    
+    [postData setObject:uid forKey:kUid];
+    
+    [postData setObject:lastCommentId forKey:@"last_comment_id"];
+    
+    [postData setObject:postId forKey:@"post_id"];
+    
+    [postData setObject:@"getPostCommentsDetails " forKey:@"requestType"];
+
+    return postData;
+}
+
 @end
