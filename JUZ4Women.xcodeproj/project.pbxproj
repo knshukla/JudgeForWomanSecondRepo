@@ -342,6 +342,12 @@
 		4AF9D2A71B493915002F769D /* HomeDescriptionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2A41B493915002F769D /* HomeDescriptionCell.h */; };
 		4AF9D2A81B493915002F769D /* HomeDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2A51B493915002F769D /* HomeDescriptionCell.m */; };
 		4AF9D2A91B493915002F769D /* HomeDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2A61B493915002F769D /* HomeDescriptionCell.xib */; };
+		4AF9D2B31B499026002F769D /* VideoDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2AB1B499026002F769D /* VideoDescriptionViewController.h */; };
+		4AF9D2B41B499026002F769D /* VideoDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2AC1B499026002F769D /* VideoDescriptionViewController.m */; };
+		4AF9D2B51B499026002F769D /* VideoDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2AD1B499026002F769D /* VideoDescriptionViewController.xib */; };
+		4AF9D2B61B499026002F769D /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */; };
+		4AF9D2B71B499026002F769D /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF9D2B11B499026002F769D /* YTPlayerView.h */; };
+		4AF9D2B81B499026002F769D /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D2B21B499026002F769D /* YTPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -751,6 +757,12 @@
 		4AF9D2A41B493915002F769D /* HomeDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDescriptionCell.h; sourceTree = "<group>"; };
 		4AF9D2A51B493915002F769D /* HomeDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDescriptionCell.m; sourceTree = "<group>"; };
 		4AF9D2A61B493915002F769D /* HomeDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDescriptionCell.xib; sourceTree = "<group>"; };
+		4AF9D2AB1B499026002F769D /* VideoDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDescriptionViewController.h; sourceTree = "<group>"; };
+		4AF9D2AC1B499026002F769D /* VideoDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDescriptionViewController.m; sourceTree = "<group>"; };
+		4AF9D2AD1B499026002F769D /* VideoDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDescriptionViewController.xib; sourceTree = "<group>"; };
+		4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		4AF9D2B11B499026002F769D /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		4AF9D2B21B499026002F769D /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1246,6 +1258,7 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AF9D2AA1B499026002F769D /* VideoDescriptionViewController */,
 				4A1EF1EF1B3DB487001909E9 /* ProfileEditController */,
 				4ADB60AE1B37325500CFA8BC /* JFWGraphVIewController */,
 				4AD028501B35263D008FF8EE /* PostDescription */,
@@ -1837,6 +1850,35 @@
 			path = HomeDescriptionCell;
 			sourceTree = "<group>";
 		};
+		4AF9D2AA1B499026002F769D /* VideoDescriptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AF9D2AB1B499026002F769D /* VideoDescriptionViewController.h */,
+				4AF9D2AC1B499026002F769D /* VideoDescriptionViewController.m */,
+				4AF9D2AD1B499026002F769D /* VideoDescriptionViewController.xib */,
+				4AF9D2AE1B499026002F769D /* YoutubePlayer */,
+			);
+			path = VideoDescriptionViewController;
+			sourceTree = "<group>";
+		};
+		4AF9D2AE1B499026002F769D /* YoutubePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4AF9D2AF1B499026002F769D /* Assets */,
+				4AF9D2B11B499026002F769D /* YTPlayerView.h */,
+				4AF9D2B21B499026002F769D /* YTPlayerView.m */,
+			);
+			path = YoutubePlayer;
+			sourceTree = "<group>";
+		};
+		4AF9D2AF1B499026002F769D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4AF9D2B01B499026002F769D /* YTPlayerView-iframe-player.html */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1881,6 +1923,7 @@
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A2EE4D91B0799100078E322 /* JFWSuccessStoriesViewController.h in Headers */,
 				38CCE62B1B2D913C00D51D68 /* DateModel.h in Headers */,
+				4AF9D2B71B499026002F769D /* YTPlayerView.h in Headers */,
 				38CCE64F1B2DDB3700D51D68 /* OptionModel.h in Headers */,
 				4A7757B61B2F38E10006A5B1 /* VideoModel.h in Headers */,
 				38CCE6361B2DD9BF00D51D68 /* JFWPollsView.h in Headers */,
@@ -1907,6 +1950,7 @@
 				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
 				4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */,
 				4AD2B2531AF559290089DB7F /* JFWSignOutViewController.h in Headers */,
+				4AF9D2B31B499026002F769D /* VideoDescriptionViewController.h in Headers */,
 				4ADB60AC1B37322700CFA8BC /* RJPieChart.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2039,6 +2083,7 @@
 				4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */,
 				38CCE6351B2DD9BF00D51D68 /* JFWPollCell.xib in Resources */,
 				381C74641AF53C82003290CF /* products_icon@2x.png in Resources */,
+				4AF9D2B51B499026002F769D /* VideoDescriptionViewController.xib in Resources */,
 				4A76DA361AFF49EF00BCFFEE /* mailBackground@2x.png in Resources */,
 				4AE103381B25D23D0035C0A6 /* PopUpView.xib in Resources */,
 				381C746F1AF53C82003290CF /* sign_up_mail_and_mob_option@2x.png in Resources */,
@@ -2105,6 +2150,7 @@
 				4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */,
 				381C74611AF53C82003290CF /* poll_icon@2x.png in Resources */,
 				381C74661AF53C82003290CF /* profile_camera_icon@2x.png in Resources */,
+				4AF9D2B61B499026002F769D /* YTPlayerView-iframe-player.html in Resources */,
 				381C743F1AF53C82003290CF /* comment_medium_icon_selected@2x.png in Resources */,
 				381C74591AF53C82003290CF /* like_medium_icon@2x.png in Resources */,
 				4A76DA2F1AFF47E200BCFFEE /* mail@2x.png in Resources */,
@@ -2205,12 +2251,14 @@
 				4AE103371B25D23D0035C0A6 /* PopUpView.m in Sources */,
 				381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */,
 				381C73CF1AF52757003290CF /* UserPreference.m in Sources */,
+				4AF9D2B41B499026002F769D /* VideoDescriptionViewController.m in Sources */,
 				4A6D150B1AF27D2C003A1708 /* AFURLConnectionOperation.m in Sources */,
 				4A6D15121AF27D2C003A1708 /* UIButton+AFNetworking.m in Sources */,
 				4A6D15101AF27D2C003A1708 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4AD19CD21B0850EC00BB2A37 /* JFWNotificationCell.m in Sources */,
 				4AD2B2481AF558F30089DB7F /* JFWProfileViewController.m in Sources */,
 				3876850B1B1D420500CF73A4 /* SearchViewCell.m in Sources */,
+				4AF9D2B81B499026002F769D /* YTPlayerView.m in Sources */,
 				4A2EE4DE1B0799310078E322 /* JFWLegalAdviseViewController.m in Sources */,
 				4ACFBA721AF3F94400C82325 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */,
