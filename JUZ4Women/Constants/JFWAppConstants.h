@@ -180,3 +180,11 @@ typedef NS_ENUM(NSInteger, FilterType) {
     kPoll
     
 };
+
+typedef NS_ENUM(NSInteger, DataFilterType) {
+    kNewest,
+    kMostLiked,
+    kAdminPost,
+    kMostDislike,
+    kPostOfTheDay
+};

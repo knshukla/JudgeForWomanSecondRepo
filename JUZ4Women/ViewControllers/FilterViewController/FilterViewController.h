@@ -12,6 +12,7 @@
 @protocol FilterDelegate
 
 - (void)onCancelButtonTapped;
+-(void)onFilterSelected:(DataFilterType)filterType;
 
 @end
 
@@ -20,7 +21,7 @@
 - (IBAction)onCancelButtonTapped:(id)sender;
 
 @property (nonatomic) id <FilterDelegate> delegate;
-@property (assign) FilterType filterType;
+@property (assign) DataFilterType filterType;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeightConstraints;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

@@ -34,6 +34,9 @@
 
 -(void)configureCell:(JFWFeedsModel *)feedModel
 {
+    NSLog(@"like: %ld",feedModel.likeCount);
+    NSLog(@"dislike: %ld",feedModel.dislikeCount);
+    
     self.postTitleLabel.text = feedModel.postTitle;
     self.postTitleDescriptionLabel.text = feedModel.tags;
     

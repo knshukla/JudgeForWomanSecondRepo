@@ -21,6 +21,7 @@
 #import "JFWWebserviceManager.h"
 #import "FilterViewController.h"
 #import "PostDescriptionViewController.h"
+#import "FilterManager.h"
 
 @interface IGHomeViewController()
 {
@@ -31,9 +32,11 @@
     JFWFilterView *filterViewObj;
     BOOL isTableOpened;
     PopUpView *demoView;
-    NSArray *responseArray;
+    NSMutableArray *responseArray;
     FilterViewController *viewController ;
     NSMutableArray *filterArray;
+    
+    DataFilterType selectedFilterType;
 
 }
 @end
@@ -58,6 +61,8 @@
     
     self.postTopViewObj.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:67.0/255.0 blue:96.0/255.0 alpha:1];
     
+    selectedFilterType = kNewest;
+    
     [self fetchFeedDetail];
 }
 
@@ -67,7 +72,10 @@
     
     [webServiceManager requestFeedApiWithFeedModel:nil withSuccessBlock:^(id dataArray)
     {
-        responseArray = (NSArray *)dataArray;
+        responseArray = dataArray;
+        
+        filterArray = [FilterManager filterArray:responseArray WithFilter:selectedFilterType];
+        
         [self.homeTableView reloadData];
     } withFailureBlock:^(NSError *error)
     {
@@ -170,7 +178,7 @@
 {
     //Returing number of rows in section of tableview
 
-    return responseArray.count;
+    return filterArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,7 +203,7 @@
     
     cell.userImageView.layer.cornerRadius = 25;
     cell.userImageView.layer.masksToBounds = YES;
-    [cell configureCell:[responseArray objectAtIndex:indexPath.row]];
+    [cell configureCell:[filterArray objectAtIndex:indexPath.row]];
     
     return cell;
     
@@ -204,7 +212,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PostDescriptionViewController *postDescriptionController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDescriptionViewController"];
-    postDescriptionController.feedModel = [responseArray objectAtIndex:indexPath.row];
+    postDescriptionController.feedModel = [filterArray objectAtIndex:indexPath.row];
     
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:postDescriptionController];
     
@@ -284,5 +292,14 @@
     [viewController.view removeFromSuperview];
 }
 
-
+-(void)onFilterSelected:(DataFilterType)filterType
+{
+    selectedFilterType = filterType;
+    
+    filterArray = [FilterManager filterArray:responseArray WithFilter:filterType];
+    
+    [tableView reloadData];
+    
+    [viewController.view removeFromSuperview];
+}
 @end

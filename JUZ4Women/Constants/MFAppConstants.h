@@ -138,8 +138,6 @@ typedef NS_ENUM(NSInteger, EventType) {
 };
 
 
-
-
 //Api related constant
 //http://hls-test.hostworks.com.au/intelligrape/response.json
 

@@ -109,6 +109,8 @@
 		388CC5931B49904B006D1CF2 /* NSDate+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */; };
 		388CC5941B49904B006D1CF2 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */; };
 		388CC5961B49AFA5006D1CF2 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 388CC5951B49AFA5006D1CF2 /* Assets */; };
+		388CC59C1B49D61D006D1CF2 /* FilterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC59A1B49D61D006D1CF2 /* FilterManager.h */; };
+		388CC59D1B49D61D006D1CF2 /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC59B1B49D61D006D1CF2 /* FilterManager.m */; };
 		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
 		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
 		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
@@ -466,6 +468,8 @@
 		388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		388CC5951B49AFA5006D1CF2 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		388CC59A1B49D61D006D1CF2 /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterManager.h; sourceTree = "<group>"; };
+		388CC59B1B49D61D006D1CF2 /* FilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterManager.m; sourceTree = "<group>"; };
 		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
 		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -985,6 +989,15 @@
 			path = PollModel;
 			sourceTree = "<group>";
 		};
+		388CC5991B49D602006D1CF2 /* FilterManager */ = {
+			isa = PBXGroup;
+			children = (
+				388CC59A1B49D61D006D1CF2 /* FilterManager.h */,
+				388CC59B1B49D61D006D1CF2 /* FilterManager.m */,
+			);
+			path = FilterManager;
+			sourceTree = "<group>";
+		};
 		38CCE61C1B2D85F800D51D68 /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1211,6 +1224,7 @@
 		4A6D14CE1AF2796F003A1708 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				388CC5991B49D602006D1CF2 /* FilterManager */,
 				4AD1EA5E1B481D93008AE41B /* SocialManager */,
 				4AB64C641B2D50E400251E52 /* RequestDictGenerator */,
 				4AEAC6171B1AE7F80050DBD7 /* CachingManager */,
@@ -1914,6 +1928,7 @@
 				4AD19CDF1B08517800BB2A37 /* SuccessStoriesCell.h in Headers */,
 				4AD1EA611B481D93008AE41B /* IGSocialManager.h in Headers */,
 				4AEAC6331B1B06C60050DBD7 /* JFWLoginModel.h in Headers */,
+				388CC59C1B49D61D006D1CF2 /* FilterManager.h in Headers */,
 				4A176D1F1B08D2EC006E4836 /* JFWAddVideoViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWProfileViewController.h in Headers */,
 				4AE54A011B3324020001B784 /* FilterTableViewCell.h in Headers */,
@@ -2307,6 +2322,7 @@
 				388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */,
 				4AEAC62A1B1AE7F80050DBD7 /* JFWWebserviceManager.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				388CC59D1B49D61D006D1CF2 /* FilterManager.m in Sources */,
 				4ACFBA931AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				4A6D150E1AF27D2C003A1708 /* AFURLSessionManager.m in Sources */,
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,

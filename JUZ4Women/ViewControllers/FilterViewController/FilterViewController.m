@@ -120,7 +120,24 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *string = [feedFilterArray objectAtIndex:indexPath.row];
     
+    DataFilterType dataFilterType = kNewest;
+    
+    if ([string isEqualToString:@"Newest"])
+    {
+        dataFilterType = kNewest;
+    }
+    else if ([string isEqualToString:@"Most Liked"])
+        dataFilterType = kMostLiked;
+    else if ([string isEqualToString:@"Most Disliked"])
+        dataFilterType = kMostDislike;
+    else if ([string isEqualToString:@"Admin Post"])
+        dataFilterType = kAdminPost;
+    else if ([string isEqualToString:@"Post of the Day"])
+        dataFilterType = kPostOfTheDay;
+    
+    [self.delegate onFilterSelected:dataFilterType];
 }
 
 
