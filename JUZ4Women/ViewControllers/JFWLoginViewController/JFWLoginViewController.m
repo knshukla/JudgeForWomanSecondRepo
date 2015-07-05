@@ -71,6 +71,9 @@
     
     // fbLoginButton.center = self.view.center;
     //[self.view addSubview:fbLoginButton];
+    
+    self.usernameTextField.text = @"vivekcybercity31@gmail.com";
+    self.passwordTextField.text = @"vivek123";
 
     [self configureStatusBar];
     [self configureTextField];

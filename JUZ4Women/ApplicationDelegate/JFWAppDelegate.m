@@ -44,10 +44,10 @@ static BOOL OSVersionIsAtLeastiOS7() {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    
+    
 //    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:0];
 //    NSString *ago = [date timeAgo];
-    
+//    
 //    NSDate *todayDate = [NSDate date];
 //    int daysToAdd = 2;
 //
@@ -55,22 +55,24 @@ static BOOL OSVersionIsAtLeastiOS7() {
 //    NSTimeInterval interval = [newDate1 timeIntervalSinceReferenceDate];
 //
 //    
-//    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:0];
-//    NSString *ago = [date timeAgo];
-//    
+//    NSDate *date1 = [[NSDate alloc] initWithTimeIntervalSince1970:interval];
+//    NSString *ago1 = [date1 timeAgo];
+//
 //   int differece = (int) [JFWUtilities daysBetweenDate:todayDate andDate:newDate1];
-    
-    NSDate *theDate = [NSDate date];
+//    
+//    NSDate *theDate = [NSDate date];
+//
+//    NSDate *newDate = [[NSDate alloc] initWithTimeInterval:-60*60*24*7
+//                                                  sinceDate:theDate];
 
-    NSDate *newDate = [[NSDate alloc] initWithTimeInterval:-60*60*24*7
-                                                  sinceDate:theDate];
-
-    NSString *ago = [newDate timeAgo];
-    NSString *date = [newDate formattedAsTimeAgo];
-
-    
-    NSDate* oldDate = [NSDate dateWithTimeIntervalSinceNow:1800];
-    NSLog(@"Date was %@", oldDate.timeAgoInWords);
+//    NSString *ago = [newDate timeAgo];
+//    
+//   // NSLog();
+//    NSString *date = [newDate formattedAsTimeAgo];
+//
+//    
+//    NSDate* oldDate = [NSDate dateWithTimeIntervalSinceNow:1800];
+//    NSLog(@"Date was %@", oldDate.timeAgoInWords);
 
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];

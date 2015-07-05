@@ -33,38 +33,6 @@
             endingLineNumber = "169"
             landmarkName = "-requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[JFWWebserviceManager requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:]"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kailash/Desktop/JUZ4Woman/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-                  timestampString = "457794534.486072"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "270">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__86-[JFWWebserviceManager requestFeedApiWithFeedModel:withSuccessBlock:withFailureBlock:]_block_invoke"
-                  moduleName = "JUZ4Women"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kailash/Desktop/JUZ4Woman/videos/JudgeForWomanSecondRepo/JUZ4Women/Managers/WebserviceManager/JFWWebserviceManager.m"
-                  timestampString = "457794534.486614"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -79,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "405"
             endingLineNumber = "405"
-            landmarkName = "-requestFeedDescriptionWithFeedModel:withSuccessBlock:withFailureBlock:"
+            landmarkName = "-requestArticleLikeApiWithVideoModal:inspiredValue:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "411"
             endingLineNumber = "411"
-            landmarkName = "-requestFeedDescriptionWithFeedModel:withSuccessBlock:withFailureBlock:"
+            landmarkName = "-requestArticleLikeApiWithVideoModal:inspiredValue:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "416"
             endingLineNumber = "416"
-            landmarkName = "-requestFeedDescriptionWithFeedModel:withSuccessBlock:withFailureBlock:"
+            landmarkName = "-requestArticleLikeApiWithVideoModal:inspiredValue:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -127,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "430"
             endingLineNumber = "430"
-            landmarkName = "-handleFeedDescriptionResponse:"
+            landmarkName = "-requestFeedDescriptionWithFeedModel:withSuccessBlock:withFailureBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
             endingLineNumber = "236"
-            landmarkName = "-onSubmitButtonTapped:"
+            landmarkName = "-onForgotPasswordButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -175,7 +143,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "-onSignInButtonTapped:"
+            landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -208,6 +176,22 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "-requestLoginApiWithLoginModal:withSuccessBlock:withFailureBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/ApplicationDelegate/JFWAppDelegate.m"
+            timestampString = "457807765.353845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

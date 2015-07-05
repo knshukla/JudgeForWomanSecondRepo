@@ -151,9 +151,6 @@
 
 -(NSMutableDictionary *)createVideoFeedRequestDictionary:(VideoModel *)videoModel
 {
-    if(!videoModel)
-        return nil;
-    
     NSNumber *postId = [NSNumber numberWithInt:1];
 
     NSMutableDictionary *dataDict = [[NSMutableDictionary alloc]init];
