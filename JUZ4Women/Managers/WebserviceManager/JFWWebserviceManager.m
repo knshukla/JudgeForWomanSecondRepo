@@ -19,6 +19,7 @@
 #import "ArticleModel.h"
 
 #import "VideoModel.h"
+#import "PollModel.h"
 
 @interface JFWWebserviceManager()
 
@@ -298,6 +299,30 @@
 
 }
 
+-(void)requestPollsDataWithLastPollId:(long)pollId  withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock
+{
+    JFWRequestDictionaryGenerator *requestGeneratorManager = [[JFWRequestDictionaryGenerator alloc]init];
+    
+    self.successBlock = successBlock;
+    self.failureBlock = failureBlock;
+    
+    NSMutableDictionary *dataDict = [requestGeneratorManager createPollDataRequestDictionary:pollId];
+    
+    [self postApiData:kBaseUrl parameters:dataDict success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        //API successful
+        NSLog(@"Successful response");
+        
+        self.successBlock([self handlePollsScreenResponse:responseObject]);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //API failed
+        NSLog(@"Failure response");
+        
+        self.failureBlock(error);
+    }];
+}
+
 - (void)handleForgotPasswordResponse:(NSDictionary *)responseDictionary
 {
 //    NSMutableArray *dataArray = [JFWParserManager parseArticleFeedsResponseWith:responseDictionary];
@@ -428,5 +453,12 @@
 -(void)handleFeedDescriptionResponse:(NSDictionary *)responseDictionary
 {
     
+}
+
+-(NSMutableArray *)handlePollsScreenResponse:(NSDictionary *)responsData
+{
+    NSMutableArray *responseArray = [JFWParserManager parsePollsResponseWith:responsData];
+    
+    return responseArray;
 }
 @end

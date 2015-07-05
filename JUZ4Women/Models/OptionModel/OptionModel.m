@@ -10,4 +10,17 @@
 
 @implementation OptionModel
 
+-(id)initWithOption:(NSString *)option
+{
+    self = [super init];
+    
+    if(self)
+    {
+        self.optionText = option;
+    }
+    
+    return self;
+}
+
+
 @end

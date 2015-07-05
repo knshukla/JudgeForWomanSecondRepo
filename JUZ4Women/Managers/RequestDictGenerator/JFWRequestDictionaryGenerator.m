@@ -309,7 +309,6 @@
 
 -(NSMutableDictionary *)getFeedDescriptionRequestDictionary:(JFWFeedsModel *)feedModel
 {
-    
     NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
     NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
     
@@ -334,4 +333,18 @@
     return postData;
 }
 
+-(NSMutableDictionary *)createPollDataRequestDictionary:(long)pollId
+{
+    NSString *uid = [[NSUserDefaults standardUserDefaults]objectForKey:kUid];
+    NSString *userName = [[NSUserDefaults standardUserDefaults]objectForKey:kUserName];
+    
+    NSMutableDictionary *postData = [[NSMutableDictionary alloc]init];
+    
+    [postData setObject:userName forKey:kUserName];
+    [postData setObject:uid forKey:kUid];
+    [postData setObject:[NSNumber numberWithInt:pollId] forKey:kLastPollId];
+    [postData setObject:@"getPollsScreenDetails" forKey:@"requestType"];
+    
+    return postData;
+}
 @end

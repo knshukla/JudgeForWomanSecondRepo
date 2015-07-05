@@ -20,4 +20,15 @@
     // Configure the view for the selected state
 }
 
+-(void)setDataCell
+{
+    if (!self.pollModelObj) {
+        return;
+    }
+    
+    [tagLabel setText:self.pollModelObj.tags];
+    
+    [questionLabel setText:self.pollModelObj.pollQuestion];
+}
+
 @end

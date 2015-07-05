@@ -12,8 +12,16 @@
 #import "JFWQuestionViewController.h"
 
 #import "JFWPollsView.h"
+#import "JFWWebserviceManager.h"
+
+#import "JFWUtilities.h"
 
 @interface JFWPollsViewController ()
+{
+    long lastPollId;
+    
+    NSMutableArray *dataArray;
+}
 
 @end
 
@@ -34,11 +42,26 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
+    [self getPollScreenData];
     [self loadPollViews];
-
 }
 
+-(void)getPollScreenData
+{
+    JFWWebserviceManager *webServiceManager = [[JFWWebserviceManager alloc]init];
+    
+    [webServiceManager requestPollsDataWithLastPollId:lastPollId withSuccessBlock:^(id array)
+     {
+         dataArray = array;
+         
+         [self loadPollViews];
+         
+     } withFailureBlock:^(NSError *error)
+     {
+         [JFWUtilities showAlert:NSLocalizedString(@"UNKNOWN_ERROR", nil)];
+         
+     }];
+}
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -71,10 +94,17 @@
 -(void)loadPollViews
 {
     if(jFWPollsViewObj)
-        return;
+    {
+        [jFWPollsViewObj setDataArray:dataArray];
+        [jFWPollsViewObj reloadView];
+        
+    }
     
     jFWPollsViewObj = [[JFWPollsView alloc]initWithFrame:self.view.bounds];
     jFWPollsViewObj.delegate = self;
+    
+    [jFWPollsViewObj setDataArray:dataArray];
+    
     [self.view addSubview:jFWPollsViewObj];
 }
 
@@ -83,7 +113,6 @@
 {
     JFWQuestionViewController *questionsController = [[JFWQuestionViewController alloc]initWithNibName:@"JFWQuestionViewController" bundle:Nil];
     
-    NSLog(@"%@",questionsController);
     [self.navigationController pushViewController:questionsController animated:YES];
 }
 

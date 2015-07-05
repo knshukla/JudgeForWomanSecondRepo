@@ -22,5 +22,10 @@
     IBOutlet JFWPollCell *cellObj;
 }
 
+
+-(void)reloadView;
+
 @property(nonatomic,retain)id <JFWPollsViewDelegate> delegate;
+@property(nonatomic, retain)NSMutableArray *dataArray;
+
 @end

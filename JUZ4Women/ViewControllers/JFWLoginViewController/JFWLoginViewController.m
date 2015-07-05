@@ -106,11 +106,7 @@
 }
 
 - (IBAction)onSignInButtonTapped:(id)sender
-{
-    JFWGraphViewController *f = [[JFWGraphViewController alloc]initWithNibName:@"JFWGraphViewController" bundle:nil];
-    [self.navigationController pushViewController:f animated:YES];
-    return;
-    
+{    
     if([self.usernameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] )
         return;
 
@@ -255,8 +251,6 @@
          [viewController.view removeFromSuperview];
 
      }];
-    
-    
 }
 
 - (IBAction)onSignUpButtonTapped:(id)sender

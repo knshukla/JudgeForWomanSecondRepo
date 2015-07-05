@@ -13,4 +13,6 @@
 @property(nonatomic,retain)NSString *optionText;
 @property(nonatomic,assign)BOOL isOptionSelected;
 
+-(id)initWithOption:(NSString *)option;
+
 @end

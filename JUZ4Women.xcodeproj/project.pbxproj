@@ -104,6 +104,8 @@
 		3876850C1B1D420500CF73A4 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387685091B1D420500CF73A4 /* SearchViewCell.xib */; };
 		388CC58A1B4962FA006D1CF2 /* IGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC5881B4962FA006D1CF2 /* IGReachability.h */; };
 		388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5891B4962FA006D1CF2 /* IGReachability.m */; };
+		388CC58F1B496FDE006D1CF2 /* PollModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC58D1B496FDE006D1CF2 /* PollModel.h */; };
+		388CC5901B496FDE006D1CF2 /* PollModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC58E1B496FDE006D1CF2 /* PollModel.m */; };
 		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
 		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
 		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
@@ -451,6 +453,8 @@
 		387685091B1D420500CF73A4 /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
 		388CC5881B4962FA006D1CF2 /* IGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGReachability.h; sourceTree = "<group>"; };
 		388CC5891B4962FA006D1CF2 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
+		388CC58D1B496FDE006D1CF2 /* PollModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollModel.h; sourceTree = "<group>"; };
+		388CC58E1B496FDE006D1CF2 /* PollModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollModel.m; sourceTree = "<group>"; };
 		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
 		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -956,6 +960,15 @@
 			path = SearchViewCell;
 			sourceTree = "<group>";
 		};
+		388CC58C1B496FC6006D1CF2 /* PollModel */ = {
+			isa = PBXGroup;
+			children = (
+				388CC58D1B496FDE006D1CF2 /* PollModel.h */,
+				388CC58E1B496FDE006D1CF2 /* PollModel.m */,
+			);
+			path = PollModel;
+			sourceTree = "<group>";
+		};
 		38CCE61C1B2D85F800D51D68 /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1271,6 +1284,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				388CC58C1B496FC6006D1CF2 /* PollModel */,
 				4ADDA9B61B2FCCAB002E26C2 /* ArticleModel */,
 				4A7757B31B2F38D30006A5B1 /* VideoModel */,
 				38CCE64C1B2DDB3700D51D68 /* OptionModel */,
@@ -1871,6 +1885,7 @@
 				4A7757B61B2F38E10006A5B1 /* VideoModel.h in Headers */,
 				38CCE6361B2DD9BF00D51D68 /* JFWPollsView.h in Headers */,
 				3876850A1B1D420500CF73A4 /* SearchViewCell.h in Headers */,
+				388CC58F1B496FDE006D1CF2 /* PollModel.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
 				4AB64C671B2D512000251E52 /* JFWRequestDictionaryGenerator.h in Headers */,
 				4AD19CD11B0850EC00BB2A37 /* JFWNotificationCell.h in Headers */,
@@ -2222,6 +2237,7 @@
 				4A6D15081AF27D2C003A1708 /* AFHTTPSessionManager.m in Sources */,
 				4AD2B2541AF559290089DB7F /* JFWSignOutViewController.m in Sources */,
 				4ACFBA751AF3F94400C82325 /* NewControllerViewController.m in Sources */,
+				388CC5901B496FDE006D1CF2 /* PollModel.m in Sources */,
 				4ACFBA6B1AF3F94400C82325 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				4ACFBA771AF3F94400C82325 /* SecondViewController.m in Sources */,
 				4ACFBA6D1AF3F94400C82325 /* MMExampleRightSideDrawerViewController.m in Sources */,

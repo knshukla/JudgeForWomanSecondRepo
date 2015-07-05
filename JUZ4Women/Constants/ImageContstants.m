@@ -2,7 +2,7 @@
 //  ImageContstants.m
 //  JUZ4Women
 //
-//  Created by Aakash sharma on 10/05/15.
+//  Created by Kailash on 10/05/15.
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 

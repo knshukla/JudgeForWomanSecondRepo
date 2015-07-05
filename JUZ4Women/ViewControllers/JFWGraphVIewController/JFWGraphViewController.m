@@ -23,16 +23,17 @@
 {
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:10];
     
-    for(int i = 0; i < 5; i ++)
+    for(int i = 0; i < 2; i ++)
     {
         //Generate Random Number
         NSNumber *one = nil;
         
         if (i%2 == 0) {
-            one = [NSNumber numberWithInt:rand()%60+20];
+            one = [NSNumber numberWithInt:60];
         }
         else
-            one = [NSNumber numberWithInt:rand()%35+10];
+            one = [NSNumber numberWithInt:40];
+        
         [dataArray addObject:one];
     }
     

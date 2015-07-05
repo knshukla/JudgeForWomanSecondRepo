@@ -2,7 +2,7 @@
   Localizable.strings
   JUZ4Women
 
-  Created by Aakash sharma on 07/05/15.
+  Created by Kailash on 07/05/15.
   Copyright (c) 2015 TTN Digital. All rights reserved.
 */
 
@@ -18,3 +18,5 @@
 "SIGNUP_ERROR_EMAIL" = "Email address not found";
 "SIGNUP_ERROR_MOBILE" = "Mobile number not found";
 "SIGNUP_ERROR_USERNAME" = "Username not found";
+
+"UNKNOWN_ERROR" = "Some unknown error occured. Please try again later";

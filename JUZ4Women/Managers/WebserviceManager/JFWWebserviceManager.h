@@ -47,6 +47,7 @@ typedef void (^FailureBlock)(NSError *);
 
 -(void)requestFeedDescriptionWithFeedModel:(JFWFeedsModel *)feedModel withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
+-(void)requestPollsDataWithLastPollId:(long)pollId  withSuccessBlock:(void (^)(id))successBlock withFailureBlock:(void (^) (NSError *))failureBlock;
 
 @property (copy, nonatomic) SuccessBlock successBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;

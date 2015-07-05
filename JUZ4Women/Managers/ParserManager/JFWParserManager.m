@@ -14,6 +14,7 @@
 #import "JFWFeedsModel.h"
 #import "VideoModel.h"
 #import "ArticleModel.h"
+#import "PollModel.h"
 
 @implementation JFWParserManager
 
@@ -85,6 +86,7 @@
     }
     return feedsArray;
 }
+
 +(UserModel *)parseUserProfileResponseWith:(NSDictionary *)profileResponseDict
 {
     NSDictionary *responseDict = [profileResponseDict objectForKey:@"basic_details"];
@@ -126,4 +128,25 @@
     return userModel;
 
 }
+
++(NSMutableArray *)parsePollsResponseWith:(NSDictionary *)responseData
+{
+    if (!responseData && ![responseData isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    
+    NSMutableArray *pollsArray = [[NSMutableArray alloc]init];
+    
+    NSArray *dataArray = [responseData objectForKey:@"responseArray"];
+    
+    for(NSDictionary *dict in dataArray)
+    {
+        PollModel *pollModel = [[PollModel alloc]initWithPollId:[dict valueForKey:kPollId] tag:[dict valueForKey:kTags] responses:(long)[dict valueForKey:kResponses] status:[[dict valueForKey:kStatus] intValue] question:[dict valueForKey:kPollQuestion] startDate:[dict valueForKey:kStartDate] startTime:[dict valueForKey:kStartTime] Option1:[dict valueForKey:kOption1] option2:[dict valueForKey:kOption2] option3:[dict valueForKey:kOption3] option4:[dict valueForKey:kOption4]];
+        
+        [pollsArray addObject:pollModel];
+    }
+    
+    return pollsArray;
+}
+
 @end

@@ -72,6 +72,19 @@ static NSString * const kIsUserName = @"IsUserName";
 static NSString * const kVideoID = @"video_id";
 static NSString *const kLikeInspiredValue = @"like_inspired_value";
 
+// Polls Web service
+static NSString *const kLastPollId = @"last_poll_id";
+static NSString *const kStatus = @"status";
+static NSString *const kPollId = @"poll_id";
+static NSString *const kPollQuestion = @"poll_ques";
+static NSString *const kResponses = @"no_of_responces";
+static NSString *const kTags = @"tags";
+static NSString *const kStartDate = @"start_date";
+static NSString *const kOption1 = @"option_one";
+static NSString *const kOption2 = @"option_two";
+static NSString *const kOption3 = @"option_three";
+static NSString *const kOption4 = @"option_four";
+static NSString *const kStartTime = @"start_time";
 
 #define kFontSize18           18.0
 

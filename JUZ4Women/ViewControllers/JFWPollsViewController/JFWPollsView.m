@@ -36,6 +36,10 @@
     [tableViewObj setBackgroundColor:[UIColor clearColor]];
 }
 
+-(void)reloadView
+{
+    [tableViewObj reloadData];
+}
 #pragma mark - Table view methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -45,7 +49,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return self.dataArray.count;
 }
 
 
@@ -60,6 +64,8 @@
         [[NSBundle mainBundle]loadNibNamed:@"JFWPollCell" owner:self options:Nil];
     }
     
+    [cellObj setPollModelObj:[self.dataArray objectAtIndex:indexPath.row]];
+    [cellObj setDataCell];
     return cellObj;
 }
 
