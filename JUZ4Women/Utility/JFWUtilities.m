@@ -173,7 +173,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     [alert show];
 }
 
--(NSDate *)getDateFromDate:(NSString *)dateString andTime:(NSString *)timeString
++(NSDate *)getDateFromDate:(NSString *)dateString andTime:(NSString *)timeString
 {
     if (!dateString || !timeString) {
         return nil;
@@ -182,7 +182,8 @@ static BOOL OSVersionIsAtLeastiOS7() {
     NSString *completeString = [NSString stringWithFormat:@"%@ %@",dateString, timeString];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-mm-hh HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss+05:30"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:[NSTimeZone localTimeZone].secondsFromGMT]];
     
     NSDate *date = [dateFormatter dateFromString:completeString];
     
