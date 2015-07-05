@@ -182,7 +182,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     NSString *completeString = [NSString stringWithFormat:@"%@ %@",dateString, timeString];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss+05:30"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:[NSTimeZone localTimeZone].secondsFromGMT]];
     
     NSDate *date = [dateFormatter dateFromString:completeString];
