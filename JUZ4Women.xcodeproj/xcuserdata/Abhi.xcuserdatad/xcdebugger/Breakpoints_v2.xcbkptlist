@@ -163,22 +163,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JUZ4Women/Utility/JFWUtilities.m"
-            timestampString = "457807762.375594"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "+getDateFromDate:andTime:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JUZ4Women/ViewControllers/VideoDescriptionViewController/VideoDescriptionViewController.m"
             timestampString = "457811492.807377"
             startingColumnNumber = "9223372036854775807"
@@ -202,6 +186,22 @@
             startingLineNumber = "132"
             endingLineNumber = "132"
             landmarkName = "-loadPlayerWithVideoID:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JUZ4Women/Utility/JFWUtilities.m"
+            timestampString = "457821321.361999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "+relativeDateStringForDate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

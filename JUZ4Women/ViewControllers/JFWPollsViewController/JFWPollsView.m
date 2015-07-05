@@ -78,5 +78,19 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (76 * self.dataArray.count < tableView.frame.size.height) {
+        return;
+    }
+    
+    if (indexPath.row == self.dataArray.count - 1)
+    {
+        if(self.delegate && [self.delegate respondsToSelector:@selector(loadDataFromIndexPath)])
+        {
+            [self.delegate loadDataFromIndexPath];
+        }
+    }
+}
 
 @end

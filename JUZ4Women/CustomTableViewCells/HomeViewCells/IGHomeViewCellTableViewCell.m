@@ -10,6 +10,7 @@
 #import "JFWFeedsModel.h"
 #import "UIImageView+AFNetworking.h"
 #import "JFWAppConstants.h"
+#import "JFWUtilities.h"
 
 @implementation IGHomeViewCellTableViewCell
 
@@ -36,6 +37,8 @@
     self.postTitleLabel.text = feedModel.postTitle;
     self.postTitleDescriptionLabel.text = feedModel.tags;
     
+    [self setDataOnTimeLabel:feedModel];
+    
     
     //NSString *defaultImage = kDefaultLiveEventPlaceholderImage;
     NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",kBaseUrl,feedModel.userAvatorUrl];
@@ -48,6 +51,13 @@
      {
          
      }];
+}
+
+-(void)setDataOnTimeLabel:(JFWFeedsModel *)feedModel
+{
+    NSDate *date = [JFWUtilities getDateFromDate:feedModel.postDate andTime:feedModel.postTime];
+    
+    [self.postDateTimeLabel setText:[JFWUtilities relativeDateStringForDate:date]];
 }
 
 @end

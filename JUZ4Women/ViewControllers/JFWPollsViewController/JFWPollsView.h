@@ -13,8 +13,10 @@
 @protocol JFWPollsViewDelegate <NSObject>
 
 -(void)questionsSelected:(id)data;
+-(void)loadDataFromIndexPath;
 
 @end
+
 @interface JFWPollsView : UIView <UITableViewDataSource,UITableViewDelegate>
 {
     

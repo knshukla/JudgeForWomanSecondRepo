@@ -63,6 +63,10 @@
 
 
     }
+    else if(self.filterType == kPoll)
+    {
+        return feedFilterArray.count;
+    }
     else
     {
         return 2;
@@ -98,6 +102,10 @@
     else if(self.filterType == kVideoType)
     {
         cell.titleLabel.text = [videoFilterArray objectAtIndex:indexPath.row];
+    }
+    else if(self.filterType == kPoll)
+    {
+        cell.titleLabel.text = [feedFilterArray objectAtIndex:indexPath.row];
     }
     else
     {
@@ -140,6 +148,15 @@
     [filterArray addObject:@"Newest"];
     [filterArray addObject:@"Most Liked"];
     [filterArray addObject:@"Most Connected"];
+    
+    return filterArray;
+    
+}
+
+-(NSMutableArray *)createPollArray
+{
+    NSMutableArray *filterArray = [[NSMutableArray alloc]init];
+    [filterArray addObject:@"Newest"];
     
     return filterArray;
     

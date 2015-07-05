@@ -176,6 +176,7 @@ typedef NS_ENUM(NSInteger, FilterType) {
     kFeedType,
     kVideoType,
     kSuccessStories,
-    kAdvice
+    kAdvice,
+    kPoll
     
 };

@@ -38,6 +38,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     self.title = @"Polls";
      self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    lastPollId = 0;
 
 }
 
@@ -53,10 +54,12 @@
     
     [webServiceManager requestPollsDataWithLastPollId:lastPollId withSuccessBlock:^(id array)
      {
-         dataArray = array;
-         
-//         PollModel *poll = [array lastObject];
-//         lastPollId = poll.pollId.longLongValue;
+         if (!dataArray) {
+             dataArray = [[NSMutableArray alloc]init];
+             [dataArray addObjectsFromArray:array];
+         }
+         else
+             [dataArray addObjectsFromArray:array];
          
          [self loadPollViews];
          
@@ -102,6 +105,8 @@
         [jFWPollsViewObj setDataArray:dataArray];
         [jFWPollsViewObj reloadView];
         
+        return;
+        
     }
     
     jFWPollsViewObj = [[JFWPollsView alloc]initWithFrame:self.view.bounds];
@@ -125,6 +130,14 @@
     }
     else
         [self loadQuestionViewControler:data];
+}
+
+-(void)loadDataFromIndexPath
+{
+     PollModel *poll = [dataArray lastObject];
+     lastPollId = poll.pollId.longLongValue;
+    
+    [self getPollScreenData];
 }
 
 -(void)loadQuestionViewControler:(PollModel *)pollData

@@ -18,4 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 
 -(void)configureCell:(JFWFeedsModel *)feedModel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *postDateTimeLabel;
+
 @end

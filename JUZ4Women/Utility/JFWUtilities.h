@@ -119,5 +119,6 @@
 
 +(void)showAlert:(NSString *)message;
 +(NSDate *)getDateFromDate:(NSString *)dateString andTime:(NSString *)timeString;
++ (NSString *)relativeDateStringForDate:(NSDate *)date;
 
 @end

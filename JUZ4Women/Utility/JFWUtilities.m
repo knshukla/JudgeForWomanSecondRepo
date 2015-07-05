@@ -190,4 +190,52 @@ static BOOL OSVersionIsAtLeastiOS7() {
     return date;
     
 }
+
+
++ (NSString *)relativeDateStringForDate:(NSDate *)date
+{
+    NSCalendarUnit units = NSDayCalendarUnit | NSWeekOfYearCalendarUnit |
+    NSMonthCalendarUnit | NSYearCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit;
+    
+    // if `date` is before "now" (i.e. in the past) then the components will be positive
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:units
+                                                                   fromDate:date
+                                                                     toDate:[NSDate date]
+                                                                    options:0];
+    
+    if (components.year > 0)
+    {
+        return [NSString stringWithFormat:@"%ld years ago", (long)components.year];
+    }
+    else if (components.month > 0) {
+        return [NSString stringWithFormat:@"%ld months ago", (long)components.month];
+    }
+    else if (components.weekOfYear > 0) {
+        return [NSString stringWithFormat:@"%ld weeks ago", (long)components.weekOfYear];
+    }
+    else if (components.day > 0)
+    {
+        if (components.day > 1)
+        {
+            return [NSString stringWithFormat:@"%ld days ago", (long)components.day];
+        }
+        else
+        {
+            return @"Yesterday";
+        }
+    }
+    else
+    {
+        if (components.hour > 0)
+        {
+            return [NSString stringWithFormat:@"%ld hrs ago", components.hour];
+        }
+        else if (components.minute > 0)
+        {
+            return [NSString stringWithFormat:@"%ld mins ago", components.minute];
+        }
+        else
+            return @"just now";
+    }
+}
 @end

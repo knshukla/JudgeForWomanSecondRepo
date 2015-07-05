@@ -39,8 +39,6 @@
 {
     NSDate *date = [JFWUtilities getDateFromDate:self.pollModelObj.startDate andTime:self.pollModelObj.startTime];
     
-    NSInteger hours = [[NSDate date] hoursAfterDate:date];
-    
-    [timeLabel setText:[NSString stringWithFormat:@"%ld hrs ago",hours]];
+    [timeLabel setText:[JFWUtilities relativeDateStringForDate:date]];
 }
 @end
