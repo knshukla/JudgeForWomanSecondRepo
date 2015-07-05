@@ -14,6 +14,7 @@
 #import "FilterViewController.h"
 #import "JFWUtilities.h"
 #import "VideoModel.h"
+#import "VideoDescriptionViewController.h"
 
 @interface JFWVideoViewController ()<FilterDelegate, VideoCellDelegate>
 {
@@ -105,6 +106,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self pushToVideoPlayerWithModel:[responseArray objectAtIndex:indexPath.row]];
 }
 
 
@@ -191,4 +193,19 @@
 {
     [self.videoTableView reloadData];
 }
+
+-(void)pushToVideoPlayerWithModel:(VideoModel *)modelObj
+{
+    if(!modelObj)
+        return;
+    
+    VideoDescriptionViewController *videoDescriptionViewControllerObj = [[VideoDescriptionViewController alloc] initWithNibName:@"VideoDescriptionViewController" bundle:nil];
+    
+    [videoDescriptionViewControllerObj setVideoModelObj:modelObj];
+    
+    [self.navigationController pushViewController:videoDescriptionViewControllerObj animated:YES];
+}
+
+
+
 @end
