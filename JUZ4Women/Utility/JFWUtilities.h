@@ -118,5 +118,6 @@
 + (NSInteger)daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime;
 
 +(void)showAlert:(NSString *)message;
++(NSDate *)getDateFromDate:(NSString *)dateString andTime:(NSString *)timeString;
 
 @end

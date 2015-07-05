@@ -106,6 +106,8 @@
 		388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5891B4962FA006D1CF2 /* IGReachability.m */; };
 		388CC58F1B496FDE006D1CF2 /* PollModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC58D1B496FDE006D1CF2 /* PollModel.h */; };
 		388CC5901B496FDE006D1CF2 /* PollModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC58E1B496FDE006D1CF2 /* PollModel.m */; };
+		388CC5931B49904B006D1CF2 /* NSDate+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */; };
+		388CC5941B49904B006D1CF2 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */; };
 		38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CCE61D1B2D862400D51D68 /* SignUpView.h */; };
 		38CCE6201B2D862400D51D68 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCE61E1B2D862400D51D68 /* SignUpView.m */; };
 		38CCE6221B2D863600D51D68 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCE6211B2D863600D51D68 /* SignUpView.xib */; };
@@ -461,6 +463,8 @@
 		388CC5891B4962FA006D1CF2 /* IGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReachability.m; sourceTree = "<group>"; };
 		388CC58D1B496FDE006D1CF2 /* PollModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollModel.h; sourceTree = "<group>"; };
 		388CC58E1B496FDE006D1CF2 /* PollModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollModel.m; sourceTree = "<group>"; };
+		388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		38CCE61D1B2D862400D51D68 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
 		38CCE61E1B2D862400D51D68 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		38CCE6211B2D863600D51D68 /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -1244,6 +1248,8 @@
 			isa = PBXGroup;
 			children = (
 				4ADB60A11B36EDAA00CFA8BC /* NSDate+NVTimeAgo.h */,
+				388CC5911B49904B006D1CF2 /* NSDate+Utilities.h */,
+				388CC5921B49904B006D1CF2 /* NSDate+Utilities.m */,
 				4ADB60A21B36EDAA00CFA8BC /* NSDate+NVTimeAgo.m */,
 				4ADB609D1B36E35E00CFA8BC /* NSDate+TimeAgo.h */,
 				4ADB609E1B36E35E00CFA8BC /* NSDate+TimeAgo.m */,
@@ -1946,6 +1952,7 @@
 				38CCE61F1B2D862400D51D68 /* SignUpView.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
 				4AD1EA641B481F89008AE41B /* Constant.h in Headers */,
+				388CC5931B49904B006D1CF2 /* NSDate+Utilities.h in Headers */,
 				4AD028531B35265B008FF8EE /* PostDescriptionViewController.h in Headers */,
 				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
 				4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */,
@@ -2304,6 +2311,7 @@
 				4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */,
 				4ACFBA741AF3F94400C82325 /* MMTableViewCell.m in Sources */,
 				4A6D150C1AF27D2C003A1708 /* AFURLRequestSerialization.m in Sources */,
+				388CC5941B49904B006D1CF2 /* NSDate+Utilities.m in Sources */,
 				388CC58B1B4962FA006D1CF2 /* IGReachability.m in Sources */,
 				4AEAC62A1B1AE7F80050DBD7 /* JFWWebserviceManager.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,

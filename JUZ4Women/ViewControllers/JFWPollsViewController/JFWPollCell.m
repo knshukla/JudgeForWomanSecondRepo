@@ -7,6 +7,8 @@
 //
 
 #import "JFWPollCell.h"
+#import "JFWUtilities.h"
+#include "NSDate+Utilities.h"
 
 @implementation JFWPollCell
 
@@ -29,6 +31,16 @@
     [tagLabel setText:self.pollModelObj.tags];
     
     [questionLabel setText:self.pollModelObj.pollQuestion];
+    
+    [self setDataOnTimeLabel];
 }
 
+-(void)setDataOnTimeLabel
+{
+    NSDate *date = [JFWUtilities getDateFromDate:self.pollModelObj.startDate andTime:self.pollModelObj.startTime];
+    
+    NSInteger hours = [[NSDate date] hoursAfterDate:date];
+    
+    [timeLabel setText:[NSString stringWithFormat:@"%ld hrs ago",hours]];
+}
 @end
