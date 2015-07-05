@@ -8,13 +8,14 @@
 
 #import "JFWPollsViewController.h"
 #import "UIViewController+MMDrawerController.h"
-
 #import "JFWQuestionViewController.h"
+#import "JFWGraphViewController.h"
 
 #import "JFWPollsView.h"
 #import "JFWWebserviceManager.h"
 
 #import "JFWUtilities.h"
+#import "PollModel.h"
 
 @interface JFWPollsViewController ()
 {
@@ -53,6 +54,9 @@
     [webServiceManager requestPollsDataWithLastPollId:lastPollId withSuccessBlock:^(id array)
      {
          dataArray = array;
+         
+//         PollModel *poll = [array lastObject];
+//         lastPollId = poll.pollId.longLongValue;
          
          [self loadPollViews];
          
@@ -109,13 +113,33 @@
 }
 
 #pragma mark - View delegate methods
--(void)questionsSelected:(id)data
+-(void)questionsSelected:(PollModel *)data
+{
+    if (!data) {
+        return;
+    }
+    
+    if (data.status)
+    {
+        [self loadGraphView:data];
+    }
+    else
+        [self loadQuestionViewControler:data];
+}
+
+-(void)loadQuestionViewControler:(PollModel *)pollData
 {
     JFWQuestionViewController *questionsController = [[JFWQuestionViewController alloc]initWithNibName:@"JFWQuestionViewController" bundle:Nil];
     
     [self.navigationController pushViewController:questionsController animated:YES];
 }
 
+-(void)loadGraphView:(PollModel *)pollData
+{
+    JFWGraphViewController *graphViewController = [[JFWGraphViewController alloc]initWithNibName:@"JFWGraphViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:graphViewController animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -74,7 +74,7 @@
 {
     if(self.delegate && [self.delegate respondsToSelector:@selector(questionsSelected:)])
     {
-        [self.delegate questionsSelected:[NSNumber numberWithInt:1]];
+        [self.delegate questionsSelected:[self.dataArray objectAtIndex:indexPath.row]];
     }
 }
 
